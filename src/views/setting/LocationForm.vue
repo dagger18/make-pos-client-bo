@@ -1,6 +1,6 @@
 <script setup>
-import { layout, makeDefaultEntity } from '@/config/forms/Branch';
-import EntityService from '@/services/BranchService';
+import { layout, makeDefaultEntity } from '@/config/forms/Location';
+import EntityService from '@/services/LocationService';
 
 const form = ref(null)
 function setEntity(entity = null) {
@@ -13,7 +13,7 @@ defineExpose({
 <template>
   <AppForm
     :layout="layout"
-    :entityName="$gettext('Branch')"
+    :entityName="$gettext('Location')"
     :makeDefaultEntity="makeDefaultEntity"
     :service="EntityService"
     ref="form"

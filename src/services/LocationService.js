@@ -1,6 +1,6 @@
 import CommonService from '@/services/CommonService';
 import { useAppStore } from '@/stores/appStore';
-const BASE_URI = 'branch'
+const BASE_URI = 'location'
 export default {
   listCacheable(params) {
     const appStore = useAppStore()

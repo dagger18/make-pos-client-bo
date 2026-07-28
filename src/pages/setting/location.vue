@@ -1,10 +1,10 @@
 <script setup>
-import { filterConfigs, headers } from '@/config/tables/Branch';
-import EntityService from '@/services/BranchService';
-import BranchForm from '@/views/setting/BranchForm.vue';
+import { filterConfigs, headers } from '@/config/tables/Location';
+import EntityService from '@/services/LocationService';
+import LocationForm from '@/views/setting/LocationForm.vue';
 import { useGettext } from 'vue3-gettext';
 definePage({
-  meta: { action: 'MANAGE', subject: 'Branch' },
+  meta: { action: 'MANAGE', subject: 'Location' },
 })
 const { $gettext } = useGettext()
 const table = ref(null)
@@ -12,7 +12,7 @@ const form = ref(null)
 const buttons = computed(() => {
   return [
     {
-      text: $gettext('Add Branch'),
+      text: $gettext('Add Location'),
       func: form.value?.setEntity
     }
   ]
@@ -29,7 +29,7 @@ async function editEntity(id) {
     :filterConfigs="filterConfigs"
     :apiService="EntityService"
     ref="table"
-    :pageTitle="$gettext('Branches')"
+    :pageTitle="$gettext('Locations')"
   >
     <template #action="{ item }">
       <v-btn
@@ -52,7 +52,7 @@ async function editEntity(id) {
       </SubmitBtn>
     </template>
   </AppTable>
-  <BranchForm
+  <LocationForm
     ref="form"
     @entitySubmitted="$refs.table.fetchData()"
   />
