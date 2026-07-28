@@ -8,8 +8,9 @@ import {
   reportFilterConfigs as shipmentFilterConfigs,
   reportGroupColumns as shipmentGroupColumnConfigs
 } from "@/config/tables/shipment/Shipment";
-import ShipmentActivityService from "@/services/ShipmentActivityService";
-import ShipmentService from "@/services/ShipmentService";
+// ShipmentActivityService and ShipmentService removed (freight-forwarder specific)
+const ShipmentActivityService = null;
+const ShipmentService = null;
 import { $gettext } from "@/utils/api";
 const list = [
   { 
