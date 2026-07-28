@@ -23,6 +23,24 @@ export default () => {
     icon: { icon: 'tabler-device-desktop-analytics' },
   },
   {
+    title: $gettext('Catalog'),
+    icon: { icon: 'tabler-shopping-bag' },
+    children: [
+      {
+        title: $gettext('Products'),
+        to: { name: 'product' },
+      },
+      {
+        title: $gettext('Categories'),
+        to: { name: 'product-categories' },
+      },
+      {
+        title: $gettext('Modifier Groups'),
+        to: { name: 'product-modifier-groups' },
+      },
+    ],
+  },
+  {
     title: $gettext('Rates'),
     icon: { icon: 'tabler-report-money' },
     children: [
