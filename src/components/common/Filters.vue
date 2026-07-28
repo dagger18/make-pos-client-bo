@@ -6,12 +6,12 @@ import DatePicker from '../form/DatePicker.vue';
 import GoodSearchSelect from '../form/GoodSearchSelect.vue';
 import ClientService from '@/services/ClientService';
 import UserService from '@/services/UserService';
-import BranchService from '@/services/BranchService';
+import LocationService from '@/services/LocationService';
 import DepartmentService from '@/services/DepartmentService';
 const serviceMap = {
   'ClientService': ClientService,
   'UserService': UserService,
-  'BranchService': BranchService,
+  'LocationService': LocationService,
   'DepartmentService': DepartmentService,
 }
 const props = defineProps({

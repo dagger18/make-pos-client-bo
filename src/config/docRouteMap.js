@@ -94,7 +94,7 @@ export const ROUTE_DOC = {
   'setting-users': 'settings.html#users',
   'setting-global-setting': 'settings.html#global-settings',
   'setting-company': 'settings.html',
-  'setting-branch': 'settings.html#branches',
+  'setting-location': 'settings.html#locations',
   'setting-department': 'settings.html#branches',
   'setting-pages': 'settings.html',
   'setting-integration-connectors': 'settings.html#integrations',

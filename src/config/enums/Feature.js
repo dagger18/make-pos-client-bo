@@ -1,6 +1,6 @@
 export const Feature = Object.freeze({
   // Core Pro
-  Branches:                 1,
+  Locations:                1,
   Departments:              2,
   PagesCms:                 3,
   Components:               4,

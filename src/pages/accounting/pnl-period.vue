@@ -31,7 +31,7 @@ onMounted(load)
 <template>
   <VContainer fluid>
     <VRow align="center" class="mb-4">
-      <VCol><h4 class="text-h5 font-weight-bold">{{ $gettext('Period P&L by Branch') }}</h4></VCol>
+      <VCol><h4 class="text-h5 font-weight-bold">{{ $gettext('Period P&L by Location') }}</h4></VCol>
     </VRow>
     <VRow class="mb-4">
       <VCol cols="12" sm="3">
@@ -48,7 +48,7 @@ onMounted(load)
       <VTable>
         <thead>
           <tr>
-            <th>{{ $gettext('Branch') }}</th><th class="text-right">{{ $gettext('Jobs') }}</th>
+            <th>{{ $gettext('Location') }}</th><th class="text-right">{{ $gettext('Jobs') }}</th>
             <th class="text-right">{{ $gettext('Revenue') }}</th><th class="text-right">{{ $gettext('Cost') }}</th>
             <th class="text-right">{{ $gettext('Gross Profit') }}</th><th class="text-right">{{ $gettext('Margin %') }}</th>
             <th class="text-right">{{ $gettext('FX Gain/Loss') }}</th><th class="text-right">{{ $gettext('Net Profit') }}</th>
@@ -57,8 +57,8 @@ onMounted(load)
         <tbody>
           <tr v-if="loading"><td colspan="8" class="text-center pa-4"><VProgressCircular indeterminate size="24"/></td></tr>
           <tr v-else-if="!rows.length"><td colspan="8" class="text-center text-medium-emphasis pa-4">{{ $gettext('No data for selected period.') }}</td></tr>
-          <tr v-for="r in rows" :key="r.branch">
-            <td class="font-weight-medium">{{ r.branch }}</td>
+          <tr v-for="r in rows" :key="r.location">
+            <td class="font-weight-medium">{{ r.location }}</td>
             <td class="text-right">{{ r.jobs_count }}</td>
             <td class="text-right">{{ fmt(r.revenue_base) }}</td>
             <td class="text-right">{{ fmt(r.cost_base) }}</td>

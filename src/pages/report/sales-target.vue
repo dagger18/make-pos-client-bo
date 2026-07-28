@@ -27,7 +27,7 @@ const MONTH_NAMES = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug',
 
 const emptyForm = () => ({
   salesRepId: null, periodYear: year.value, periodMonth: null,
-  targetType: 'REVENUE', targetValue: null, currency: 'USD', branchId: null,
+  targetType: 'REVENUE', targetValue: null, currency: 'USD', locationId: null,
 })
 const form = ref(emptyForm())
 
@@ -71,7 +71,7 @@ function openEdit(item) {
     targetType: item.targetType,
     targetValue: item.targetValue,
     currency: item.currency ?? 'USD',
-    branchId: item.branch?.id ?? null,
+    locationId: item.location?.id ?? null,
   }
   dialog.value = true
 }

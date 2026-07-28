@@ -13,11 +13,11 @@ export const headers = () => {
   return [
     { key: 'name', text: $gettext('Name') },
     {
-      key: 'branch',
-      text: $gettext('Branch'),
+      key: 'location',
+      text: $gettext('Location'),
       sortable: false,
       renderObject(item) {
-        return item.branch?.name ?? '-'
+        return item.location?.name ?? '-'
       }
     },
     {

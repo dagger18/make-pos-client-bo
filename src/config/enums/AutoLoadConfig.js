@@ -1,5 +1,5 @@
 import DepartmentService from '@/services/DepartmentService'
-import BranchService from '@/services/BranchService'
+import LocationService from '@/services/LocationService'
 import ClientService from '@/services/ClientService'
 import CurrencyService from '@/services/CurrencyService'
 // DatasetService removed - freight-specific service
@@ -127,10 +127,10 @@ export default {
     touched: false,
     clearRoute: 'setting-department',
   },
-  branches: {
+  locations: {
     list: [],
-    loader: BranchService.list,
+    loader: LocationService.list,
     touched: false,
-    clearRoute: 'setting-branch',
+    clearRoute: 'setting-location',
   },
 }

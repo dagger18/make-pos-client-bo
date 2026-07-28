@@ -1,6 +1,6 @@
 import CommonService from '@/services/CommonService';
 import { getList as getShipmentTypeList } from '@/config/enums/ShipmentType';
-import BranchService from '@/services/BranchService';
+import LocationService from '@/services/LocationService';
 export const makeDefaultEntity = async () => {
   return {
     name: '',
@@ -20,10 +20,10 @@ export const layout = (entity) => {
       ],
       [
         {
-          name: 'branch',
-          text: $gettext('Branch'),
+          name: 'location',
+          text: $gettext('Location'),
           type: 'select-search',
-          apiEndpoint: BranchService,
+          apiEndpoint: LocationService,
         }
       ],
       [

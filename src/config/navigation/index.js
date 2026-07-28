@@ -251,9 +251,9 @@ export default () => {
         action: 'GET'
       },
       {
-        ...gated(Feature.Branches, $gettext('Branches')),
-        to: { name: 'setting-branch' },
-        subject: 'Branch',
+        ...gated(Feature.Locations, $gettext('Locations')),
+        to: { name: 'setting-location' },
+        subject: 'Location',
         action: 'MANAGE'
       },
       {
