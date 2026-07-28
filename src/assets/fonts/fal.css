@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "fal";
+    src: url("../fonts/fal.woff2?14fdae60dc4364a312c8275d9a26ee40") format("woff2"),
+url("../fonts/fal.woff?14fdae60dc4364a312c8275d9a26ee40") format("woff"),
+url("../fonts/fal.ttf?14fdae60dc4364a312c8275d9a26ee40") format("truetype"),
+url("../fonts/fal.svg?14fdae60dc4364a312c8275d9a26ee40#fal") format("svg");
+    font-display: swap;
+}
+
+.fa-light:before,.fal:before {
+    font-family: fal !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inherit;
+}
+.fa-light:before,.fal:after {
+    display: none;
+}
+
+.fa-handshake:before {
+    content: "\f2b5";
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html><html lang="ar"><head>
+  <script>
+(function(){
+  var lang='en';
+  try{var m=document.cookie.match(/(?:^|;\s*)user=([^;]*)/);if(m){var u=JSON.parse(decodeURIComponent(m[1]));if(u&&u.language)lang=u.language;}}catch(e){}
+  if(lang==='ar')return;
+  var f=location.pathname.split('/').pop();
+  if(lang==='en'){location.replace('../'+f);}else{location.replace('../'+lang+'/'+f);}
+})();
+</script>
+
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الإعدادات — دليل مستخدم Make Cargo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="settings">
+<div class="layout">
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <i class="ti ti-ship"></i><span>Make Cargo</span>
+    </a>
+    <div class="search-wrap">
+      <i class="ti ti-search"></i>
+      <input class="sidebar-search" type="text" placeholder="Search this page…" id="search-input" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">البدء</div>
+    <a class="nav-item" href="index.html" data-page="index"><i class="ti ti-home"></i><span>نظرة عامة</span></a>
+    <a class="nav-sub" href="index.html#login"><i class="ti ti-lock"></i><span>تسجيل الدخول</span></a>
+    <a class="nav-sub" href="index.html#navigation"><i class="ti ti-compass"></i><span>التنقل</span></a>
+    <a class="nav-sub" href="index.html#language"><i class="ti ti-language"></i><span>اللغة والكتابة من اليمين لليسار</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">الوحدات الأساسية</div>
+    <a class="nav-item" href="dashboard.html" data-page="dashboard"><i class="ti ti-layout-dashboard"></i><span>لوحة التحكم</span></a>
+    <a class="nav-item" href="quotes.html" data-page="quotes"><i class="ti ti-file-invoice"></i><span>عروض الأسعار</span></a>
+    <a class="nav-item" href="shipments.html" data-page="shipments"><i class="ti ti-package"></i><span>الشحنات</span></a>
+    <a class="nav-sub" href="shipments.html#tabs"><i class="ti ti-table-column"></i><span>علامات التبويب التفصيلية</span></a>
+    <a class="nav-sub" href="shipments.html#billing"><i class="ti ti-receipt"></i><span>الفوترة والفواتير</span></a>
+    <a class="nav-item" href="consolidations.html" data-page="consolidations"><i class="ti ti-link"></i><span>الدمج</span></a>
+    <a class="nav-item" href="clients.html" data-page="clients"><i class="ti ti-users"></i><span>العملاء</span></a>
+    <a class="nav-item" href="providers.html" data-page="providers"><i class="ti ti-building"></i><span>الموردون</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">المالية</div>
+    <a class="nav-item" href="accounting.html" data-page="accounting"><i class="ti ti-receipt-2"></i><span>المحاسبة</span></a>
+    <a class="nav-sub" href="accounting.html#invoices"><i class="ti ti-file-invoice"></i><span>أنواع المستندات</span></a>
+    <a class="nav-sub" href="accounting.html#soa"><i class="ti ti-report"></i><span>كشف الحساب</span></a>
+    <a class="nav-sub" href="accounting.html#payments"><i class="ti ti-credit-card"></i><span>المدفوعات والإيصالات</span></a>
+    <a class="nav-sub" href="accounting.html#ageing"><i class="ti ti-clock"></i><span>تقارير الديون المتأخرة</span></a>
+    <a class="nav-sub" href="accounting.html#journal"><i class="ti ti-notebook"></i><span>قيود اليومية</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">التسعير</div>
+    <a class="nav-item" href="rates.html" data-page="rates"><i class="ti ti-coin"></i><span>الأسعار</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">الناقلون</div>
+    <a class="nav-item" href="carrier-tools.html" data-page="carrier-tools"><i class="ti ti-ship"></i><span>أدوات الناقلين</span></a>
+    <a class="nav-sub" href="carrier-tools.html#vessel-sailing"><i class="ti ti-anchor"></i><span>إبحار السفينة</span></a>
+    <a class="nav-sub" href="carrier-tools.html#flight-schedule"><i class="ti ti-plane"></i><span>جدول الرحلات</span></a>
+    <a class="nav-sub" href="carrier-tools.html#container-tracking"><i class="ti ti-box"></i><span>تتبع الحاويات</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">المستودع</div>
+    <a class="nav-item" href="warehouse.html" data-page="warehouse"><i class="ti ti-building-warehouse"></i><span>المستودع</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">المبيعات</div>
+    <a class="nav-item" href="crm.html" data-page="crm"><i class="ti ti-trending-up"></i><span>CRM</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">التقارير</div>
+    <a class="nav-item" href="reports.html" data-page="reports"><i class="ti ti-chart-bar"></i><span>التقارير</span></a>
+    <a class="nav-sub" href="reports.html#operations"><i class="ti ti-timeline"></i><span>العمليات</span></a>
+    <a class="nav-sub" href="reports.html#finance"><i class="ti ti-coins"></i><span>المالية</span></a>
+    <a class="nav-sub" href="reports.html#analytics"><i class="ti ti-chart-dots"></i><span>التحليلات ومؤشرات الأداء</span></a>
+    <a class="nav-sub" href="reports.html#compliance"><i class="ti ti-shield-check"></i><span>الامتثال</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">الإدارة</div>
+    <a class="nav-item" href="library.html" data-page="library"><i class="ti ti-books"></i><span>المكتبة</span></a>
+    <a class="nav-item" href="settings.html" data-page="settings"><i class="ti ti-settings"></i><span>الإعدادات</span></a>
+    <a class="nav-sub" href="settings.html#users"><i class="ti ti-user-cog"></i><span>المستخدمون والمجموعات</span></a>
+    <a class="nav-sub" href="settings.html#global-settings"><i class="ti ti-adjustments"></i><span>الإعدادات العامة</span></a>
+    <a class="nav-sub" href="settings.html#branches"><i class="ti ti-building-skyscraper"></i><span>الفروع</span></a>
+    <a class="nav-sub" href="settings.html#integrations"><i class="ti ti-plug"></i><span>تكاملات EDI</span></a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="top-bar">
+    <div class="breadcrumb">
+      <a href="index.html"><i class="ti ti-home"></i></a>
+      <i class="ti ti-chevron-right"></i>
+      <span>الإعدادات</span>
+    </div>
+  </div>
+
+  <div class="content" id="page-content">
+
+    <div class="section" id="settings">
+      <div class="section-header">
+        <div class="section-icon"><i class="ti ti-settings"></i></div>
+        <h2>الإعدادات</h2>
+      </div>
+
+      <h3 id="users">المستخدمون والمجموعات</h3>
+      <p>انتقل إلى <strong>الإعدادات → المستخدمون</strong> لإدارة وصول فريقك:</p>
+      <ul>
+        <li><strong>دعوة مستخدم</strong> — أدخل عنوان البريد الإلكتروني وسيتلقى المستخدم رابط دعوة لتعيين كلمة مروره</li>
+        <li><strong>تعيين مجموعات</strong> — تحدد المجموعات الصلاحيات المتوافقة مع دور المستخدم (العمليات، المالية، المشرف)</li>
+        <li><strong>تعطيل مستخدم</strong> — اجعل المستخدم غير نشط لإلغاء وصوله دون حذف سجلاته التاريخية</li>
+      </ul>
+      <p>انتقل إلى <strong>الإعدادات → المجموعات</strong> لإدارة مجموعات الصلاحيات. يمكنك لكل مجموعة تخصيص الإجراءات المسموح بها (عرض، إنشاء، تعديل، حذف) لكل وحدة.</p>
+
+      <h3 id="global-settings">الإعدادات العامة</h3>
+      <p>انتقل إلى <strong>الإعدادات → الإعداد العام</strong> للإعدادات الافتراضية على مستوى المؤسسة:</p>
+      <ul>
+        <li><strong>العملة الأساسية</strong> — العملة الافتراضية المستخدمة للأرباح والخسائر والتقارير</li>
+        <li><strong>أسعار الصرف</strong> — تعيين أسعار العملات الأجنبية وتحديثها للمستندات متعددة العملات</li>
+        <li><strong>تنسيق معرّف عرض السعر</strong> — تنسيق الترقيم التلقائي لأرقام عروض الأسعار (مثلاً <code>QT-{YYYY}-{SEQ}</code>)</li>
+        <li><strong>تنسيق معرّف الشحنة</strong> — تنسيق الترقيم التلقائي لأرقام المهام</li>
+      </ul>
+
+      <h3>معلومات الشركة</h3>
+      <p>انتقل إلى <strong>الإعدادات → الشركة</strong> لإدارة هوية مؤسستك:</p>
+      <ul>
+        <li>اسم الشركة والشعار والعنوان المسجّل</li>
+        <li>تفاصيل التسجيل القانوني (رقم الشركة، الرقم الضريبي)</li>
+        <li>معلومات بنكية تُستخدم في الفواتير وتعليمات الدفع</li>
+      </ul>
+      <div class="tip"><strong>تلميح:</strong> يظهر شعار الشركة وتفاصيلها على جميع مستندات PDF المُنشأة — الفواتير وعروض الأسعار وقوائم التعبئة وSOAs. احرص على تحديث هذه المعلومات.</div>
+
+      <h3 id="branches">الفروع والأقسام</h3>
+      <p><strong>الفروع</strong> تمثّل مواقع مكاتبك الفعلية. يمكن تعيين كل شحنة وفاتورة ومستند مالي لفرع، مما يتيح التقارير على مستوى الفروع والأرباح والخسائر.</p>
+      <p><strong>الأقسام</strong> هي مراكز تكلفة داخل الفرع، مفيدة لتقارير الأرباح والخسائر على مستوى القسم وتخصيص الميزانية.</p>
+
+      <h3>دليل الحسابات</h3>
+      <p>انتقل إلى <strong>الإعدادات → دليل الحسابات</strong> لتعريف هيكل حسابات دفتر الأستاذ العام (GL)، الذي يشمل الأصول والخصوم وحقوق الملكية والإيرادات والمصروفات. تُستخدم هذه الرموز للقيود اليومية والتقارير المالية.</p>
+
+      <h3 id="integrations">تكاملات EDI</h3>
+      <p>انتقل إلى <strong>الإعدادات → موصلات التكامل</strong> لتكوين الاتصالات بأنظمة الناقلين ومزودي التتبع والمنصات التجارية. يتطلب كل موصل:</p>
+      <ul>
+        <li>بيانات اعتماد API المقدَّمة من الناقل أو مزود البيانات</li>
+        <li>قواعد ربط البيانات لترجمة رموز حالة الناقل إلى حالات النظام</li>
+        <li>اختبار اتصال للتحقق من أن التكامل نشط ويستجيب</li>
+      </ul>
+      <div class="warning-box"><strong>Note:</strong> EDI connectors require IT or admin-level setup. Contact your system administrator or Make Cargo support when adding new integrations.</div>
+
+      <h3>ملف تعريفك</h3>
+      <p>انقر على صورة ملف تعريفك في الزاوية العلوية اليمنى لأي صفحة للوصول إلى إعدادات ملفك. من هنا يمكنك:</p>
+      <ul>
+        <li>تحديث اسمك وعنوان بريدك الإلكتروني وصورة ملف تعريفك</li>
+        <li>تغيير كلمة المرور</li>
+        <li>تعيين لغتك المفضلة</li>
+        <li>ضبط تفضيلات الإشعارات</li>
+      </ul>
+    </div>
+
+  </div>
+</main>
+
+</div><!-- /layout -->
+<script>
+(function () {
+  if (window.self !== window.top) document.documentElement.classList.add('in-iframe');
+  var page = document.body.dataset.page;
+  if (page) {
+    document.querySelectorAll('.nav-item[data-page]').forEach(function(el) {
+      el.classList.toggle('active', el.dataset.page === page);
+    });
+  }
+  document.querySelectorAll('.nav-sub').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href') || '';
+      var hi = href.indexOf('#');
+      if (hi === -1) return;
+      var filePart = href.slice(0, hi);
+      var hash = href.slice(hi + 1);
+      var curFile = location.pathname.split('/').pop();
+      if (!filePart || filePart === curFile) {
+        e.preventDefault();
+        var target = document.getElementById(hash);
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.pushState(null, '', '#' + hash); }
+      }
+    });
+  });
+  var anchors = document.querySelectorAll('[id]');
+  var subLinks = document.querySelectorAll('.nav-sub');
+  if (anchors.length && subLinks.length) {
+    var curFile = location.pathname.split('/').pop();
+    function markSub() {
+      var cur = '';
+      anchors.forEach(function(el) { if (window.scrollY + 130 >= el.offsetTop) cur = el.id; });
+      subLinks.forEach(function(l) {
+        var href = l.getAttribute('href') || '';
+        var hi = href.indexOf('#');
+        if (hi === -1) return;
+        var fp = href.slice(0, hi); var hash = href.slice(hi + 1);
+        if (!fp || fp === curFile) l.classList.toggle('active', hash === cur);
+      });
+    }
+    window.addEventListener('scroll', markSub, { passive: true });
+    markSub();
+  }
+  var inp = document.getElementById('search-input');
+  var body = document.getElementById('page-content');
+  if (inp && body) {
+    var nodes = body.querySelectorAll('p, li, td, h2, h3, h4');
+    inp.addEventListener('input', function() {
+      var q = this.value.trim();
+      nodes.forEach(function(n) { n.innerHTML = n.innerHTML.replace(/<mark class="hl">(.*?)<\/mark>/gi, '$1'); });
+      if (!q) return;
+      var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      nodes.forEach(function(n) { if (re.test(n.textContent)) n.innerHTML = n.innerHTML.replace(re, '<mark class="hl">$1</mark>'); });
+      var first = body.querySelector('.hl');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+  if (location.hash) {
+    requestAnimationFrame(function() {
+      var el = document.getElementById(location.hash.slice(1));
+      if (el) el.scrollIntoView({ block: 'start' });
+    });
+  }
+})();
+</script>
+
+
+</body></html>

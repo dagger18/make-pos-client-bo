@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="zh"><head>
+  <script>
+(function(){
+  var lang='en';
+  try{var m=document.cookie.match(/(?:^|;\s*)user=([^;]*)/);if(m){var u=JSON.parse(decodeURIComponent(m[1]));if(u&&u.language)lang=u.language;}}catch(e){}
+  if(lang==='zh')return;
+  var f=location.pathname.split('/').pop();
+  if(lang==='en'){location.replace('../'+f);}else{location.replace('../'+lang+'/'+f);}
+})();
+</script>
+
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>拼箱/合并货运 — Make Cargo 用户指南</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="consolidations">
+<div class="layout">
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <i class="ti ti-ship"></i><span>Make Cargo</span>
+    </a>
+    <div class="search-wrap">
+      <i class="ti ti-search"></i>
+      <input class="sidebar-search" type="text" placeholder="Search this page…" id="search-input" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">快速入门</div>
+    <a class="nav-item" href="index.html" data-page="index"><i class="ti ti-home"></i><span>概览</span></a>
+    <a class="nav-sub" href="index.html#login"><i class="ti ti-lock"></i><span>登录</span></a>
+    <a class="nav-sub" href="index.html#navigation"><i class="ti ti-compass"></i><span>导航</span></a>
+    <a class="nav-sub" href="index.html#language"><i class="ti ti-language"></i><span>语言与 RTL</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">核心模块</div>
+    <a class="nav-item" href="dashboard.html" data-page="dashboard"><i class="ti ti-layout-dashboard"></i><span>仪表盘</span></a>
+    <a class="nav-item" href="quotes.html" data-page="quotes"><i class="ti ti-file-invoice"></i><span>报价</span></a>
+    <a class="nav-item" href="shipments.html" data-page="shipments"><i class="ti ti-package"></i><span>货运订单</span></a>
+    <a class="nav-sub" href="shipments.html#tabs"><i class="ti ti-table-column"></i><span>详情标签页</span></a>
+    <a class="nav-sub" href="shipments.html#billing"><i class="ti ti-receipt"></i><span>开票与账单</span></a>
+    <a class="nav-item" href="consolidations.html" data-page="consolidations"><i class="ti ti-link"></i><span>拼箱/合并货运</span></a>
+    <a class="nav-item" href="clients.html" data-page="clients"><i class="ti ti-users"></i><span>客户</span></a>
+    <a class="nav-item" href="providers.html" data-page="providers"><i class="ti ti-building"></i><span>供应商</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">财务</div>
+    <a class="nav-item" href="accounting.html" data-page="accounting"><i class="ti ti-receipt-2"></i><span>财务会计</span></a>
+    <a class="nav-sub" href="accounting.html#invoices"><i class="ti ti-file-invoice"></i><span>单据类型</span></a>
+    <a class="nav-sub" href="accounting.html#soa"><i class="ti ti-report"></i><span>对账单</span></a>
+    <a class="nav-sub" href="accounting.html#payments"><i class="ti ti-credit-card"></i><span>付款与收款</span></a>
+    <a class="nav-sub" href="accounting.html#ageing"><i class="ti ti-clock"></i><span>账龄报表</span></a>
+    <a class="nav-sub" href="accounting.html#journal"><i class="ti ti-notebook"></i><span>日记账分录</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">定价</div>
+    <a class="nav-item" href="rates.html" data-page="rates"><i class="ti ti-coin"></i><span>费率</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">承运商</div>
+    <a class="nav-item" href="carrier-tools.html" data-page="carrier-tools"><i class="ti ti-ship"></i><span>承运商工具</span></a>
+    <a class="nav-sub" href="carrier-tools.html#vessel-sailing"><i class="ti ti-anchor"></i><span>船期查询</span></a>
+    <a class="nav-sub" href="carrier-tools.html#flight-schedule"><i class="ti ti-plane"></i><span>航班时刻表</span></a>
+    <a class="nav-sub" href="carrier-tools.html#container-tracking"><i class="ti ti-box"></i><span>集装箱追踪</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">仓库</div>
+    <a class="nav-item" href="warehouse.html" data-page="warehouse"><i class="ti ti-building-warehouse"></i><span>仓库</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">销售</div>
+    <a class="nav-item" href="crm.html" data-page="crm"><i class="ti ti-trending-up"></i><span>CRM</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">报表</div>
+    <a class="nav-item" href="reports.html" data-page="reports"><i class="ti ti-chart-bar"></i><span>报表</span></a>
+    <a class="nav-sub" href="reports.html#operations"><i class="ti ti-timeline"></i><span>运营</span></a>
+    <a class="nav-sub" href="reports.html#finance"><i class="ti ti-coins"></i><span>财务</span></a>
+    <a class="nav-sub" href="reports.html#analytics"><i class="ti ti-chart-dots"></i><span>数据分析与 KPI</span></a>
+    <a class="nav-sub" href="reports.html#compliance"><i class="ti ti-shield-check"></i><span>合规</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">系统管理</div>
+    <a class="nav-item" href="library.html" data-page="library"><i class="ti ti-books"></i><span>基础数据库</span></a>
+    <a class="nav-item" href="settings.html" data-page="settings"><i class="ti ti-settings"></i><span>系统设置</span></a>
+    <a class="nav-sub" href="settings.html#users"><i class="ti ti-user-cog"></i><span>用户与权限组</span></a>
+    <a class="nav-sub" href="settings.html#global-settings"><i class="ti ti-adjustments"></i><span>全局设置</span></a>
+    <a class="nav-sub" href="settings.html#branches"><i class="ti ti-building-skyscraper"></i><span>分公司/分支机构</span></a>
+    <a class="nav-sub" href="settings.html#integrations"><i class="ti ti-plug"></i><span>EDI 集成</span></a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="top-bar">
+    <div class="breadcrumb">
+      <a href="index.html"><i class="ti ti-home"></i></a>
+      <i class="ti ti-chevron-right"></i>
+      <span>拼箱/合并货运</span>
+    </div>
+  </div>
+
+  <div class="content" id="page-content">
+
+    <div class="section" id="consolidations">
+      <div class="section-header">
+        <div class="section-icon"><i class="ti ti-link"></i></div>
+        <h2>拼箱/合并货运</h2>
+      </div>
+      <p>拼箱/合并货运将多票 LCL（或拼货）货运订单合并为一个集装箱或航班，所有货主共同分摊运费。</p>
+
+      <h3>创建拼箱/合并货运</h3>
+      <ol class="steps">
+        <li><span class="step-num">1</span><span>Go to <strong>Consolidations</strong> and click <strong>New Consolidation</strong></span></li>
+        <li><span class="step-num">2</span><span>Select transport mode and service type (e.g., Ocean — LCL)</span></li>
+        <li><span class="step-num">3</span><span>Enter POL, POD, ETD, ETA, vessel/flight details, and container/ULD details</span></li>
+        <li><span class="step-num">4</span><span>Go to the <strong>Manifest</strong> tab and search for existing LCL shipments to attach as child shipments</span></li>
+      </ol>
+
+      <h3>拼箱状态</h3>
+      <div class="status-grid">
+        <span class="status-chip" style="background:#f1f5f9;color:#475569;">Open</span>
+        <span class="status-chip" style="background:#fee2e2;color:#991b1b;">Closed</span>
+        <span class="status-chip" style="background:#dbeafe;color:#1d4ed8;">Departed</span>
+        <span class="status-chip" style="background:#d1fae5;color:#065f46;">Arrived</span>
+        <span class="status-chip" style="background:#e2e8f0;color:#64748b;">Cancelled</span>
+      </div>
+
+      <h3>装箱与拆箱</h3>
+      <p><strong>装箱</strong> 记录起运地的集装箱装载过程——每件货物及其状况在装入集装箱时均被记录。</p>
+      <p><strong>拆箱</strong> 记录目的地 CFS（集装箱货运站）的货物卸载过程——货物被清点并分配给各收货人。每票货运订单的货物在此过程中均被追踪。</p>
+      <div class="tip"><strong>提示：</strong> 在出发前关闭拼箱，以防止继续添加新货运订单。船舶出港后将拼箱标记为 <strong>已出发</strong>，货物到达目的地后标记为 <strong>已到达</strong>。</div>
+    </div>
+
+  </div>
+</main>
+
+</div><!-- /layout -->
+<script>
+(function () {
+  if (window.self !== window.top) document.documentElement.classList.add('in-iframe');
+  var page = document.body.dataset.page;
+  if (page) {
+    document.querySelectorAll('.nav-item[data-page]').forEach(function(el) {
+      el.classList.toggle('active', el.dataset.page === page);
+    });
+  }
+  document.querySelectorAll('.nav-sub').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href') || '';
+      var hi = href.indexOf('#');
+      if (hi === -1) return;
+      var filePart = href.slice(0, hi);
+      var hash = href.slice(hi + 1);
+      var curFile = location.pathname.split('/').pop();
+      if (!filePart || filePart === curFile) {
+        e.preventDefault();
+        var target = document.getElementById(hash);
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.pushState(null, '', '#' + hash); }
+      }
+    });
+  });
+  var anchors = document.querySelectorAll('[id]');
+  var subLinks = document.querySelectorAll('.nav-sub');
+  if (anchors.length && subLinks.length) {
+    var curFile = location.pathname.split('/').pop();
+    function markSub() {
+      var cur = '';
+      anchors.forEach(function(el) { if (window.scrollY + 130 >= el.offsetTop) cur = el.id; });
+      subLinks.forEach(function(l) {
+        var href = l.getAttribute('href') || '';
+        var hi = href.indexOf('#');
+        if (hi === -1) return;
+        var fp = href.slice(0, hi); var hash = href.slice(hi + 1);
+        if (!fp || fp === curFile) l.classList.toggle('active', hash === cur);
+      });
+    }
+    window.addEventListener('scroll', markSub, { passive: true });
+    markSub();
+  }
+  var inp = document.getElementById('search-input');
+  var body = document.getElementById('page-content');
+  if (inp && body) {
+    var nodes = body.querySelectorAll('p, li, td, h2, h3, h4');
+    inp.addEventListener('input', function() {
+      var q = this.value.trim();
+      nodes.forEach(function(n) { n.innerHTML = n.innerHTML.replace(/<mark class="hl">(.*?)<\/mark>/gi, '$1'); });
+      if (!q) return;
+      var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      nodes.forEach(function(n) { if (re.test(n.textContent)) n.innerHTML = n.innerHTML.replace(re, '<mark class="hl">$1</mark>'); });
+      var first = body.querySelector('.hl');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+  if (location.hash) {
+    requestAnimationFrame(function() {
+      var el = document.getElementById(location.hash.slice(1));
+      if (el) el.scrollIntoView({ block: 'start' });
+    });
+  }
+})();
+</script>
+
+
+</body></html>

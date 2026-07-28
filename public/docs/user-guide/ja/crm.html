@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="ja"><head>
+  <script>
+(function(){
+  var lang='en';
+  try{var m=document.cookie.match(/(?:^|;\s*)user=([^;]*)/);if(m){var u=JSON.parse(decodeURIComponent(m[1]));if(u&&u.language)lang=u.language;}}catch(e){}
+  if(lang==='ja')return;
+  var f=location.pathname.split('/').pop();
+  if(lang==='en'){location.replace('../'+f);}else{location.replace('../'+lang+'/'+f);}
+})();
+</script>
+
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRM — Make Cargo ユーザーガイド</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="crm">
+<div class="layout">
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <i class="ti ti-ship"></i><span>Make Cargo</span>
+    </a>
+    <div class="search-wrap">
+      <i class="ti ti-search"></i>
+      <input class="sidebar-search" type="text" placeholder="Search this page…" id="search-input" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">はじめに</div>
+    <a class="nav-item" href="index.html" data-page="index"><i class="ti ti-home"></i><span>概要</span></a>
+    <a class="nav-sub" href="index.html#login"><i class="ti ti-lock"></i><span>ログイン</span></a>
+    <a class="nav-sub" href="index.html#navigation"><i class="ti ti-compass"></i><span>ナビゲーション</span></a>
+    <a class="nav-sub" href="index.html#language"><i class="ti ti-language"></i><span>言語 &amp; RTL</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">コアモジュール</div>
+    <a class="nav-item" href="dashboard.html" data-page="dashboard"><i class="ti ti-layout-dashboard"></i><span>ダッシュボード</span></a>
+    <a class="nav-item" href="quotes.html" data-page="quotes"><i class="ti ti-file-invoice"></i><span>見積もり</span></a>
+    <a class="nav-item" href="shipments.html" data-page="shipments"><i class="ti ti-package"></i><span>貨物輸送</span></a>
+    <a class="nav-sub" href="shipments.html#tabs"><i class="ti ti-table-column"></i><span>詳細タブ</span></a>
+    <a class="nav-sub" href="shipments.html#billing"><i class="ti ti-receipt"></i><span>請求 &amp; 支払い</span></a>
+    <a class="nav-item" href="consolidations.html" data-page="consolidations"><i class="ti ti-link"></i><span>混載</span></a>
+    <a class="nav-item" href="clients.html" data-page="clients"><i class="ti ti-users"></i><span>クライアント</span></a>
+    <a class="nav-item" href="providers.html" data-page="providers"><i class="ti ti-building"></i><span>プロバイダー</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">財務</div>
+    <a class="nav-item" href="accounting.html" data-page="accounting"><i class="ti ti-receipt-2"></i><span>会計</span></a>
+    <a class="nav-sub" href="accounting.html#invoices"><i class="ti ti-file-invoice"></i><span>ドキュメント種別</span></a>
+    <a class="nav-sub" href="accounting.html#soa"><i class="ti ti-report"></i><span>取引明細書</span></a>
+    <a class="nav-sub" href="accounting.html#payments"><i class="ti ti-credit-card"></i><span>支払い &amp; 領収書</span></a>
+    <a class="nav-sub" href="accounting.html#ageing"><i class="ti ti-clock"></i><span>経年レポート</span></a>
+    <a class="nav-sub" href="accounting.html#journal"><i class="ti ti-notebook"></i><span>仕訳入力</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">料金設定</div>
+    <a class="nav-item" href="rates.html" data-page="rates"><i class="ti ti-coin"></i><span>運賃</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">キャリア</div>
+    <a class="nav-item" href="carrier-tools.html" data-page="carrier-tools"><i class="ti ti-ship"></i><span>キャリアツール</span></a>
+    <a class="nav-sub" href="carrier-tools.html#vessel-sailing"><i class="ti ti-anchor"></i><span>船舶スケジュール</span></a>
+    <a class="nav-sub" href="carrier-tools.html#flight-schedule"><i class="ti ti-plane"></i><span>フライトスケジュール</span></a>
+    <a class="nav-sub" href="carrier-tools.html#container-tracking"><i class="ti ti-box"></i><span>コンテナ追跡</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">倉庫</div>
+    <a class="nav-item" href="warehouse.html" data-page="warehouse"><i class="ti ti-building-warehouse"></i><span>倉庫</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">営業</div>
+    <a class="nav-item" href="crm.html" data-page="crm"><i class="ti ti-trending-up"></i><span>CRM</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">レポート</div>
+    <a class="nav-item" href="reports.html" data-page="reports"><i class="ti ti-chart-bar"></i><span>レポート</span></a>
+    <a class="nav-sub" href="reports.html#operations"><i class="ti ti-timeline"></i><span>オペレーション</span></a>
+    <a class="nav-sub" href="reports.html#finance"><i class="ti ti-coins"></i><span>財務</span></a>
+    <a class="nav-sub" href="reports.html#analytics"><i class="ti ti-chart-dots"></i><span>分析 &amp; KPI</span></a>
+    <a class="nav-sub" href="reports.html#compliance"><i class="ti ti-shield-check"></i><span>コンプライアンス</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">管理</div>
+    <a class="nav-item" href="library.html" data-page="library"><i class="ti ti-books"></i><span>ライブラリ</span></a>
+    <a class="nav-item" href="settings.html" data-page="settings"><i class="ti ti-settings"></i><span>設定</span></a>
+    <a class="nav-sub" href="settings.html#users"><i class="ti ti-user-cog"></i><span>ユーザー &amp; グループ</span></a>
+    <a class="nav-sub" href="settings.html#global-settings"><i class="ti ti-adjustments"></i><span>グローバル設定</span></a>
+    <a class="nav-sub" href="settings.html#branches"><i class="ti ti-building-skyscraper"></i><span>支店</span></a>
+    <a class="nav-sub" href="settings.html#integrations"><i class="ti ti-plug"></i><span>EDI 連携</span></a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="top-bar">
+    <div class="breadcrumb">
+      <a href="index.html"><i class="ti ti-home"></i></a>
+      <i class="ti ti-chevron-right"></i>
+      <span>CRM</span>
+    </div>
+  </div>
+
+  <div class="content" id="page-content">
+
+    <div class="section" id="crm">
+      <div class="section-header">
+        <div class="section-icon"><i class="ti ti-trending-up"></i></div>
+        <h2>CRM — 営業パイプライン</h2>
+      </div>
+      <p>リードを追跡し、商談を管理し、見込み客をクライアントに転換します。</p>
+
+      <h3>リード</h3>
+      <ol class="steps">
+        <li><span class="step-num">1</span><span>Go to <strong>CRM → Leads</strong> and click <strong>New Lead</strong></span></li>
+        <li><span class="step-num">2</span><span>Enter company name, contact details, industry, estimated monthly volume, and lead source (Referral, LinkedIn, Cold Call, etc.)</span></li>
+        <li><span class="step-num">3</span><span>Assign the lead to a sales staff member and select the transport modes they are interested in</span></li>
+        <li><span class="step-num">4</span><span>Update the status as the lead progresses: <strong>New → Contacted → Qualified → Converted</strong></span></li>
+        <li><span class="step-num">5</span><span>Once qualified, click <strong>Convert to Client</strong> to automatically create a client profile from the lead data</span></li>
+      </ol>
+
+      <h3>活動</h3>
+      <p><strong>CRM → 活動</strong> で営業活動（電話、会議、メール）を記録します。各活動をリードまたは商談に紐付け、結果を記録し、フォローアップの予定を設定します。活動履歴により、営業マネージャーはチームの取り組みを完全に把握できます。</p>
+
+      <h3>商談</h3>
+      <p><strong>CRM → 商談</strong> で、見込み金額とクローズ確率とともに有望な案件を追跡します。商談はリードまたは既存のクライアントに紐付けることができます。パイプラインビューを使用して、各ステージの進捗を追跡し、売上を予測します。</p>
+    </div>
+
+  </div>
+</main>
+
+</div><!-- /layout -->
+<script>
+(function () {
+  if (window.self !== window.top) document.documentElement.classList.add('in-iframe');
+  var page = document.body.dataset.page;
+  if (page) {
+    document.querySelectorAll('.nav-item[data-page]').forEach(function(el) {
+      el.classList.toggle('active', el.dataset.page === page);
+    });
+  }
+  document.querySelectorAll('.nav-sub').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href') || '';
+      var hi = href.indexOf('#');
+      if (hi === -1) return;
+      var filePart = href.slice(0, hi);
+      var hash = href.slice(hi + 1);
+      var curFile = location.pathname.split('/').pop();
+      if (!filePart || filePart === curFile) {
+        e.preventDefault();
+        var target = document.getElementById(hash);
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.pushState(null, '', '#' + hash); }
+      }
+    });
+  });
+  var anchors = document.querySelectorAll('[id]');
+  var subLinks = document.querySelectorAll('.nav-sub');
+  if (anchors.length && subLinks.length) {
+    var curFile = location.pathname.split('/').pop();
+    function markSub() {
+      var cur = '';
+      anchors.forEach(function(el) { if (window.scrollY + 130 >= el.offsetTop) cur = el.id; });
+      subLinks.forEach(function(l) {
+        var href = l.getAttribute('href') || '';
+        var hi = href.indexOf('#');
+        if (hi === -1) return;
+        var fp = href.slice(0, hi); var hash = href.slice(hi + 1);
+        if (!fp || fp === curFile) l.classList.toggle('active', hash === cur);
+      });
+    }
+    window.addEventListener('scroll', markSub, { passive: true });
+    markSub();
+  }
+  var inp = document.getElementById('search-input');
+  var body = document.getElementById('page-content');
+  if (inp && body) {
+    var nodes = body.querySelectorAll('p, li, td, h2, h3, h4');
+    inp.addEventListener('input', function() {
+      var q = this.value.trim();
+      nodes.forEach(function(n) { n.innerHTML = n.innerHTML.replace(/<mark class="hl">(.*?)<\/mark>/gi, '$1'); });
+      if (!q) return;
+      var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      nodes.forEach(function(n) { if (re.test(n.textContent)) n.innerHTML = n.innerHTML.replace(re, '<mark class="hl">$1</mark>'); });
+      var first = body.querySelector('.hl');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+  if (location.hash) {
+    requestAnimationFrame(function() {
+      var el = document.getElementById(location.hash.slice(1));
+      if (el) el.scrollIntoView({ block: 'start' });
+    });
+  }
+})();
+</script>
+
+
+</body></html>

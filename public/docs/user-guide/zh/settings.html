@@ -1,0 +1,247 @@
+<!DOCTYPE html><html lang="zh"><head>
+  <script>
+(function(){
+  var lang='en';
+  try{var m=document.cookie.match(/(?:^|;\s*)user=([^;]*)/);if(m){var u=JSON.parse(decodeURIComponent(m[1]));if(u&&u.language)lang=u.language;}}catch(e){}
+  if(lang==='zh')return;
+  var f=location.pathname.split('/').pop();
+  if(lang==='en'){location.replace('../'+f);}else{location.replace('../'+lang+'/'+f);}
+})();
+</script>
+
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>系统设置 — Make Cargo 用户指南</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="settings">
+<div class="layout">
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <i class="ti ti-ship"></i><span>Make Cargo</span>
+    </a>
+    <div class="search-wrap">
+      <i class="ti ti-search"></i>
+      <input class="sidebar-search" type="text" placeholder="Search this page…" id="search-input" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">快速入门</div>
+    <a class="nav-item" href="index.html" data-page="index"><i class="ti ti-home"></i><span>概览</span></a>
+    <a class="nav-sub" href="index.html#login"><i class="ti ti-lock"></i><span>登录</span></a>
+    <a class="nav-sub" href="index.html#navigation"><i class="ti ti-compass"></i><span>导航</span></a>
+    <a class="nav-sub" href="index.html#language"><i class="ti ti-language"></i><span>语言与 RTL</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">核心模块</div>
+    <a class="nav-item" href="dashboard.html" data-page="dashboard"><i class="ti ti-layout-dashboard"></i><span>仪表盘</span></a>
+    <a class="nav-item" href="quotes.html" data-page="quotes"><i class="ti ti-file-invoice"></i><span>报价</span></a>
+    <a class="nav-item" href="shipments.html" data-page="shipments"><i class="ti ti-package"></i><span>货运订单</span></a>
+    <a class="nav-sub" href="shipments.html#tabs"><i class="ti ti-table-column"></i><span>详情标签页</span></a>
+    <a class="nav-sub" href="shipments.html#billing"><i class="ti ti-receipt"></i><span>开票与账单</span></a>
+    <a class="nav-item" href="consolidations.html" data-page="consolidations"><i class="ti ti-link"></i><span>拼箱/合并货运</span></a>
+    <a class="nav-item" href="clients.html" data-page="clients"><i class="ti ti-users"></i><span>客户</span></a>
+    <a class="nav-item" href="providers.html" data-page="providers"><i class="ti ti-building"></i><span>供应商</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">财务</div>
+    <a class="nav-item" href="accounting.html" data-page="accounting"><i class="ti ti-receipt-2"></i><span>财务会计</span></a>
+    <a class="nav-sub" href="accounting.html#invoices"><i class="ti ti-file-invoice"></i><span>单据类型</span></a>
+    <a class="nav-sub" href="accounting.html#soa"><i class="ti ti-report"></i><span>对账单</span></a>
+    <a class="nav-sub" href="accounting.html#payments"><i class="ti ti-credit-card"></i><span>付款与收款</span></a>
+    <a class="nav-sub" href="accounting.html#ageing"><i class="ti ti-clock"></i><span>账龄报表</span></a>
+    <a class="nav-sub" href="accounting.html#journal"><i class="ti ti-notebook"></i><span>日记账分录</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">定价</div>
+    <a class="nav-item" href="rates.html" data-page="rates"><i class="ti ti-coin"></i><span>费率</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">承运商</div>
+    <a class="nav-item" href="carrier-tools.html" data-page="carrier-tools"><i class="ti ti-ship"></i><span>承运商工具</span></a>
+    <a class="nav-sub" href="carrier-tools.html#vessel-sailing"><i class="ti ti-anchor"></i><span>船期查询</span></a>
+    <a class="nav-sub" href="carrier-tools.html#flight-schedule"><i class="ti ti-plane"></i><span>航班时刻表</span></a>
+    <a class="nav-sub" href="carrier-tools.html#container-tracking"><i class="ti ti-box"></i><span>集装箱追踪</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">仓库</div>
+    <a class="nav-item" href="warehouse.html" data-page="warehouse"><i class="ti ti-building-warehouse"></i><span>仓库</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">销售</div>
+    <a class="nav-item" href="crm.html" data-page="crm"><i class="ti ti-trending-up"></i><span>CRM</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">报表</div>
+    <a class="nav-item" href="reports.html" data-page="reports"><i class="ti ti-chart-bar"></i><span>报表</span></a>
+    <a class="nav-sub" href="reports.html#operations"><i class="ti ti-timeline"></i><span>运营</span></a>
+    <a class="nav-sub" href="reports.html#finance"><i class="ti ti-coins"></i><span>财务</span></a>
+    <a class="nav-sub" href="reports.html#analytics"><i class="ti ti-chart-dots"></i><span>数据分析与 KPI</span></a>
+    <a class="nav-sub" href="reports.html#compliance"><i class="ti ti-shield-check"></i><span>合规</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">系统管理</div>
+    <a class="nav-item" href="library.html" data-page="library"><i class="ti ti-books"></i><span>基础数据库</span></a>
+    <a class="nav-item" href="settings.html" data-page="settings"><i class="ti ti-settings"></i><span>系统设置</span></a>
+    <a class="nav-sub" href="settings.html#users"><i class="ti ti-user-cog"></i><span>用户与权限组</span></a>
+    <a class="nav-sub" href="settings.html#global-settings"><i class="ti ti-adjustments"></i><span>全局设置</span></a>
+    <a class="nav-sub" href="settings.html#branches"><i class="ti ti-building-skyscraper"></i><span>分公司/分支机构</span></a>
+    <a class="nav-sub" href="settings.html#integrations"><i class="ti ti-plug"></i><span>EDI 集成</span></a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="top-bar">
+    <div class="breadcrumb">
+      <a href="index.html"><i class="ti ti-home"></i></a>
+      <i class="ti ti-chevron-right"></i>
+      <span>系统设置</span>
+    </div>
+  </div>
+
+  <div class="content" id="page-content">
+
+    <div class="section" id="settings">
+      <div class="section-header">
+        <div class="section-icon"><i class="ti ti-settings"></i></div>
+        <h2>系统设置</h2>
+      </div>
+
+      <h3 id="users">用户与权限组</h3>
+      <p>前往 <strong>系统设置 → 用户</strong> 管理团队的访问权限：</p>
+      <ul>
+        <li><strong>邀请用户</strong> — 输入邮箱地址后，用户将收到设置密码的邀请链接</li>
+        <li><strong>分配权限组</strong> — 权限组根据用户角色定义权限（运营、财务、管理员）</li>
+        <li><strong>停用用户</strong> — 将用户切换为非活跃状态，在不删除历史记录的情况下撤销其访问权限</li>
+      </ul>
+      <p>前往 <strong>系统设置 → 权限组</strong> 管理权限组。对于每个权限组，您可以自定义每个模块允许执行的操作（查看、创建、编辑、删除）。</p>
+
+      <h3 id="global-settings">全局设置</h3>
+      <p>前往 <strong>系统设置 → 全局设置</strong> 配置组织级别的默认值：</p>
+      <ul>
+        <li><strong>基础货币</strong> — 用于 P&amp;L 和报表的默认货币</li>
+        <li><strong>汇率</strong> — 设置和更新多币种单据使用的外汇汇率</li>
+        <li><strong>报价单编号格式</strong> — 报价单号的自动编号格式（例如 <code>QT-{YYYY}-{SEQ}</code>）</li>
+        <li><strong>货运订单编号格式</strong> — 作业编号的自动编号格式</li>
+      </ul>
+
+      <h3>公司信息</h3>
+      <p>前往 <strong>系统设置 → 公司</strong> 管理您组织的基本信息：</p>
+      <ul>
+        <li>公司名称、徽标及注册地址</li>
+        <li>法律注册信息（公司注册号、税务识别号）</li>
+        <li>发票和付款说明中使用的银行账户信息</li>
+      </ul>
+      <div class="tip"><strong>提示：</strong> 公司徽标和详情将显示在所有生成的 PDF 文件中——包括发票、报价单、装箱单和 SOA。请保持此信息为最新状态。</div>
+
+      <h3 id="branches">分公司与部门</h3>
+      <p><strong>分公司</strong> 代表您的实体办公地点。每个货运订单、发票和财务单据均可分配至分公司，从而支持分公司级别的报表和 P&amp;L 核算。</p>
+      <p><strong>部门</strong> 是分公司内的成本中心，适用于部门级 P&amp;L 报告和预算分配。</p>
+
+      <h3>科目表</h3>
+      <p>前往 <strong>系统设置 → 科目表</strong> 定义您的 GL（总账）账户结构，涵盖资产、负债、权益、收入和费用。这些账户编码用于日记账分录和财务报告。</p>
+
+      <h3 id="integrations">EDI 集成</h3>
+      <p>前往 <strong>系统设置 → 集成连接器</strong> 配置与承运商系统、追踪服务商和贸易平台的连接。每个连接器需要：</p>
+      <ul>
+        <li>承运商或数据提供商提供的 API 凭证</li>
+        <li>将承运商状态代码转换为系统状态的数据映射规则</li>
+        <li>验证集成是否处于活跃和响应状态的连接测试</li>
+      </ul>
+      <div class="warning-box"><strong>Note:</strong> EDI connectors require IT or admin-level setup. Contact your system administrator or Make Cargo support when adding new integrations.</div>
+
+      <h3>个人档案</h3>
+      <p>点击任意页面右上角的头像，访问个人档案设置。在此您可以：</p>
+      <ul>
+        <li>更新您的姓名、邮箱地址和头像</li>
+        <li>修改密码</li>
+        <li>设置您的首选语言</li>
+        <li>配置通知偏好设置</li>
+      </ul>
+    </div>
+
+  </div>
+</main>
+
+</div><!-- /layout -->
+<script>
+(function () {
+  if (window.self !== window.top) document.documentElement.classList.add('in-iframe');
+  var page = document.body.dataset.page;
+  if (page) {
+    document.querySelectorAll('.nav-item[data-page]').forEach(function(el) {
+      el.classList.toggle('active', el.dataset.page === page);
+    });
+  }
+  document.querySelectorAll('.nav-sub').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href') || '';
+      var hi = href.indexOf('#');
+      if (hi === -1) return;
+      var filePart = href.slice(0, hi);
+      var hash = href.slice(hi + 1);
+      var curFile = location.pathname.split('/').pop();
+      if (!filePart || filePart === curFile) {
+        e.preventDefault();
+        var target = document.getElementById(hash);
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.pushState(null, '', '#' + hash); }
+      }
+    });
+  });
+  var anchors = document.querySelectorAll('[id]');
+  var subLinks = document.querySelectorAll('.nav-sub');
+  if (anchors.length && subLinks.length) {
+    var curFile = location.pathname.split('/').pop();
+    function markSub() {
+      var cur = '';
+      anchors.forEach(function(el) { if (window.scrollY + 130 >= el.offsetTop) cur = el.id; });
+      subLinks.forEach(function(l) {
+        var href = l.getAttribute('href') || '';
+        var hi = href.indexOf('#');
+        if (hi === -1) return;
+        var fp = href.slice(0, hi); var hash = href.slice(hi + 1);
+        if (!fp || fp === curFile) l.classList.toggle('active', hash === cur);
+      });
+    }
+    window.addEventListener('scroll', markSub, { passive: true });
+    markSub();
+  }
+  var inp = document.getElementById('search-input');
+  var body = document.getElementById('page-content');
+  if (inp && body) {
+    var nodes = body.querySelectorAll('p, li, td, h2, h3, h4');
+    inp.addEventListener('input', function() {
+      var q = this.value.trim();
+      nodes.forEach(function(n) { n.innerHTML = n.innerHTML.replace(/<mark class="hl">(.*?)<\/mark>/gi, '$1'); });
+      if (!q) return;
+      var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      nodes.forEach(function(n) { if (re.test(n.textContent)) n.innerHTML = n.innerHTML.replace(re, '<mark class="hl">$1</mark>'); });
+      var first = body.querySelector('.hl');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+  if (location.hash) {
+    requestAnimationFrame(function() {
+      var el = document.getElementById(location.hash.slice(1));
+      if (el) el.scrollIntoView({ block: 'start' });
+    });
+  }
+})();
+</script>
+
+
+</body></html>

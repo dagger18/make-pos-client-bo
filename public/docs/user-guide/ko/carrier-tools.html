@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="ko"><head>
+  <script>
+(function(){
+  var lang='en';
+  try{var m=document.cookie.match(/(?:^|;\s*)user=([^;]*)/);if(m){var u=JSON.parse(decodeURIComponent(m[1]));if(u&&u.language)lang=u.language;}}catch(e){}
+  if(lang==='ko')return;
+  var f=location.pathname.split('/').pop();
+  if(lang==='en'){location.replace('../'+f);}else{location.replace('../'+lang+'/'+f);}
+})();
+</script>
+
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>운송사 도구 — Make Cargo 사용 가이드</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="carrier-tools">
+<div class="layout">
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <i class="ti ti-ship"></i><span>Make Cargo</span>
+    </a>
+    <div class="search-wrap">
+      <i class="ti ti-search"></i>
+      <input class="sidebar-search" type="text" placeholder="Search this page…" id="search-input" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">시작하기</div>
+    <a class="nav-item" href="index.html" data-page="index"><i class="ti ti-home"></i><span>개요</span></a>
+    <a class="nav-sub" href="index.html#login"><i class="ti ti-lock"></i><span>로그인</span></a>
+    <a class="nav-sub" href="index.html#navigation"><i class="ti ti-compass"></i><span>탐색</span></a>
+    <a class="nav-sub" href="index.html#language"><i class="ti ti-language"></i><span>언어 &amp; RTL</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">핵심 모듈</div>
+    <a class="nav-item" href="dashboard.html" data-page="dashboard"><i class="ti ti-layout-dashboard"></i><span>대시보드</span></a>
+    <a class="nav-item" href="quotes.html" data-page="quotes"><i class="ti ti-file-invoice"></i><span>견적</span></a>
+    <a class="nav-item" href="shipments.html" data-page="shipments"><i class="ti ti-package"></i><span>화물 운송</span></a>
+    <a class="nav-sub" href="shipments.html#tabs"><i class="ti ti-table-column"></i><span>세부 탭</span></a>
+    <a class="nav-sub" href="shipments.html#billing"><i class="ti ti-receipt"></i><span>청구 &amp; 결제</span></a>
+    <a class="nav-item" href="consolidations.html" data-page="consolidations"><i class="ti ti-link"></i><span>혼재</span></a>
+    <a class="nav-item" href="clients.html" data-page="clients"><i class="ti ti-users"></i><span>클라이언트</span></a>
+    <a class="nav-item" href="providers.html" data-page="providers"><i class="ti ti-building"></i><span>공급업체</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">재무</div>
+    <a class="nav-item" href="accounting.html" data-page="accounting"><i class="ti ti-receipt-2"></i><span>회계</span></a>
+    <a class="nav-sub" href="accounting.html#invoices"><i class="ti ti-file-invoice"></i><span>문서 유형</span></a>
+    <a class="nav-sub" href="accounting.html#soa"><i class="ti ti-report"></i><span>거래 명세서</span></a>
+    <a class="nav-sub" href="accounting.html#payments"><i class="ti ti-credit-card"></i><span>지급 &amp; 영수증</span></a>
+    <a class="nav-sub" href="accounting.html#ageing"><i class="ti ti-clock"></i><span>연령 분석 보고서</span></a>
+    <a class="nav-sub" href="accounting.html#journal"><i class="ti ti-notebook"></i><span>분개 입력</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">요금 설정</div>
+    <a class="nav-item" href="rates.html" data-page="rates"><i class="ti ti-coin"></i><span>운임</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">운송사</div>
+    <a class="nav-item" href="carrier-tools.html" data-page="carrier-tools"><i class="ti ti-ship"></i><span>운송사 도구</span></a>
+    <a class="nav-sub" href="carrier-tools.html#vessel-sailing"><i class="ti ti-anchor"></i><span>선박 스케줄</span></a>
+    <a class="nav-sub" href="carrier-tools.html#flight-schedule"><i class="ti ti-plane"></i><span>항공 스케줄</span></a>
+    <a class="nav-sub" href="carrier-tools.html#container-tracking"><i class="ti ti-box"></i><span>컨테이너 추적</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">창고</div>
+    <a class="nav-item" href="warehouse.html" data-page="warehouse"><i class="ti ti-building-warehouse"></i><span>창고</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">영업</div>
+    <a class="nav-item" href="crm.html" data-page="crm"><i class="ti ti-trending-up"></i><span>CRM</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">보고서</div>
+    <a class="nav-item" href="reports.html" data-page="reports"><i class="ti ti-chart-bar"></i><span>보고서</span></a>
+    <a class="nav-sub" href="reports.html#operations"><i class="ti ti-timeline"></i><span>운영</span></a>
+    <a class="nav-sub" href="reports.html#finance"><i class="ti ti-coins"></i><span>재무</span></a>
+    <a class="nav-sub" href="reports.html#analytics"><i class="ti ti-chart-dots"></i><span>분석 &amp; KPI</span></a>
+    <a class="nav-sub" href="reports.html#compliance"><i class="ti ti-shield-check"></i><span>컴플라이언스</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">관리</div>
+    <a class="nav-item" href="library.html" data-page="library"><i class="ti ti-books"></i><span>라이브러리</span></a>
+    <a class="nav-item" href="settings.html" data-page="settings"><i class="ti ti-settings"></i><span>설정</span></a>
+    <a class="nav-sub" href="settings.html#users"><i class="ti ti-user-cog"></i><span>사용자 &amp; 그룹</span></a>
+    <a class="nav-sub" href="settings.html#global-settings"><i class="ti ti-adjustments"></i><span>전역 설정</span></a>
+    <a class="nav-sub" href="settings.html#branches"><i class="ti ti-building-skyscraper"></i><span>지점</span></a>
+    <a class="nav-sub" href="settings.html#integrations"><i class="ti ti-plug"></i><span>EDI 연동</span></a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="top-bar">
+    <div class="breadcrumb">
+      <a href="index.html"><i class="ti ti-home"></i></a>
+      <i class="ti ti-chevron-right"></i>
+      <span>운송사 도구</span>
+    </div>
+  </div>
+
+  <div class="content" id="page-content">
+
+    <div class="section" id="carrier-tools">
+      <div class="section-header">
+        <div class="section-icon"><i class="ti ti-ship"></i></div>
+        <h2>운송사 도구</h2>
+      </div>
+      <p>운송사 시스템과 연동된 실시간 스케줄 조회 및 컨테이너 추적 도구.</p>
+
+      <h3 id="vessel-sailing">선박 운항 스케줄</h3>
+      <p><strong>운송사 → 선박 스케줄</strong>로 이동하세요. UN/LOCODE 코드를 사용하여 POL과 POD를 입력하고（예：호치민시는 <code>VNCLI</code>）, 필요에 따라 ETD 시작일을 설정한 후 <strong>검색</strong>을 클릭합니다.</p>
+      <p>검색 결과에는 다음이 표시됩니다：</p>
+      <ul>
+        <li>선박명 및 항차 번호</li>
+        <li>운송사명</li>
+        <li>ETD（출항 예정일시）및 ETA（입항 예정일시）</li>
+        <li>운송 소요 일수</li>
+      </ul>
+      <p>검색은 기본적으로 60일 이내의 출항을 대상으로 합니다.</p>
+
+      <h3 id="flight-schedule">항공 스케줄</h3>
+      <p><strong>운송사 → 항공 스케줄</strong>로 이동하세요. IATA 공항 코드를 사용하여 출발지와 목적지를 입력하고（예：호치민시는 <code>SGN</code>，홍콩은 <code>HKG</code>）날짜를 선택합니다. <strong>검색</strong>을 클릭하면 이용 가능한 항공편, 출발·도착 시간, 경유 노선을 확인할 수 있습니다.</p>
+
+      <h3 id="container-tracking">컨테이너 추적</h3>
+      <p><strong>운송사 → 컨테이너 추적</strong>으로 이동하여 시스템에 있는 모든 컨테이너의 실시간 추적 상태를 확인하세요. 목록에는 다음이 표시됩니다：</p>
+      <ul>
+        <li>운송 참조 번호 및 운송사</li>
+        <li>컨테이너 번호</li>
+        <li>현재 추적 상태 및 최근 이벤트 설명</li>
+        <li>마지막 확인 시간 및 운송사 API 오류</li>
+      </ul>
+      <p><strong>새로 고침</strong>을 클릭하면 연결된 모든 운송사의 추적 컨테이너 상태가 즉시 업데이트됩니다.</p>
+    </div>
+
+  </div>
+</main>
+
+</div><!-- /layout -->
+<script>
+(function () {
+  if (window.self !== window.top) document.documentElement.classList.add('in-iframe');
+  var page = document.body.dataset.page;
+  if (page) {
+    document.querySelectorAll('.nav-item[data-page]').forEach(function(el) {
+      el.classList.toggle('active', el.dataset.page === page);
+    });
+  }
+  document.querySelectorAll('.nav-sub').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href') || '';
+      var hi = href.indexOf('#');
+      if (hi === -1) return;
+      var filePart = href.slice(0, hi);
+      var hash = href.slice(hi + 1);
+      var curFile = location.pathname.split('/').pop();
+      if (!filePart || filePart === curFile) {
+        e.preventDefault();
+        var target = document.getElementById(hash);
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.pushState(null, '', '#' + hash); }
+      }
+    });
+  });
+  var anchors = document.querySelectorAll('[id]');
+  var subLinks = document.querySelectorAll('.nav-sub');
+  if (anchors.length && subLinks.length) {
+    var curFile = location.pathname.split('/').pop();
+    function markSub() {
+      var cur = '';
+      anchors.forEach(function(el) { if (window.scrollY + 130 >= el.offsetTop) cur = el.id; });
+      subLinks.forEach(function(l) {
+        var href = l.getAttribute('href') || '';
+        var hi = href.indexOf('#');
+        if (hi === -1) return;
+        var fp = href.slice(0, hi); var hash = href.slice(hi + 1);
+        if (!fp || fp === curFile) l.classList.toggle('active', hash === cur);
+      });
+    }
+    window.addEventListener('scroll', markSub, { passive: true });
+    markSub();
+  }
+  var inp = document.getElementById('search-input');
+  var body = document.getElementById('page-content');
+  if (inp && body) {
+    var nodes = body.querySelectorAll('p, li, td, h2, h3, h4');
+    inp.addEventListener('input', function() {
+      var q = this.value.trim();
+      nodes.forEach(function(n) { n.innerHTML = n.innerHTML.replace(/<mark class="hl">(.*?)<\/mark>/gi, '$1'); });
+      if (!q) return;
+      var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      nodes.forEach(function(n) { if (re.test(n.textContent)) n.innerHTML = n.innerHTML.replace(re, '<mark class="hl">$1</mark>'); });
+      var first = body.querySelector('.hl');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+  if (location.hash) {
+    requestAnimationFrame(function() {
+      var el = document.getElementById(location.hash.slice(1));
+      if (el) el.scrollIntoView({ block: 'start' });
+    });
+  }
+})();
+</script>
+
+
+</body></html>

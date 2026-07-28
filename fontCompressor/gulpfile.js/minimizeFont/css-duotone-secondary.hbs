@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "{{ name }}";
+    src: {{{ fontSrc }}};
+    font-display: swap;
+}
+
+{{ selector }}:after {
+    font-family: {{ name }} !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inherit !important;
+}
+
+{{# each codepoints }}
+.{{ ../prefix }}-{{ @key }}:after {
+    content: "\\{{ codepoint this }}";
+}
+{{/ each }}

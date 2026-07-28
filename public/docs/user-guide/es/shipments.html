@@ -1,0 +1,251 @@
+<!DOCTYPE html><html lang="es"><head>
+  <script>
+(function(){
+  var lang='en';
+  try{var m=document.cookie.match(/(?:^|;\s*)user=([^;]*)/);if(m){var u=JSON.parse(decodeURIComponent(m[1]));if(u&&u.language)lang=u.language;}}catch(e){}
+  if(lang==='es')return;
+  var f=location.pathname.split('/').pop();
+  if(lang==='en'){location.replace('../'+f);}else{location.replace('../'+lang+'/'+f);}
+})();
+</script>
+
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envíos — Guía de usuario de Make Cargo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="shipments">
+<div class="layout">
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <i class="ti ti-ship"></i><span>Make Cargo</span>
+    </a>
+    <div class="search-wrap">
+      <i class="ti ti-search"></i>
+      <input class="sidebar-search" type="text" placeholder="Search this page…" id="search-input" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Primeros pasos</div>
+    <a class="nav-item" href="index.html" data-page="index"><i class="ti ti-home"></i><span>Descripción general</span></a>
+    <a class="nav-sub" href="index.html#login"><i class="ti ti-lock"></i><span>Inicio de sesión</span></a>
+    <a class="nav-sub" href="index.html#navigation"><i class="ti ti-compass"></i><span>Navegación</span></a>
+    <a class="nav-sub" href="index.html#language"><i class="ti ti-language"></i><span>Idioma y RTL</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Módulos principales</div>
+    <a class="nav-item" href="dashboard.html" data-page="dashboard"><i class="ti ti-layout-dashboard"></i><span>Panel de control</span></a>
+    <a class="nav-item" href="quotes.html" data-page="quotes"><i class="ti ti-file-invoice"></i><span>Cotizaciones</span></a>
+    <a class="nav-item" href="shipments.html" data-page="shipments"><i class="ti ti-package"></i><span>Envíos</span></a>
+    <a class="nav-sub" href="shipments.html#tabs"><i class="ti ti-table-column"></i><span>Pestañas de detalle</span></a>
+    <a class="nav-sub" href="shipments.html#billing"><i class="ti ti-receipt"></i><span>Facturación y cobro</span></a>
+    <a class="nav-item" href="consolidations.html" data-page="consolidations"><i class="ti ti-link"></i><span>Consolidaciones</span></a>
+    <a class="nav-item" href="clients.html" data-page="clients"><i class="ti ti-users"></i><span>Clientes</span></a>
+    <a class="nav-item" href="providers.html" data-page="providers"><i class="ti ti-building"></i><span>Proveedores</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Finanzas</div>
+    <a class="nav-item" href="accounting.html" data-page="accounting"><i class="ti ti-receipt-2"></i><span>Contabilidad</span></a>
+    <a class="nav-sub" href="accounting.html#invoices"><i class="ti ti-file-invoice"></i><span>Tipos de documentos</span></a>
+    <a class="nav-sub" href="accounting.html#soa"><i class="ti ti-report"></i><span>Estado de cuenta</span></a>
+    <a class="nav-sub" href="accounting.html#payments"><i class="ti ti-credit-card"></i><span>Pagos y recibos</span></a>
+    <a class="nav-sub" href="accounting.html#ageing"><i class="ti ti-clock"></i><span>Informes de antigüedad</span></a>
+    <a class="nav-sub" href="accounting.html#journal"><i class="ti ti-notebook"></i><span>Asientos contables</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Precios</div>
+    <a class="nav-item" href="rates.html" data-page="rates"><i class="ti ti-coin"></i><span>Tarifas</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Transportistas</div>
+    <a class="nav-item" href="carrier-tools.html" data-page="carrier-tools"><i class="ti ti-ship"></i><span>Herramientas de transportistas</span></a>
+    <a class="nav-sub" href="carrier-tools.html#vessel-sailing"><i class="ti ti-anchor"></i><span>Salida de buques</span></a>
+    <a class="nav-sub" href="carrier-tools.html#flight-schedule"><i class="ti ti-plane"></i><span>Horario de vuelos</span></a>
+    <a class="nav-sub" href="carrier-tools.html#container-tracking"><i class="ti ti-box"></i><span>Seguimiento de contenedores</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Almacén</div>
+    <a class="nav-item" href="warehouse.html" data-page="warehouse"><i class="ti ti-building-warehouse"></i><span>Almacén</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Ventas</div>
+    <a class="nav-item" href="crm.html" data-page="crm"><i class="ti ti-trending-up"></i><span>CRM</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Informes</div>
+    <a class="nav-item" href="reports.html" data-page="reports"><i class="ti ti-chart-bar"></i><span>Informes</span></a>
+    <a class="nav-sub" href="reports.html#operations"><i class="ti ti-timeline"></i><span>Operaciones</span></a>
+    <a class="nav-sub" href="reports.html#finance"><i class="ti ti-coins"></i><span>Finanzas</span></a>
+    <a class="nav-sub" href="reports.html#analytics"><i class="ti ti-chart-dots"></i><span>Análisis e indicadores clave</span></a>
+    <a class="nav-sub" href="reports.html#compliance"><i class="ti ti-shield-check"></i><span>Cumplimiento normativo</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Administración</div>
+    <a class="nav-item" href="library.html" data-page="library"><i class="ti ti-books"></i><span>Biblioteca</span></a>
+    <a class="nav-item" href="settings.html" data-page="settings"><i class="ti ti-settings"></i><span>Configuración</span></a>
+    <a class="nav-sub" href="settings.html#users"><i class="ti ti-user-cog"></i><span>Usuarios y grupos</span></a>
+    <a class="nav-sub" href="settings.html#global-settings"><i class="ti ti-adjustments"></i><span>Configuración global</span></a>
+    <a class="nav-sub" href="settings.html#branches"><i class="ti ti-building-skyscraper"></i><span>Sucursales</span></a>
+    <a class="nav-sub" href="settings.html#integrations"><i class="ti ti-plug"></i><span>Integraciones EDI</span></a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="top-bar">
+    <div class="breadcrumb">
+      <a href="index.html"><i class="ti ti-home"></i></a>
+      <i class="ti ti-chevron-right"></i>
+      <span>Envíos</span>
+    </div>
+  </div>
+
+  <div class="content" id="page-content">
+
+    <div class="section" id="shipments">
+      <div class="section-header">
+        <div class="section-icon"><i class="ti ti-package"></i></div>
+        <h2>Envíos</h2>
+      </div>
+      <p>Los envíos son la unidad operativa central. Cada uno representa un trabajo de carga desde el origen hasta el destino.</p>
+
+      <h3>Crear un envío</h3>
+      <ol class="steps">
+        <li><span class="step-num">1</span><span>Go to <strong>Shipments</strong>, select a transport mode tab, or click <strong>New Shipment</strong> from the Dashboard</span></li>
+        <li><span class="step-num">2</span><span>Choose transport mode and service type (FCL, LCL, FTL, LTL, etc.)</span></li>
+        <li><span class="step-num">3</span><span>Enter client, POL (Port of Loading), POD (Port of Discharge), ETD, and ETA</span></li>
+        <li><span class="step-num">4</span><span>Add cargo details: commodity, container count, weight, volume</span></li>
+        <li><span class="step-num">5</span><span>Click <strong>Save</strong>. The shipment is created with status <strong>Draft</strong>.</span></li>
+      </ol>
+
+      <h3>Estados de envío</h3>
+      <div class="status-grid">
+        <span class="status-chip" style="background:#f1f5f9;color:#475569;">Draft</span>
+        <span class="status-chip" style="background:#dbeafe;color:#1d4ed8;">Booked</span>
+        <span class="status-chip" style="background:#ede9fe;color:#5b21b6;">In Transit</span>
+        <span class="status-chip" style="background:#d1fae5;color:#065f46;">Delivered</span>
+        <span class="status-chip" style="background:#fee2e2;color:#991b1b;">Cancelled</span>
+      </div>
+
+      <h3 id="tabs">Pestañas de detalle</h3>
+      <p>Cada registro de envío contiene múltiples pestañas que cubren todos los aspectos del trabajo de carga:</p>
+      <table>
+        <thead>
+          <tr><th>Tab</th><th>What's here</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Header</strong></td><td>Core details — parties, route, dates, service type, MBL/MAWB, vessel/flight, container numbers</td></tr>
+          <tr><td><strong>Cargo</strong></td><td>Commodity lines, package types, weight, volume, HS codes, dangerous goods</td></tr>
+          <tr><td><strong>Parties</strong></td><td>Shipper, consignee, notify party, agent, co-loader</td></tr>
+          <tr><td><strong>Cost Sheet</strong></td><td>All revenue and cost charge lines, gross profit, margin. Lock when accounting is closed.</td></tr>
+          <tr><td><strong>Documents</strong></td><td>Upload and manage shipment documents (BL, invoice, packing list, COO, etc.)</td></tr>
+          <tr><td><strong>Milestones</strong></td><td>Key event timestamps: booking confirmed, departed, arrived, customs cleared, delivered</td></tr>
+          <tr><td><strong>Tasks</strong></td><td>Assign and track to-do items for the team</td></tr>
+          <tr><td><strong>Notes</strong></td><td>Internal notes and comments thread</td></tr>
+          <tr><td><strong>Activities</strong></td><td>Full event log — every change, message, and update</td></tr>
+          <tr><td><strong>Customs</strong></td><td>Customs entry declarations, duty payments, clearance status</td></tr>
+          <tr><td><strong>Insurance</strong></td><td>Cargo insurance details, coverage amount, policy reference</td></tr>
+          <tr><td><strong>D&amp;D</strong></td><td>Demurrage &amp; Detention — free days, start date, dispute/return management</td></tr>
+        </tbody>
+      </table>
+
+      <h3 id="billing">Facturación y cobro</h3>
+      <p>Todas las acciones de facturación se inician desde la pestaña <strong>Hoja de costos</strong> de un envío:</p>
+      <ul>
+        <li><strong>Generar nota de débito (ID)</strong> — cobrar al cliente los cargos del lado de venta</li>
+        <li><strong>Generar nota de crédito (IC)</strong> — registrar el costo del proveedor</li>
+        <li><strong>Ver PyG</strong> — ver ingresos vs. costos y margen bruto del envío</li>
+        <li><strong>Cerrar contabilidad</strong> — bloquear la hoja de costos una vez finalizada la facturación</li>
+      </ul>
+
+      <h3>Replicar un envío</h3>
+      <p>Use la acción <strong>Replicar</strong> en cualquier envío para crear un nuevo borrador prellenado con los mismos detalles: cliente, ruta, carga y líneas de cargo. Esto es útil para rutas comerciales recurrentes con el mismo cliente.</p>
+
+      <h3>Manifiesto</h3>
+      <p>Navegue a <strong>Envíos → Manifiesto</strong> para generar un informe de manifiesto de carga a través de múltiples envíos para un buque o vuelo determinado. El manifiesto puede exportarse como PDF o Excel para su presentación a transportistas o autoridades portuarias.</p>
+    </div>
+
+  </div>
+</main>
+
+</div><!-- /layout -->
+<script>
+(function () {
+  if (window.self !== window.top) document.documentElement.classList.add('in-iframe');
+  var page = document.body.dataset.page;
+  if (page) {
+    document.querySelectorAll('.nav-item[data-page]').forEach(function(el) {
+      el.classList.toggle('active', el.dataset.page === page);
+    });
+  }
+  document.querySelectorAll('.nav-sub').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href') || '';
+      var hi = href.indexOf('#');
+      if (hi === -1) return;
+      var filePart = href.slice(0, hi);
+      var hash = href.slice(hi + 1);
+      var curFile = location.pathname.split('/').pop();
+      if (!filePart || filePart === curFile) {
+        e.preventDefault();
+        var target = document.getElementById(hash);
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.pushState(null, '', '#' + hash); }
+      }
+    });
+  });
+  var anchors = document.querySelectorAll('[id]');
+  var subLinks = document.querySelectorAll('.nav-sub');
+  if (anchors.length && subLinks.length) {
+    var curFile = location.pathname.split('/').pop();
+    function markSub() {
+      var cur = '';
+      anchors.forEach(function(el) { if (window.scrollY + 130 >= el.offsetTop) cur = el.id; });
+      subLinks.forEach(function(l) {
+        var href = l.getAttribute('href') || '';
+        var hi = href.indexOf('#');
+        if (hi === -1) return;
+        var fp = href.slice(0, hi); var hash = href.slice(hi + 1);
+        if (!fp || fp === curFile) l.classList.toggle('active', hash === cur);
+      });
+    }
+    window.addEventListener('scroll', markSub, { passive: true });
+    markSub();
+  }
+  var inp = document.getElementById('search-input');
+  var body = document.getElementById('page-content');
+  if (inp && body) {
+    var nodes = body.querySelectorAll('p, li, td, h2, h3, h4');
+    inp.addEventListener('input', function() {
+      var q = this.value.trim();
+      nodes.forEach(function(n) { n.innerHTML = n.innerHTML.replace(/<mark class="hl">(.*?)<\/mark>/gi, '$1'); });
+      if (!q) return;
+      var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      nodes.forEach(function(n) { if (re.test(n.textContent)) n.innerHTML = n.innerHTML.replace(re, '<mark class="hl">$1</mark>'); });
+      var first = body.querySelector('.hl');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+  if (location.hash) {
+    requestAnimationFrame(function() {
+      var el = document.getElementById(location.hash.slice(1));
+      if (el) el.scrollIntoView({ block: 'start' });
+    });
+  }
+})();
+</script>
+
+
+</body></html>

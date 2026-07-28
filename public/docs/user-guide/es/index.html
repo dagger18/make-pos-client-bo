@@ -1,0 +1,302 @@
+<!DOCTYPE html><html lang="es"><head>
+  <script>
+(function(){
+  var lang='en';
+  try{var m=document.cookie.match(/(?:^|;\s*)user=([^;]*)/);if(m){var u=JSON.parse(decodeURIComponent(m[1]));if(u&&u.language)lang=u.language;}}catch(e){}
+  if(lang==='es')return;
+  var f=location.pathname.split('/').pop();
+  if(lang==='en'){location.replace('../'+f);}else{location.replace('../'+lang+'/'+f);}
+})();
+</script>
+
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descripción general — Guía de usuario de Make Cargo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="index">
+<div class="layout">
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <i class="ti ti-ship"></i><span>Make Cargo</span>
+    </a>
+    <div class="search-wrap">
+      <i class="ti ti-search"></i>
+      <input class="sidebar-search" type="text" placeholder="Search this page…" id="search-input" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Primeros pasos</div>
+    <a class="nav-item" href="index.html" data-page="index"><i class="ti ti-home"></i><span>Descripción general</span></a>
+    <a class="nav-sub" href="index.html#login"><i class="ti ti-lock"></i><span>Inicio de sesión</span></a>
+    <a class="nav-sub" href="index.html#navigation"><i class="ti ti-compass"></i><span>Navegación</span></a>
+    <a class="nav-sub" href="index.html#language"><i class="ti ti-language"></i><span>Idioma y RTL</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Módulos principales</div>
+    <a class="nav-item" href="dashboard.html" data-page="dashboard"><i class="ti ti-layout-dashboard"></i><span>Panel de control</span></a>
+    <a class="nav-item" href="quotes.html" data-page="quotes"><i class="ti ti-file-invoice"></i><span>Cotizaciones</span></a>
+    <a class="nav-item" href="shipments.html" data-page="shipments"><i class="ti ti-package"></i><span>Envíos</span></a>
+    <a class="nav-sub" href="shipments.html#tabs"><i class="ti ti-table-column"></i><span>Pestañas de detalle</span></a>
+    <a class="nav-sub" href="shipments.html#billing"><i class="ti ti-receipt"></i><span>Facturación y cobro</span></a>
+    <a class="nav-item" href="consolidations.html" data-page="consolidations"><i class="ti ti-link"></i><span>Consolidaciones</span></a>
+    <a class="nav-item" href="clients.html" data-page="clients"><i class="ti ti-users"></i><span>Clientes</span></a>
+    <a class="nav-item" href="providers.html" data-page="providers"><i class="ti ti-building"></i><span>Proveedores</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Finanzas</div>
+    <a class="nav-item" href="accounting.html" data-page="accounting"><i class="ti ti-receipt-2"></i><span>Contabilidad</span></a>
+    <a class="nav-sub" href="accounting.html#invoices"><i class="ti ti-file-invoice"></i><span>Tipos de documentos</span></a>
+    <a class="nav-sub" href="accounting.html#soa"><i class="ti ti-report"></i><span>Estado de cuenta</span></a>
+    <a class="nav-sub" href="accounting.html#payments"><i class="ti ti-credit-card"></i><span>Pagos y recibos</span></a>
+    <a class="nav-sub" href="accounting.html#ageing"><i class="ti ti-clock"></i><span>Informes de antigüedad</span></a>
+    <a class="nav-sub" href="accounting.html#journal"><i class="ti ti-notebook"></i><span>Asientos contables</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Precios</div>
+    <a class="nav-item" href="rates.html" data-page="rates"><i class="ti ti-coin"></i><span>Tarifas</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Transportistas</div>
+    <a class="nav-item" href="carrier-tools.html" data-page="carrier-tools"><i class="ti ti-ship"></i><span>Herramientas de transportistas</span></a>
+    <a class="nav-sub" href="carrier-tools.html#vessel-sailing"><i class="ti ti-anchor"></i><span>Salida de buques</span></a>
+    <a class="nav-sub" href="carrier-tools.html#flight-schedule"><i class="ti ti-plane"></i><span>Horario de vuelos</span></a>
+    <a class="nav-sub" href="carrier-tools.html#container-tracking"><i class="ti ti-box"></i><span>Seguimiento de contenedores</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Almacén</div>
+    <a class="nav-item" href="warehouse.html" data-page="warehouse"><i class="ti ti-building-warehouse"></i><span>Almacén</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Ventas</div>
+    <a class="nav-item" href="crm.html" data-page="crm"><i class="ti ti-trending-up"></i><span>CRM</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Informes</div>
+    <a class="nav-item" href="reports.html" data-page="reports"><i class="ti ti-chart-bar"></i><span>Informes</span></a>
+    <a class="nav-sub" href="reports.html#operations"><i class="ti ti-timeline"></i><span>Operaciones</span></a>
+    <a class="nav-sub" href="reports.html#finance"><i class="ti ti-coins"></i><span>Finanzas</span></a>
+    <a class="nav-sub" href="reports.html#analytics"><i class="ti ti-chart-dots"></i><span>Análisis e indicadores clave</span></a>
+    <a class="nav-sub" href="reports.html#compliance"><i class="ti ti-shield-check"></i><span>Cumplimiento normativo</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Administración</div>
+    <a class="nav-item" href="library.html" data-page="library"><i class="ti ti-books"></i><span>Biblioteca</span></a>
+    <a class="nav-item" href="settings.html" data-page="settings"><i class="ti ti-settings"></i><span>Configuración</span></a>
+    <a class="nav-sub" href="settings.html#users"><i class="ti ti-user-cog"></i><span>Usuarios y grupos</span></a>
+    <a class="nav-sub" href="settings.html#global-settings"><i class="ti ti-adjustments"></i><span>Configuración global</span></a>
+    <a class="nav-sub" href="settings.html#branches"><i class="ti ti-building-skyscraper"></i><span>Sucursales</span></a>
+    <a class="nav-sub" href="settings.html#integrations"><i class="ti ti-plug"></i><span>Integraciones EDI</span></a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="top-bar">
+    <div class="breadcrumb">
+      <i class="ti ti-home"></i>
+      <span>Descripción general</span>
+    </div>
+  </div>
+
+  <div class="content" id="page-content">
+
+    <div class="section" id="overview">
+      <div class="section-header">
+        <div class="section-icon"><i class="ti ti-home"></i></div>
+        <h2>Descripción general</h2>
+      </div>
+      <p>Make Cargo es una plataforma de back-office de agencia de carga integral que cubre precios, cotizaciones, ejecución de envíos, gestión financiera e informes de cumplimiento normativo.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>Modos de transporte</h3>
+          <ul>
+            <li>Marítimo — FCL &amp; LCL</li>
+            <li>Aéreo</li>
+            <li>Terrestre — FTL &amp; LTL</li>
+            <li>Ferroviario</li>
+            <li>Mensajería</li>
+            <li>Multimodal</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Flujo de trabajo típico</h3>
+          <div class="workflow">
+            <div class="workflow-step">Rate Setup</div>
+            <div class="workflow-arrow"><i class="ti ti-arrow-right"></i></div>
+            <div class="workflow-step">Quote</div>
+            <div class="workflow-arrow"><i class="ti ti-arrow-right"></i></div>
+            <div class="workflow-step">Shipment</div>
+            <div class="workflow-arrow"><i class="ti ti-arrow-right"></i></div>
+            <div class="workflow-step">Invoice</div>
+            <div class="workflow-arrow"><i class="ti ti-arrow-right"></i></div>
+            <div class="workflow-step">Payment</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Ir a un módulo</h3>
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a> — Real-time operational overview</li>
+          <li><a href="quotes.html">Quotes</a> — Create and manage shipping quotations</li>
+          <li><a href="shipments.html">Shipments</a> — Core freight job management</li>
+          <li><a href="consolidations.html">Consolidations</a> — Group LCL shipments into containers</li>
+          <li><a href="clients.html">Clients</a> — Customer profiles and billing history</li>
+          <li><a href="providers.html">Providers</a> — Carrier and vendor management</li>
+          <li><a href="accounting.html">Accounting</a> — Invoices, payments, and financial documents</li>
+          <li><a href="rates.html">Rates</a> — Buying and selling price lists</li>
+          <li><a href="carrier-tools.html">Carrier Tools</a> — Schedules and container tracking</li>
+          <li><a href="warehouse.html">Warehouse</a> — CFS and inventory management</li>
+          <li><a href="crm.html">CRM</a> — Sales pipeline and leads</li>
+          <li><a href="reports.html">Reports</a> — Operational, financial, and compliance reports</li>
+          <li><a href="library.html">Library</a> — Master reference data</li>
+          <li><a href="settings.html">Settings</a> — Users, branches, integrations</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section" id="login">
+      <div class="section-header">
+        <div class="section-icon"><i class="ti ti-lock"></i></div>
+        <h2>Inicio de sesión</h2>
+      </div>
+      <ol class="steps">
+        <li><span class="step-num">1</span><span>Go to your company's Make Cargo URL (e.g., <code>app.makecargo.io</code>)</span></li>
+        <li><span class="step-num">2</span><span>Enter your username (email) and password</span></li>
+        <li><span class="step-num">3</span><span>Click <strong>Login</strong>. You will be taken to the Dashboard.</span></li>
+      </ol>
+      <p><strong>Forgot Password?</strong> Click the "Forgot Password?" link on the login page and enter your email address. A password reset link will be sent to your inbox.</p>
+      <p><strong>Enlace de invitación:</strong> Los nuevos usuarios reciben un correo de invitación con un enlace para establecer su contraseña. El enlace expira después de 48 horas: contacte a su administrador si ha expirado.</p>
+    </div>
+
+    <div class="section" id="navigation">
+      <div class="section-header">
+        <div class="section-icon"><i class="ti ti-compass"></i></div>
+        <h2>Navegación</h2>
+      </div>
+      <p>The left sidebar provides access to all modules. Sub-tabs become visible after opening a module. The top-right corner shows your profile avatar, notification bell, and language switcher. A red badge <span class="badge badge-danger">●</span> appears on items that require attention or have new activity.</p>
+
+      <table>
+        <thead>
+          <tr><th>Section</th><th>Contains</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Getting Started</td><td>Overview, login, language</td></tr>
+          <tr><td>Core Modules</td><td>Dashboard, Quotes, Shipments, Consolidations, Clients, Providers</td></tr>
+          <tr><td>Finance</td><td>Accounting</td></tr>
+          <tr><td>Pricing</td><td>Rates</td></tr>
+          <tr><td>Carriers</td><td>Vessel Sailing, Flight Schedule, Container Tracking</td></tr>
+          <tr><td>Warehouse</td><td>Warehouse</td></tr>
+          <tr><td>Sales</td><td>CRM</td></tr>
+          <tr><td>Reports</td><td>Operations, Finance, Analytics, Compliance</td></tr>
+          <tr><td>Administration</td><td>Library, Settings</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section" id="language">
+      <div class="section-header">
+        <div class="section-icon"><i class="ti ti-language"></i></div>
+        <h2>Compatibilidad con idiomas y RTL</h2>
+      </div>
+      <p>Make Cargo admite varios idiomas. Cambie su idioma en cualquier momento usando el selector de idioma en la esquina superior derecha de la aplicación.</p>
+      <div class="status-grid">
+        <span class="status-chip" style="background:#e0e7ff;color:#3730a3;">English</span>
+        <span class="status-chip" style="background:#fce7f3;color:#9d174d;">中文 (Simplified)</span>
+        <span class="status-chip" style="background:#d1fae5;color:#065f46;">Tiếng Việt</span>
+        <span class="status-chip" style="background:#fef3c7;color:#92400e;">日本語</span>
+        <span class="status-chip" style="background:#ede9fe;color:#5b21b6;">한국어</span>
+        <span class="status-chip" style="background:#fee2e2;color:#991b1b;">Deutsch</span>
+        <span class="status-chip" style="background:#fff7ed;color:#9a3412;">Español</span>
+        <span class="status-chip" style="background:#f0fdf4;color:#166534;">العربية (RTL)</span>
+      </div>
+      <p>Cuando se selecciona el árabe, toda la interfaz cambia al diseño de derecha a izquierda (RTL): las barras laterales, la alineación del texto y el flujo se reflejan automáticamente.</p>
+      <p>Su preferencia de idioma se guarda en su perfil y persiste en todas las sesiones y dispositivos.</p>
+    </div>
+
+  </div>
+</main>
+
+</div><!-- /layout -->
+<script>
+(function () {
+  if (window.self !== window.top) document.documentElement.classList.add('in-iframe');
+  var page = document.body.dataset.page;
+  if (page) {
+    document.querySelectorAll('.nav-item[data-page]').forEach(function(el) {
+      el.classList.toggle('active', el.dataset.page === page);
+    });
+  }
+  document.querySelectorAll('.nav-sub').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href') || '';
+      var hi = href.indexOf('#');
+      if (hi === -1) return;
+      var filePart = href.slice(0, hi);
+      var hash = href.slice(hi + 1);
+      var curFile = location.pathname.split('/').pop();
+      if (!filePart || filePart === curFile) {
+        e.preventDefault();
+        var target = document.getElementById(hash);
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.pushState(null, '', '#' + hash); }
+      }
+    });
+  });
+  var anchors = document.querySelectorAll('[id]');
+  var subLinks = document.querySelectorAll('.nav-sub');
+  if (anchors.length && subLinks.length) {
+    var curFile = location.pathname.split('/').pop();
+    function markSub() {
+      var cur = '';
+      anchors.forEach(function(el) { if (window.scrollY + 130 >= el.offsetTop) cur = el.id; });
+      subLinks.forEach(function(l) {
+        var href = l.getAttribute('href') || '';
+        var hi = href.indexOf('#');
+        if (hi === -1) return;
+        var fp = href.slice(0, hi); var hash = href.slice(hi + 1);
+        if (!fp || fp === curFile) l.classList.toggle('active', hash === cur);
+      });
+    }
+    window.addEventListener('scroll', markSub, { passive: true });
+    markSub();
+  }
+  var inp = document.getElementById('search-input');
+  var body = document.getElementById('page-content');
+  if (inp && body) {
+    var nodes = body.querySelectorAll('p, li, td, h2, h3, h4');
+    inp.addEventListener('input', function() {
+      var q = this.value.trim();
+      nodes.forEach(function(n) { n.innerHTML = n.innerHTML.replace(/<mark class="hl">(.*?)<\/mark>/gi, '$1'); });
+      if (!q) return;
+      var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      nodes.forEach(function(n) { if (re.test(n.textContent)) n.innerHTML = n.innerHTML.replace(re, '<mark class="hl">$1</mark>'); });
+      var first = body.querySelector('.hl');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+  if (location.hash) {
+    requestAnimationFrame(function() {
+      var el = document.getElementById(location.hash.slice(1));
+      if (el) el.scrollIntoView({ block: 'start' });
+    });
+  }
+})();
+</script>
+
+
+</body></html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html><html lang="ja"><head>
+  <script>
+(function(){
+  var lang='en';
+  try{var m=document.cookie.match(/(?:^|;\s*)user=([^;]*)/);if(m){var u=JSON.parse(decodeURIComponent(m[1]));if(u&&u.language)lang=u.language;}}catch(e){}
+  if(lang==='ja')return;
+  var f=location.pathname.split('/').pop();
+  if(lang==='en'){location.replace('../'+f);}else{location.replace('../'+lang+'/'+f);}
+})();
+</script>
+
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>会計 — Make Cargo ユーザーガイド</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="accounting">
+<div class="layout">
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <i class="ti ti-ship"></i><span>Make Cargo</span>
+    </a>
+    <div class="search-wrap">
+      <i class="ti ti-search"></i>
+      <input class="sidebar-search" type="text" placeholder="Search this page…" id="search-input" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">はじめに</div>
+    <a class="nav-item" href="index.html" data-page="index"><i class="ti ti-home"></i><span>概要</span></a>
+    <a class="nav-sub" href="index.html#login"><i class="ti ti-lock"></i><span>ログイン</span></a>
+    <a class="nav-sub" href="index.html#navigation"><i class="ti ti-compass"></i><span>ナビゲーション</span></a>
+    <a class="nav-sub" href="index.html#language"><i class="ti ti-language"></i><span>言語 &amp; RTL</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">コアモジュール</div>
+    <a class="nav-item" href="dashboard.html" data-page="dashboard"><i class="ti ti-layout-dashboard"></i><span>ダッシュボード</span></a>
+    <a class="nav-item" href="quotes.html" data-page="quotes"><i class="ti ti-file-invoice"></i><span>見積もり</span></a>
+    <a class="nav-item" href="shipments.html" data-page="shipments"><i class="ti ti-package"></i><span>貨物輸送</span></a>
+    <a class="nav-sub" href="shipments.html#tabs"><i class="ti ti-table-column"></i><span>詳細タブ</span></a>
+    <a class="nav-sub" href="shipments.html#billing"><i class="ti ti-receipt"></i><span>請求 &amp; 支払い</span></a>
+    <a class="nav-item" href="consolidations.html" data-page="consolidations"><i class="ti ti-link"></i><span>混載</span></a>
+    <a class="nav-item" href="clients.html" data-page="clients"><i class="ti ti-users"></i><span>クライアント</span></a>
+    <a class="nav-item" href="providers.html" data-page="providers"><i class="ti ti-building"></i><span>プロバイダー</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">財務</div>
+    <a class="nav-item" href="accounting.html" data-page="accounting"><i class="ti ti-receipt-2"></i><span>会計</span></a>
+    <a class="nav-sub" href="accounting.html#invoices"><i class="ti ti-file-invoice"></i><span>ドキュメント種別</span></a>
+    <a class="nav-sub" href="accounting.html#soa"><i class="ti ti-report"></i><span>取引明細書</span></a>
+    <a class="nav-sub" href="accounting.html#payments"><i class="ti ti-credit-card"></i><span>支払い &amp; 領収書</span></a>
+    <a class="nav-sub" href="accounting.html#ageing"><i class="ti ti-clock"></i><span>経年レポート</span></a>
+    <a class="nav-sub" href="accounting.html#journal"><i class="ti ti-notebook"></i><span>仕訳入力</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">料金設定</div>
+    <a class="nav-item" href="rates.html" data-page="rates"><i class="ti ti-coin"></i><span>運賃</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">キャリア</div>
+    <a class="nav-item" href="carrier-tools.html" data-page="carrier-tools"><i class="ti ti-ship"></i><span>キャリアツール</span></a>
+    <a class="nav-sub" href="carrier-tools.html#vessel-sailing"><i class="ti ti-anchor"></i><span>船舶スケジュール</span></a>
+    <a class="nav-sub" href="carrier-tools.html#flight-schedule"><i class="ti ti-plane"></i><span>フライトスケジュール</span></a>
+    <a class="nav-sub" href="carrier-tools.html#container-tracking"><i class="ti ti-box"></i><span>コンテナ追跡</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">倉庫</div>
+    <a class="nav-item" href="warehouse.html" data-page="warehouse"><i class="ti ti-building-warehouse"></i><span>倉庫</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">営業</div>
+    <a class="nav-item" href="crm.html" data-page="crm"><i class="ti ti-trending-up"></i><span>CRM</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">レポート</div>
+    <a class="nav-item" href="reports.html" data-page="reports"><i class="ti ti-chart-bar"></i><span>レポート</span></a>
+    <a class="nav-sub" href="reports.html#operations"><i class="ti ti-timeline"></i><span>オペレーション</span></a>
+    <a class="nav-sub" href="reports.html#finance"><i class="ti ti-coins"></i><span>財務</span></a>
+    <a class="nav-sub" href="reports.html#analytics"><i class="ti ti-chart-dots"></i><span>分析 &amp; KPI</span></a>
+    <a class="nav-sub" href="reports.html#compliance"><i class="ti ti-shield-check"></i><span>コンプライアンス</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">管理</div>
+    <a class="nav-item" href="library.html" data-page="library"><i class="ti ti-books"></i><span>ライブラリ</span></a>
+    <a class="nav-item" href="settings.html" data-page="settings"><i class="ti ti-settings"></i><span>設定</span></a>
+    <a class="nav-sub" href="settings.html#users"><i class="ti ti-user-cog"></i><span>ユーザー &amp; グループ</span></a>
+    <a class="nav-sub" href="settings.html#global-settings"><i class="ti ti-adjustments"></i><span>グローバル設定</span></a>
+    <a class="nav-sub" href="settings.html#branches"><i class="ti ti-building-skyscraper"></i><span>支店</span></a>
+    <a class="nav-sub" href="settings.html#integrations"><i class="ti ti-plug"></i><span>EDI 連携</span></a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="top-bar">
+    <div class="breadcrumb">
+      <a href="index.html"><i class="ti ti-home"></i></a>
+      <i class="ti ti-chevron-right"></i>
+      <span>会計</span>
+    </div>
+  </div>
+
+  <div class="content" id="page-content">
+
+    <div class="section" id="accounting">
+      <div class="section-header">
+        <div class="section-icon"><i class="ti ti-receipt-2"></i></div>
+        <h2>会計</h2>
+      </div>
+      <p>会計モジュールは、請求書、クレジットノート、支払い、領収書などすべての財務書類を管理します。</p>
+
+      <h3 id="invoices">ドキュメント種別</h3>
+      <table>
+        <thead>
+          <tr><th>Code</th><th>Name</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>ID</code></td><td>Debit Note / Sales Invoice</td><td>Charge a client for freight services</td></tr>
+          <tr><td><code>IC</code></td><td>Credit Note / Cost Invoice</td><td>Record cost from a provider</td></tr>
+          <tr><td><code>CO</code></td><td>COBO</td><td>Internal cost-to-owner document</td></tr>
+          <tr><td><code>PO</code></td><td>POBO / Purchase Order</td><td>Purchase order / payable record</td></tr>
+          <tr><td><code>PMT</code></td><td>Payment</td><td>Record a payment made to a provider</td></tr>
+          <tr><td><code>RPT</code></td><td>Receipt</td><td>Record a payment received from a client</td></tr>
+        </tbody>
+      </table>
+
+      <h3>請求書の作成 (ID)</h3>
+      <ol class="steps">
+        <li><span class="step-num">1</span><span>Go to <strong>Accounting → ID</strong> and click <strong>New Invoice</strong>, or create directly from the shipment Cost Sheet tab</span></li>
+        <li><span class="step-num">2</span><span>Select the client and shipment reference</span></li>
+        <li><span class="step-num">3</span><span>Add charge lines (imported from cost sheet or entered manually)</span></li>
+        <li><span class="step-num">4</span><span>Set the currency and exchange rate</span></li>
+        <li><span class="step-num">5</span><span>Save as <strong>Draft</strong>, then click <strong>Submit</strong> to finalise and issue to the client</span></li>
+      </ol>
+
+      <h3 id="soa">取引明細書</h3>
+      <p><strong>会計 → SOA-Client</strong> に移動するか、クライアント／プロバイダーのレコードを開いて <strong>取引明細書</strong> を選択してください。SOA には以下が表示されます：</p>
+      <ul>
+        <li>すべての請求書とその現在のステータス（下書き / 送信済み / 承認済み / 支払い済み）</li>
+        <li>すべての支払いとその適用先の請求書</li>
+        <li>累積残高</li>
+        <li>編集可能な為替レートを使用したマルチ通貨表示</li>
+      </ul>
+      <p>クライアント確認または社内照合のため、SOA を PDF または Excel でエクスポートできます。</p>
+
+      <h3 id="payments">支払い &amp; 領収書の記録</h3>
+      <p>プロバイダーへの支払いを記録するには <strong>会計 → PMT</strong>、クライアントからの入金を記録するには <strong>会計 → RPT</strong> に移動してください。いずれの場合も：</p>
+      <ol>
+        <li>新しいレコードを作成し、関連する請求書に紐付けます</li>
+        <li>支払い金額、日付、支払い方法（銀行振込、カード、小切手など）を入力します</li>
+        <li>保存すると、紐付けられた請求書の未払い残高が自動的に更新されます</li>
+      </ol>
+
+      <h3 id="ageing">経年レポート</h3>
+      <p><strong>会計 → AR Ageing</strong>（売掛金）または <strong>AP Ageing</strong>（買掛金）に移動してください。日付範囲を選択してレポートを実行します。未払い金額は経過期間別にグループ化されます：</p>
+      <div class="status-grid">
+        <span class="status-chip" style="background:#d1fae5;color:#065f46;">Current</span>
+        <span class="status-chip" style="background:#fef3c7;color:#92400e;">1–30 days</span>
+        <span class="status-chip" style="background:#fed7aa;color:#9a3412;">31–60 days</span>
+        <span class="status-chip" style="background:#fecaca;color:#b91c1c;">61–90 days</span>
+        <span class="status-chip" style="background:#fee2e2;color:#7f1d1d;">90+ days</span>
+      </div>
+
+      <h3 id="journal">仕訳入力</h3>
+      <p>手動で総勘定元帳の仕訳を作成するには、<strong>会計 → Journal</strong> に移動してください。各仕訳入力には以下が必要です：</p>
+      <ul>
+        <li>勘定科目表からの借方・貸方コード</li>
+        <li>摘要と参照</li>
+        <li>金額と通貨</li>
+      </ul>
+      <p>仕訳は、総勘定元帳に転記される前に、権限を持つユーザーの承認が必要です。</p>
+
+      <h3>期間別損益</h3>
+      <p><strong>会計 → P&amp;L Period</strong> に移動してください。開始日と終了日の範囲を選択し、<strong>レポート実行</strong> をクリックします。レポートには支店別の収益、費用、粗利益、利益率 %、為替差損益、純利益が表示されます。</p>
+    </div>
+
+  </div>
+</main>
+
+</div><!-- /layout -->
+<script>
+(function () {
+  if (window.self !== window.top) document.documentElement.classList.add('in-iframe');
+  var page = document.body.dataset.page;
+  if (page) {
+    document.querySelectorAll('.nav-item[data-page]').forEach(function(el) {
+      el.classList.toggle('active', el.dataset.page === page);
+    });
+  }
+  document.querySelectorAll('.nav-sub').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href') || '';
+      var hi = href.indexOf('#');
+      if (hi === -1) return;
+      var filePart = href.slice(0, hi);
+      var hash = href.slice(hi + 1);
+      var curFile = location.pathname.split('/').pop();
+      if (!filePart || filePart === curFile) {
+        e.preventDefault();
+        var target = document.getElementById(hash);
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.pushState(null, '', '#' + hash); }
+      }
+    });
+  });
+  var anchors = document.querySelectorAll('[id]');
+  var subLinks = document.querySelectorAll('.nav-sub');
+  if (anchors.length && subLinks.length) {
+    var curFile = location.pathname.split('/').pop();
+    function markSub() {
+      var cur = '';
+      anchors.forEach(function(el) { if (window.scrollY + 130 >= el.offsetTop) cur = el.id; });
+      subLinks.forEach(function(l) {
+        var href = l.getAttribute('href') || '';
+        var hi = href.indexOf('#');
+        if (hi === -1) return;
+        var fp = href.slice(0, hi); var hash = href.slice(hi + 1);
+        if (!fp || fp === curFile) l.classList.toggle('active', hash === cur);
+      });
+    }
+    window.addEventListener('scroll', markSub, { passive: true });
+    markSub();
+  }
+  var inp = document.getElementById('search-input');
+  var body = document.getElementById('page-content');
+  if (inp && body) {
+    var nodes = body.querySelectorAll('p, li, td, h2, h3, h4');
+    inp.addEventListener('input', function() {
+      var q = this.value.trim();
+      nodes.forEach(function(n) { n.innerHTML = n.innerHTML.replace(/<mark class="hl">(.*?)<\/mark>/gi, '$1'); });
+      if (!q) return;
+      var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      nodes.forEach(function(n) { if (re.test(n.textContent)) n.innerHTML = n.innerHTML.replace(re, '<mark class="hl">$1</mark>'); });
+      var first = body.querySelector('.hl');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+  if (location.hash) {
+    requestAnimationFrame(function() {
+      var el = document.getElementById(location.hash.slice(1));
+      if (el) el.scrollIntoView({ block: 'start' });
+    });
+  }
+})();
+</script>
+
+
+</body></html>

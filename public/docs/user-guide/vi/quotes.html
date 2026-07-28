@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="vi"><head>
+  <script>
+(function(){
+  var lang='en';
+  try{var m=document.cookie.match(/(?:^|;\s*)user=([^;]*)/);if(m){var u=JSON.parse(decodeURIComponent(m[1]));if(u&&u.language)lang=u.language;}}catch(e){}
+  if(lang==='vi')return;
+  var f=location.pathname.split('/').pop();
+  if(lang==='en'){location.replace('../'+f);}else{location.replace('../'+lang+'/'+f);}
+})();
+</script>
+
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Báo giá — Hướng dẫn sử dụng Make Cargo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="quotes">
+<div class="layout">
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <i class="ti ti-ship"></i><span>Make Cargo</span>
+    </a>
+    <div class="search-wrap">
+      <i class="ti ti-search"></i>
+      <input class="sidebar-search" type="text" placeholder="Search this page…" id="search-input" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Bắt đầu</div>
+    <a class="nav-item" href="index.html" data-page="index"><i class="ti ti-home"></i><span>Tổng quan</span></a>
+    <a class="nav-sub" href="index.html#login"><i class="ti ti-lock"></i><span>Đăng nhập</span></a>
+    <a class="nav-sub" href="index.html#navigation"><i class="ti ti-compass"></i><span>Điều hướng</span></a>
+    <a class="nav-sub" href="index.html#language"><i class="ti ti-language"></i><span>Ngôn ngữ &amp; RTL</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Các mô-đun chính</div>
+    <a class="nav-item" href="dashboard.html" data-page="dashboard"><i class="ti ti-layout-dashboard"></i><span>Bảng điều khiển</span></a>
+    <a class="nav-item" href="quotes.html" data-page="quotes"><i class="ti ti-file-invoice"></i><span>Báo giá</span></a>
+    <a class="nav-item" href="shipments.html" data-page="shipments"><i class="ti ti-package"></i><span>Lô hàng</span></a>
+    <a class="nav-sub" href="shipments.html#tabs"><i class="ti ti-table-column"></i><span>Các tab chi tiết</span></a>
+    <a class="nav-sub" href="shipments.html#billing"><i class="ti ti-receipt"></i><span>Lập hóa đơn &amp; Thanh toán</span></a>
+    <a class="nav-item" href="consolidations.html" data-page="consolidations"><i class="ti ti-link"></i><span>Hàng ghép/Gom hàng</span></a>
+    <a class="nav-item" href="clients.html" data-page="clients"><i class="ti ti-users"></i><span>Khách hàng</span></a>
+    <a class="nav-item" href="providers.html" data-page="providers"><i class="ti ti-building"></i><span>Nhà cung cấp</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Tài chính</div>
+    <a class="nav-item" href="accounting.html" data-page="accounting"><i class="ti ti-receipt-2"></i><span>Kế toán</span></a>
+    <a class="nav-sub" href="accounting.html#invoices"><i class="ti ti-file-invoice"></i><span>Loại chứng từ</span></a>
+    <a class="nav-sub" href="accounting.html#soa"><i class="ti ti-report"></i><span>Sao kê tài khoản</span></a>
+    <a class="nav-sub" href="accounting.html#payments"><i class="ti ti-credit-card"></i><span>Thanh toán &amp; Thu tiền</span></a>
+    <a class="nav-sub" href="accounting.html#ageing"><i class="ti ti-clock"></i><span>Báo cáo tuổi nợ</span></a>
+    <a class="nav-sub" href="accounting.html#journal"><i class="ti ti-notebook"></i><span>Bút toán nhật ký</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Định giá</div>
+    <a class="nav-item" href="rates.html" data-page="rates"><i class="ti ti-coin"></i><span>Cước phí</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Hãng vận chuyển</div>
+    <a class="nav-item" href="carrier-tools.html" data-page="carrier-tools"><i class="ti ti-ship"></i><span>Công cụ hãng vận chuyển</span></a>
+    <a class="nav-sub" href="carrier-tools.html#vessel-sailing"><i class="ti ti-anchor"></i><span>Lịch tàu</span></a>
+    <a class="nav-sub" href="carrier-tools.html#flight-schedule"><i class="ti ti-plane"></i><span>Lịch bay</span></a>
+    <a class="nav-sub" href="carrier-tools.html#container-tracking"><i class="ti ti-box"></i><span>Theo dõi container</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Kho hàng</div>
+    <a class="nav-item" href="warehouse.html" data-page="warehouse"><i class="ti ti-building-warehouse"></i><span>Kho hàng</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Kinh doanh</div>
+    <a class="nav-item" href="crm.html" data-page="crm"><i class="ti ti-trending-up"></i><span>CRM</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Báo cáo</div>
+    <a class="nav-item" href="reports.html" data-page="reports"><i class="ti ti-chart-bar"></i><span>Báo cáo</span></a>
+    <a class="nav-sub" href="reports.html#operations"><i class="ti ti-timeline"></i><span>Vận hành</span></a>
+    <a class="nav-sub" href="reports.html#finance"><i class="ti ti-coins"></i><span>Tài chính</span></a>
+    <a class="nav-sub" href="reports.html#analytics"><i class="ti ti-chart-dots"></i><span>Phân tích &amp; KPI</span></a>
+    <a class="nav-sub" href="reports.html#compliance"><i class="ti ti-shield-check"></i><span>Tuân thủ</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Quản trị hệ thống</div>
+    <a class="nav-item" href="library.html" data-page="library"><i class="ti ti-books"></i><span>Thư viện dữ liệu</span></a>
+    <a class="nav-item" href="settings.html" data-page="settings"><i class="ti ti-settings"></i><span>Cài đặt</span></a>
+    <a class="nav-sub" href="settings.html#users"><i class="ti ti-user-cog"></i><span>Người dùng &amp; Nhóm quyền</span></a>
+    <a class="nav-sub" href="settings.html#global-settings"><i class="ti ti-adjustments"></i><span>Cài đặt toàn cục</span></a>
+    <a class="nav-sub" href="settings.html#branches"><i class="ti ti-building-skyscraper"></i><span>Chi nhánh</span></a>
+    <a class="nav-sub" href="settings.html#integrations"><i class="ti ti-plug"></i><span>Tích hợp EDI</span></a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="top-bar">
+    <div class="breadcrumb">
+      <a href="index.html"><i class="ti ti-home"></i></a>
+      <i class="ti ti-chevron-right"></i>
+      <span>Báo giá</span>
+    </div>
+  </div>
+
+  <div class="content" id="page-content">
+
+    <div class="section" id="quotes">
+      <div class="section-header">
+        <div class="section-icon"><i class="ti ti-file-invoice"></i></div>
+        <h2>Báo giá</h2>
+      </div>
+      <p>Tạo và quản lý báo giá vận chuyển. Báo giá có thể được chuyển thành lô hàng sau khi được chấp nhận.</p>
+
+      <h3>Tạo báo giá</h3>
+      <ol class="steps">
+        <li><span class="step-num">1</span><span>Go to <strong>Quotes</strong> in the sidebar and select a transport mode tab (Ocean, Air, Road, etc.)</span></li>
+        <li><span class="step-num">2</span><span>Click <strong>New Quote</strong></span></li>
+        <li><span class="step-num">3</span><span>Fill in the client, origin/destination, cargo details, and preferred service type</span></li>
+        <li><span class="step-num">4</span><span>Add charge lines (freight, local, customs, service fees). The system can auto-populate from the rate library.</span></li>
+        <li><span class="step-num">5</span><span>Click <strong>Save as Draft</strong> to save for later, or click <strong>Send</strong> to issue the quotation to the client.</span></li>
+      </ol>
+
+      <h3>Trạng thái báo giá</h3>
+      <div class="status-grid">
+        <span class="status-chip" style="background:#f1f5f9;color:#475569;">Draft</span>
+        <span class="status-chip" style="background:#dbeafe;color:#1d4ed8;">Sent</span>
+        <span class="status-chip" style="background:#d1fae5;color:#065f46;">Accepted</span>
+        <span class="status-chip" style="background:#fee2e2;color:#991b1b;">Rejected</span>
+        <span class="status-chip" style="background:#fef3c7;color:#92400e;">Expired</span>
+      </div>
+
+      <h3>Chuyển thành lô hàng</h3>
+      <p>Mở báo giá đã <strong>Chấp nhận</strong> và nhấp <strong>Chuyển thành lô hàng</strong>. Hệ thống tạo một lô hàng mới được điền sẵn thông tin báo giá — khách hàng, tuyến đường, hàng hóa và các dòng phí. Xem xét chi tiết và xác nhận để hoàn tất chuyển đổi.</p>
+
+      <h3>Tài liệu báo giá</h3>
+      <p>The <strong>Preview PDF</strong> button generates a printable quotation document ready to send to the client. You can customise the document header (logo, company details, footer text) via <a href="settings.html#global-settings">Global Settings</a>.</p>
+    </div>
+
+  </div>
+</main>
+
+</div><!-- /layout -->
+<script>
+(function () {
+  if (window.self !== window.top) document.documentElement.classList.add('in-iframe');
+  var page = document.body.dataset.page;
+  if (page) {
+    document.querySelectorAll('.nav-item[data-page]').forEach(function(el) {
+      el.classList.toggle('active', el.dataset.page === page);
+    });
+  }
+  document.querySelectorAll('.nav-sub').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href') || '';
+      var hi = href.indexOf('#');
+      if (hi === -1) return;
+      var filePart = href.slice(0, hi);
+      var hash = href.slice(hi + 1);
+      var curFile = location.pathname.split('/').pop();
+      if (!filePart || filePart === curFile) {
+        e.preventDefault();
+        var target = document.getElementById(hash);
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.pushState(null, '', '#' + hash); }
+      }
+    });
+  });
+  var anchors = document.querySelectorAll('[id]');
+  var subLinks = document.querySelectorAll('.nav-sub');
+  if (anchors.length && subLinks.length) {
+    var curFile = location.pathname.split('/').pop();
+    function markSub() {
+      var cur = '';
+      anchors.forEach(function(el) { if (window.scrollY + 130 >= el.offsetTop) cur = el.id; });
+      subLinks.forEach(function(l) {
+        var href = l.getAttribute('href') || '';
+        var hi = href.indexOf('#');
+        if (hi === -1) return;
+        var fp = href.slice(0, hi); var hash = href.slice(hi + 1);
+        if (!fp || fp === curFile) l.classList.toggle('active', hash === cur);
+      });
+    }
+    window.addEventListener('scroll', markSub, { passive: true });
+    markSub();
+  }
+  var inp = document.getElementById('search-input');
+  var body = document.getElementById('page-content');
+  if (inp && body) {
+    var nodes = body.querySelectorAll('p, li, td, h2, h3, h4');
+    inp.addEventListener('input', function() {
+      var q = this.value.trim();
+      nodes.forEach(function(n) { n.innerHTML = n.innerHTML.replace(/<mark class="hl">(.*?)<\/mark>/gi, '$1'); });
+      if (!q) return;
+      var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      nodes.forEach(function(n) { if (re.test(n.textContent)) n.innerHTML = n.innerHTML.replace(re, '<mark class="hl">$1</mark>'); });
+      var first = body.querySelector('.hl');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+  if (location.hash) {
+    requestAnimationFrame(function() {
+      var el = document.getElementById(location.hash.slice(1));
+      if (el) el.scrollIntoView({ block: 'start' });
+    });
+  }
+})();
+</script>
+
+
+</body></html>

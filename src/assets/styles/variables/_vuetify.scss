@@ -1,0 +1,8 @@
+// ❗ Path must be relative
+// ℹ️ Remove above import and uncomment below to override core variables.
+@forward "../../../@core/scss/template/libs/vuetify/variables" with (
+  $card-text-padding: 14px,
+  $card-item-padding: 14px,
+  $field-font-size: 13px,
+  $list-item-title-font-size: 13px
+)

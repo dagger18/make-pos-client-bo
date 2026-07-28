@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "far";
+    src: url("../fonts/far.woff2?b8c34cb3160563cb9ab3ca2722e6a966") format("woff2"),
+url("../fonts/far.woff?b8c34cb3160563cb9ab3ca2722e6a966") format("woff"),
+url("../fonts/far.ttf?b8c34cb3160563cb9ab3ca2722e6a966") format("truetype"),
+url("../fonts/far.svg?b8c34cb3160563cb9ab3ca2722e6a966#far") format("svg");
+    font-display: swap;
+}
+
+.fa-regular:before,.far:before {
+    font-family: far !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inherit;
+}
+.fa-regular:before,.far:after {
+    display: none;
+}
+
+.fa-hashtag:before {
+    content: "\f292";
+}
+.fa-truck:before {
+    content: "\f0d1";
+}
+.fa-ship:before {
+    content: "\f21a";
+}
+.fa-train:before {
+    content: "\f238";
+}
+.fa-box:before {
+    content: "\f466";
+}
+.fa-plane-departure:before {
+    content: "\f5b0";
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html><html lang="vi"><head>
+  <script>
+(function(){
+  var lang='en';
+  try{var m=document.cookie.match(/(?:^|;\s*)user=([^;]*)/);if(m){var u=JSON.parse(decodeURIComponent(m[1]));if(u&&u.language)lang=u.language;}}catch(e){}
+  if(lang==='vi')return;
+  var f=location.pathname.split('/').pop();
+  if(lang==='en'){location.replace('../'+f);}else{location.replace('../'+lang+'/'+f);}
+})();
+</script>
+
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cài đặt — Hướng dẫn sử dụng Make Cargo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="settings">
+<div class="layout">
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <i class="ti ti-ship"></i><span>Make Cargo</span>
+    </a>
+    <div class="search-wrap">
+      <i class="ti ti-search"></i>
+      <input class="sidebar-search" type="text" placeholder="Search this page…" id="search-input" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Bắt đầu</div>
+    <a class="nav-item" href="index.html" data-page="index"><i class="ti ti-home"></i><span>Tổng quan</span></a>
+    <a class="nav-sub" href="index.html#login"><i class="ti ti-lock"></i><span>Đăng nhập</span></a>
+    <a class="nav-sub" href="index.html#navigation"><i class="ti ti-compass"></i><span>Điều hướng</span></a>
+    <a class="nav-sub" href="index.html#language"><i class="ti ti-language"></i><span>Ngôn ngữ &amp; RTL</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Các mô-đun chính</div>
+    <a class="nav-item" href="dashboard.html" data-page="dashboard"><i class="ti ti-layout-dashboard"></i><span>Bảng điều khiển</span></a>
+    <a class="nav-item" href="quotes.html" data-page="quotes"><i class="ti ti-file-invoice"></i><span>Báo giá</span></a>
+    <a class="nav-item" href="shipments.html" data-page="shipments"><i class="ti ti-package"></i><span>Lô hàng</span></a>
+    <a class="nav-sub" href="shipments.html#tabs"><i class="ti ti-table-column"></i><span>Các tab chi tiết</span></a>
+    <a class="nav-sub" href="shipments.html#billing"><i class="ti ti-receipt"></i><span>Lập hóa đơn &amp; Thanh toán</span></a>
+    <a class="nav-item" href="consolidations.html" data-page="consolidations"><i class="ti ti-link"></i><span>Hàng ghép/Gom hàng</span></a>
+    <a class="nav-item" href="clients.html" data-page="clients"><i class="ti ti-users"></i><span>Khách hàng</span></a>
+    <a class="nav-item" href="providers.html" data-page="providers"><i class="ti ti-building"></i><span>Nhà cung cấp</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Tài chính</div>
+    <a class="nav-item" href="accounting.html" data-page="accounting"><i class="ti ti-receipt-2"></i><span>Kế toán</span></a>
+    <a class="nav-sub" href="accounting.html#invoices"><i class="ti ti-file-invoice"></i><span>Loại chứng từ</span></a>
+    <a class="nav-sub" href="accounting.html#soa"><i class="ti ti-report"></i><span>Sao kê tài khoản</span></a>
+    <a class="nav-sub" href="accounting.html#payments"><i class="ti ti-credit-card"></i><span>Thanh toán &amp; Thu tiền</span></a>
+    <a class="nav-sub" href="accounting.html#ageing"><i class="ti ti-clock"></i><span>Báo cáo tuổi nợ</span></a>
+    <a class="nav-sub" href="accounting.html#journal"><i class="ti ti-notebook"></i><span>Bút toán nhật ký</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Định giá</div>
+    <a class="nav-item" href="rates.html" data-page="rates"><i class="ti ti-coin"></i><span>Cước phí</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Hãng vận chuyển</div>
+    <a class="nav-item" href="carrier-tools.html" data-page="carrier-tools"><i class="ti ti-ship"></i><span>Công cụ hãng vận chuyển</span></a>
+    <a class="nav-sub" href="carrier-tools.html#vessel-sailing"><i class="ti ti-anchor"></i><span>Lịch tàu</span></a>
+    <a class="nav-sub" href="carrier-tools.html#flight-schedule"><i class="ti ti-plane"></i><span>Lịch bay</span></a>
+    <a class="nav-sub" href="carrier-tools.html#container-tracking"><i class="ti ti-box"></i><span>Theo dõi container</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Kho hàng</div>
+    <a class="nav-item" href="warehouse.html" data-page="warehouse"><i class="ti ti-building-warehouse"></i><span>Kho hàng</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Kinh doanh</div>
+    <a class="nav-item" href="crm.html" data-page="crm"><i class="ti ti-trending-up"></i><span>CRM</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Báo cáo</div>
+    <a class="nav-item" href="reports.html" data-page="reports"><i class="ti ti-chart-bar"></i><span>Báo cáo</span></a>
+    <a class="nav-sub" href="reports.html#operations"><i class="ti ti-timeline"></i><span>Vận hành</span></a>
+    <a class="nav-sub" href="reports.html#finance"><i class="ti ti-coins"></i><span>Tài chính</span></a>
+    <a class="nav-sub" href="reports.html#analytics"><i class="ti ti-chart-dots"></i><span>Phân tích &amp; KPI</span></a>
+    <a class="nav-sub" href="reports.html#compliance"><i class="ti ti-shield-check"></i><span>Tuân thủ</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Quản trị hệ thống</div>
+    <a class="nav-item" href="library.html" data-page="library"><i class="ti ti-books"></i><span>Thư viện dữ liệu</span></a>
+    <a class="nav-item" href="settings.html" data-page="settings"><i class="ti ti-settings"></i><span>Cài đặt</span></a>
+    <a class="nav-sub" href="settings.html#users"><i class="ti ti-user-cog"></i><span>Người dùng &amp; Nhóm quyền</span></a>
+    <a class="nav-sub" href="settings.html#global-settings"><i class="ti ti-adjustments"></i><span>Cài đặt toàn cục</span></a>
+    <a class="nav-sub" href="settings.html#branches"><i class="ti ti-building-skyscraper"></i><span>Chi nhánh</span></a>
+    <a class="nav-sub" href="settings.html#integrations"><i class="ti ti-plug"></i><span>Tích hợp EDI</span></a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="top-bar">
+    <div class="breadcrumb">
+      <a href="index.html"><i class="ti ti-home"></i></a>
+      <i class="ti ti-chevron-right"></i>
+      <span>Cài đặt</span>
+    </div>
+  </div>
+
+  <div class="content" id="page-content">
+
+    <div class="section" id="settings">
+      <div class="section-header">
+        <div class="section-icon"><i class="ti ti-settings"></i></div>
+        <h2>Cài đặt</h2>
+      </div>
+
+      <h3 id="users">Người dùng &amp; Nhóm quyền</h3>
+      <p>Vào <strong>Cài đặt → Người dùng</strong> để quản lý quyền truy cập của nhóm:</p>
+      <ul>
+        <li><strong>Mời người dùng</strong> — nhập địa chỉ email và người dùng sẽ nhận được liên kết mời để thiết lập mật khẩu</li>
+        <li><strong>Phân công nhóm quyền</strong> — nhóm quyền xác định quyền hạn phù hợp với vai trò của người dùng (Vận hành, Tài chính, Quản trị)</li>
+        <li><strong>Vô hiệu hóa người dùng</strong> — chuyển người dùng sang trạng thái Không hoạt động để thu hồi quyền truy cập mà không xóa hồ sơ lịch sử</li>
+      </ul>
+      <p>Vào <strong>Cài đặt → Nhóm quyền</strong> để quản lý các nhóm quyền. Đối với mỗi nhóm, bạn có thể tùy chỉnh những thao tác nào (xem, tạo, chỉnh sửa, xóa) được phép trên từng mô-đun.</p>
+
+      <h3 id="global-settings">Cài đặt toàn cục</h3>
+      <p>Vào <strong>Cài đặt → Cài đặt toàn cục</strong> để xem các giá trị mặc định toàn tổ chức:</p>
+      <ul>
+        <li><strong>Tiền tệ cơ sở</strong> — loại tiền tệ mặc định dùng cho P&amp;L và báo cáo</li>
+        <li><strong>Tỷ giá hối đoái</strong> — thiết lập và cập nhật tỷ giá ngoại hối dùng cho chứng từ đa tiền tệ</li>
+        <li><strong>Định dạng mã báo giá</strong> — định dạng đánh số tự động cho số báo giá (ví dụ: <code>QT-{YYYY}-{SEQ}</code>)</li>
+        <li><strong>Định dạng mã lô hàng</strong> — định dạng đánh số tự động cho số công việc</li>
+      </ul>
+
+      <h3>Thông tin công ty</h3>
+      <p>Vào <strong>Cài đặt → Công ty</strong> để quản lý thông tin định danh tổ chức của bạn:</p>
+      <ul>
+        <li>Tên công ty, logo và địa chỉ đăng ký</li>
+        <li>Thông tin đăng ký pháp lý (số đăng ký kinh doanh, mã số thuế)</li>
+        <li>Thông tin ngân hàng dùng trên hóa đơn và hướng dẫn thanh toán</li>
+      </ul>
+      <div class="tip"><strong>Mẹo:</strong> Logo và thông tin công ty xuất hiện trên tất cả tài liệu PDF được tạo — hóa đơn, báo giá, danh sách đóng gói và SOA. Hãy giữ thông tin này luôn cập nhật.</div>
+
+      <h3 id="branches">Chi nhánh &amp; Phòng ban</h3>
+      <p><strong>Chi nhánh</strong> đại diện cho các địa điểm văn phòng thực tế của bạn. Mỗi lô hàng, hóa đơn và chứng từ tài chính đều có thể được phân bổ vào một chi nhánh, cho phép báo cáo và P&amp;L theo cấp chi nhánh.</p>
+      <p><strong>Phòng ban</strong> là các trung tâm chi phí trong một chi nhánh, hữu ích cho báo cáo P&amp;L và phân bổ ngân sách theo cấp phòng ban.</p>
+
+      <h3>Sơ đồ tài khoản</h3>
+      <p>Vào <strong>Cài đặt → Sơ đồ tài khoản</strong> để xác định cấu trúc tài khoản GL (Sổ cái tổng hợp), bao gồm Tài sản, Nợ phải trả, Vốn chủ sở hữu, Doanh thu và Chi phí. Các mã tài khoản này được dùng cho bút toán nhật ký và báo cáo tài chính.</p>
+
+      <h3 id="integrations">Tích hợp EDI</h3>
+      <p>Vào <strong>Cài đặt → Đầu nối tích hợp</strong> để cấu hình kết nối với hệ thống hãng vận chuyển, nhà cung cấp theo dõi và các nền tảng thương mại. Mỗi đầu nối yêu cầu:</p>
+      <ul>
+        <li>Thông tin xác thực API do hãng vận chuyển hoặc nhà cung cấp dữ liệu cấp</li>
+        <li>Quy tắc ánh xạ dữ liệu để chuyển đổi mã trạng thái hãng vận chuyển thành trạng thái hệ thống</li>
+        <li>Kiểm tra kết nối để xác minh tích hợp đang hoạt động và phản hồi</li>
+      </ul>
+      <div class="warning-box"><strong>Note:</strong> EDI connectors require IT or admin-level setup. Contact your system administrator or Make Cargo support when adding new integrations.</div>
+
+      <h3>Hồ sơ của bạn</h3>
+      <p>Nhấp vào ảnh đại diện ở góc trên bên phải của bất kỳ trang nào để truy cập cài đặt hồ sơ. Từ đây bạn có thể:</p>
+      <ul>
+        <li>Cập nhật tên, địa chỉ email và ảnh hồ sơ của bạn</li>
+        <li>Đổi mật khẩu</li>
+        <li>Đặt ngôn ngữ ưu tiên của bạn</li>
+        <li>Cấu hình tùy chọn thông báo</li>
+      </ul>
+    </div>
+
+  </div>
+</main>
+
+</div><!-- /layout -->
+<script>
+(function () {
+  if (window.self !== window.top) document.documentElement.classList.add('in-iframe');
+  var page = document.body.dataset.page;
+  if (page) {
+    document.querySelectorAll('.nav-item[data-page]').forEach(function(el) {
+      el.classList.toggle('active', el.dataset.page === page);
+    });
+  }
+  document.querySelectorAll('.nav-sub').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href') || '';
+      var hi = href.indexOf('#');
+      if (hi === -1) return;
+      var filePart = href.slice(0, hi);
+      var hash = href.slice(hi + 1);
+      var curFile = location.pathname.split('/').pop();
+      if (!filePart || filePart === curFile) {
+        e.preventDefault();
+        var target = document.getElementById(hash);
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.pushState(null, '', '#' + hash); }
+      }
+    });
+  });
+  var anchors = document.querySelectorAll('[id]');
+  var subLinks = document.querySelectorAll('.nav-sub');
+  if (anchors.length && subLinks.length) {
+    var curFile = location.pathname.split('/').pop();
+    function markSub() {
+      var cur = '';
+      anchors.forEach(function(el) { if (window.scrollY + 130 >= el.offsetTop) cur = el.id; });
+      subLinks.forEach(function(l) {
+        var href = l.getAttribute('href') || '';
+        var hi = href.indexOf('#');
+        if (hi === -1) return;
+        var fp = href.slice(0, hi); var hash = href.slice(hi + 1);
+        if (!fp || fp === curFile) l.classList.toggle('active', hash === cur);
+      });
+    }
+    window.addEventListener('scroll', markSub, { passive: true });
+    markSub();
+  }
+  var inp = document.getElementById('search-input');
+  var body = document.getElementById('page-content');
+  if (inp && body) {
+    var nodes = body.querySelectorAll('p, li, td, h2, h3, h4');
+    inp.addEventListener('input', function() {
+      var q = this.value.trim();
+      nodes.forEach(function(n) { n.innerHTML = n.innerHTML.replace(/<mark class="hl">(.*?)<\/mark>/gi, '$1'); });
+      if (!q) return;
+      var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      nodes.forEach(function(n) { if (re.test(n.textContent)) n.innerHTML = n.innerHTML.replace(re, '<mark class="hl">$1</mark>'); });
+      var first = body.querySelector('.hl');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+  if (location.hash) {
+    requestAnimationFrame(function() {
+      var el = document.getElementById(location.hash.slice(1));
+      if (el) el.scrollIntoView({ block: 'start' });
+    });
+  }
+})();
+</script>
+
+
+</body></html>

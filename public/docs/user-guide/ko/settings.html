@@ -1,0 +1,247 @@
+<!DOCTYPE html><html lang="ko"><head>
+  <script>
+(function(){
+  var lang='en';
+  try{var m=document.cookie.match(/(?:^|;\s*)user=([^;]*)/);if(m){var u=JSON.parse(decodeURIComponent(m[1]));if(u&&u.language)lang=u.language;}}catch(e){}
+  if(lang==='ko')return;
+  var f=location.pathname.split('/').pop();
+  if(lang==='en'){location.replace('../'+f);}else{location.replace('../'+lang+'/'+f);}
+})();
+</script>
+
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>설정 — Make Cargo 사용 가이드</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="settings">
+<div class="layout">
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <i class="ti ti-ship"></i><span>Make Cargo</span>
+    </a>
+    <div class="search-wrap">
+      <i class="ti ti-search"></i>
+      <input class="sidebar-search" type="text" placeholder="Search this page…" id="search-input" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">시작하기</div>
+    <a class="nav-item" href="index.html" data-page="index"><i class="ti ti-home"></i><span>개요</span></a>
+    <a class="nav-sub" href="index.html#login"><i class="ti ti-lock"></i><span>로그인</span></a>
+    <a class="nav-sub" href="index.html#navigation"><i class="ti ti-compass"></i><span>탐색</span></a>
+    <a class="nav-sub" href="index.html#language"><i class="ti ti-language"></i><span>언어 &amp; RTL</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">핵심 모듈</div>
+    <a class="nav-item" href="dashboard.html" data-page="dashboard"><i class="ti ti-layout-dashboard"></i><span>대시보드</span></a>
+    <a class="nav-item" href="quotes.html" data-page="quotes"><i class="ti ti-file-invoice"></i><span>견적</span></a>
+    <a class="nav-item" href="shipments.html" data-page="shipments"><i class="ti ti-package"></i><span>화물 운송</span></a>
+    <a class="nav-sub" href="shipments.html#tabs"><i class="ti ti-table-column"></i><span>세부 탭</span></a>
+    <a class="nav-sub" href="shipments.html#billing"><i class="ti ti-receipt"></i><span>청구 &amp; 결제</span></a>
+    <a class="nav-item" href="consolidations.html" data-page="consolidations"><i class="ti ti-link"></i><span>혼재</span></a>
+    <a class="nav-item" href="clients.html" data-page="clients"><i class="ti ti-users"></i><span>클라이언트</span></a>
+    <a class="nav-item" href="providers.html" data-page="providers"><i class="ti ti-building"></i><span>공급업체</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">재무</div>
+    <a class="nav-item" href="accounting.html" data-page="accounting"><i class="ti ti-receipt-2"></i><span>회계</span></a>
+    <a class="nav-sub" href="accounting.html#invoices"><i class="ti ti-file-invoice"></i><span>문서 유형</span></a>
+    <a class="nav-sub" href="accounting.html#soa"><i class="ti ti-report"></i><span>거래 명세서</span></a>
+    <a class="nav-sub" href="accounting.html#payments"><i class="ti ti-credit-card"></i><span>지급 &amp; 영수증</span></a>
+    <a class="nav-sub" href="accounting.html#ageing"><i class="ti ti-clock"></i><span>연령 분석 보고서</span></a>
+    <a class="nav-sub" href="accounting.html#journal"><i class="ti ti-notebook"></i><span>분개 입력</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">요금 설정</div>
+    <a class="nav-item" href="rates.html" data-page="rates"><i class="ti ti-coin"></i><span>운임</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">운송사</div>
+    <a class="nav-item" href="carrier-tools.html" data-page="carrier-tools"><i class="ti ti-ship"></i><span>운송사 도구</span></a>
+    <a class="nav-sub" href="carrier-tools.html#vessel-sailing"><i class="ti ti-anchor"></i><span>선박 스케줄</span></a>
+    <a class="nav-sub" href="carrier-tools.html#flight-schedule"><i class="ti ti-plane"></i><span>항공 스케줄</span></a>
+    <a class="nav-sub" href="carrier-tools.html#container-tracking"><i class="ti ti-box"></i><span>컨테이너 추적</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">창고</div>
+    <a class="nav-item" href="warehouse.html" data-page="warehouse"><i class="ti ti-building-warehouse"></i><span>창고</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">영업</div>
+    <a class="nav-item" href="crm.html" data-page="crm"><i class="ti ti-trending-up"></i><span>CRM</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">보고서</div>
+    <a class="nav-item" href="reports.html" data-page="reports"><i class="ti ti-chart-bar"></i><span>보고서</span></a>
+    <a class="nav-sub" href="reports.html#operations"><i class="ti ti-timeline"></i><span>운영</span></a>
+    <a class="nav-sub" href="reports.html#finance"><i class="ti ti-coins"></i><span>재무</span></a>
+    <a class="nav-sub" href="reports.html#analytics"><i class="ti ti-chart-dots"></i><span>분석 &amp; KPI</span></a>
+    <a class="nav-sub" href="reports.html#compliance"><i class="ti ti-shield-check"></i><span>컴플라이언스</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">관리</div>
+    <a class="nav-item" href="library.html" data-page="library"><i class="ti ti-books"></i><span>라이브러리</span></a>
+    <a class="nav-item" href="settings.html" data-page="settings"><i class="ti ti-settings"></i><span>설정</span></a>
+    <a class="nav-sub" href="settings.html#users"><i class="ti ti-user-cog"></i><span>사용자 &amp; 그룹</span></a>
+    <a class="nav-sub" href="settings.html#global-settings"><i class="ti ti-adjustments"></i><span>전역 설정</span></a>
+    <a class="nav-sub" href="settings.html#branches"><i class="ti ti-building-skyscraper"></i><span>지점</span></a>
+    <a class="nav-sub" href="settings.html#integrations"><i class="ti ti-plug"></i><span>EDI 연동</span></a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="top-bar">
+    <div class="breadcrumb">
+      <a href="index.html"><i class="ti ti-home"></i></a>
+      <i class="ti ti-chevron-right"></i>
+      <span>설정</span>
+    </div>
+  </div>
+
+  <div class="content" id="page-content">
+
+    <div class="section" id="settings">
+      <div class="section-header">
+        <div class="section-icon"><i class="ti ti-settings"></i></div>
+        <h2>설정</h2>
+      </div>
+
+      <h3 id="users">사용자 &amp; 그룹</h3>
+      <p>팀의 접근 권한을 관리하려면 <strong>설정 → 사용자</strong>로 이동하세요：</p>
+      <ul>
+        <li><strong>사용자 초대</strong> — 이메일 주소를 입력하면 해당 사용자에게 비밀번호 설정을 위한 초대 링크가 전송됩니다</li>
+        <li><strong>그룹 배정</strong> — 그룹은 사용자의 역할（운영, 재무, 관리자）에 맞는 권한을 정의합니다</li>
+        <li><strong>사용자 비활성화</strong> — 사용자를 비활성으로 전환하여 기존 기록을 삭제하지 않고 접근 권한을 취소합니다</li>
+      </ul>
+      <p>권한 그룹을 관리하려면 <strong>설정 → 그룹</strong>으로 이동하세요. 각 그룹에 대해 각 모듈에서 허용되는 작업（보기, 생성, 편집, 삭제）을 사용자 정의할 수 있습니다.</p>
+
+      <h3 id="global-settings">전역 설정</h3>
+      <p>조직 전체 기본값을 설정하려면 <strong>설정 → 전역 설정</strong>으로 이동하세요：</p>
+      <ul>
+        <li><strong>기본 통화</strong> — P&amp;L 및 보고에 사용되는 기본 통화</li>
+        <li><strong>환율</strong> — 다중 통화 문서에 사용되는 환율을 설정하고 업데이트합니다</li>
+        <li><strong>견적 ID 형식</strong> — 견적 번호의 자동 채번 형식（예：<code>QT-{YYYY}-{SEQ}</code>）</li>
+        <li><strong>운송 ID 형식</strong> — 건 번호의 자동 채번 형식</li>
+      </ul>
+
+      <h3>회사 정보</h3>
+      <p>조직의 회사 정보를 관리하려면 <strong>설정 → 회사</strong>로 이동하세요：</p>
+      <ul>
+        <li>회사명, 로고, 등기 주소</li>
+        <li>법인 등록 정보（회사 번호, 세무 ID）</li>
+        <li>인보이스 및 결제 안내에 사용되는 은행 정보</li>
+      </ul>
+      <div class="tip"><strong>팁：</strong> 회사 로고와 정보는 생성되는 모든 PDF 문서（인보이스, 견적서, 포장 명세서, SOA）에 표시됩니다. 이 정보를 최신 상태로 유지하세요.</div>
+
+      <h3 id="branches">지점 &amp; 부서</h3>
+      <p><strong>지점（Branches）</strong>은 실제 사무소 위치를 나타냅니다. 각 운송, 인보이스, 재무 문서를 지점에 배정할 수 있어 지점 수준의 보고서 및 P&amp;L이 가능합니다.</p>
+      <p><strong>부서（Departments）</strong>는 지점 내 비용 센터로, 부서 수준의 P&amp;L 보고 및 예산 배분에 유용합니다.</p>
+
+      <h3>계정과목표</h3>
+      <p><strong>설정 → 계정과목표</strong>로 이동하여 자산, 부채, 자본, 수익, 비용을 포함하는 GL（총계정원장）계정 구조를 정의하세요. 이 계정 코드는 분개 입력과 재무 보고에 사용됩니다.</p>
+
+      <h3 id="integrations">EDI 연동</h3>
+      <p>운송사 시스템, 추적 공급업체, 무역 플랫폼과의 연결을 구성하려면 <strong>설정 → 연동 커넥터</strong>로 이동하세요. 각 커넥터에는 다음이 필요합니다：</p>
+      <ul>
+        <li>운송사 또는 데이터 공급업체가 제공하는 API 인증 정보</li>
+        <li>운송사 상태 코드를 시스템 상태로 변환하는 데이터 매핑 규칙</li>
+        <li>연동이 활성화되어 응답하는지 확인하는 연결 테스트</li>
+      </ul>
+      <div class="warning-box"><strong>Note:</strong> EDI connectors require IT or admin-level setup. Contact your system administrator or Make Cargo support when adding new integrations.</div>
+
+      <h3>내 프로필</h3>
+      <p>임의 페이지의 오른쪽 상단에 있는 아바타를 클릭하여 프로필 설정에 접근합니다. 여기에서 다음을 할 수 있습니다：</p>
+      <ul>
+        <li>이름, 이메일 주소, 프로필 사진을 업데이트합니다</li>
+        <li>비밀번호를 변경합니다</li>
+        <li>선호 언어를 설정합니다</li>
+        <li>알림 기본 설정을 구성합니다</li>
+      </ul>
+    </div>
+
+  </div>
+</main>
+
+</div><!-- /layout -->
+<script>
+(function () {
+  if (window.self !== window.top) document.documentElement.classList.add('in-iframe');
+  var page = document.body.dataset.page;
+  if (page) {
+    document.querySelectorAll('.nav-item[data-page]').forEach(function(el) {
+      el.classList.toggle('active', el.dataset.page === page);
+    });
+  }
+  document.querySelectorAll('.nav-sub').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href') || '';
+      var hi = href.indexOf('#');
+      if (hi === -1) return;
+      var filePart = href.slice(0, hi);
+      var hash = href.slice(hi + 1);
+      var curFile = location.pathname.split('/').pop();
+      if (!filePart || filePart === curFile) {
+        e.preventDefault();
+        var target = document.getElementById(hash);
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.pushState(null, '', '#' + hash); }
+      }
+    });
+  });
+  var anchors = document.querySelectorAll('[id]');
+  var subLinks = document.querySelectorAll('.nav-sub');
+  if (anchors.length && subLinks.length) {
+    var curFile = location.pathname.split('/').pop();
+    function markSub() {
+      var cur = '';
+      anchors.forEach(function(el) { if (window.scrollY + 130 >= el.offsetTop) cur = el.id; });
+      subLinks.forEach(function(l) {
+        var href = l.getAttribute('href') || '';
+        var hi = href.indexOf('#');
+        if (hi === -1) return;
+        var fp = href.slice(0, hi); var hash = href.slice(hi + 1);
+        if (!fp || fp === curFile) l.classList.toggle('active', hash === cur);
+      });
+    }
+    window.addEventListener('scroll', markSub, { passive: true });
+    markSub();
+  }
+  var inp = document.getElementById('search-input');
+  var body = document.getElementById('page-content');
+  if (inp && body) {
+    var nodes = body.querySelectorAll('p, li, td, h2, h3, h4');
+    inp.addEventListener('input', function() {
+      var q = this.value.trim();
+      nodes.forEach(function(n) { n.innerHTML = n.innerHTML.replace(/<mark class="hl">(.*?)<\/mark>/gi, '$1'); });
+      if (!q) return;
+      var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      nodes.forEach(function(n) { if (re.test(n.textContent)) n.innerHTML = n.innerHTML.replace(re, '<mark class="hl">$1</mark>'); });
+      var first = body.querySelector('.hl');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+  if (location.hash) {
+    requestAnimationFrame(function() {
+      var el = document.getElementById(location.hash.slice(1));
+      if (el) el.scrollIntoView({ block: 'start' });
+    });
+  }
+})();
+</script>
+
+
+</body></html>

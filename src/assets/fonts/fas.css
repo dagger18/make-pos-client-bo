@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "fas";
+    src: url("../fonts/fas.woff2?34fe41faba9214ce364f92cf28e80692") format("woff2"),
+url("../fonts/fas.woff?34fe41faba9214ce364f92cf28e80692") format("woff"),
+url("../fonts/fas.ttf?34fe41faba9214ce364f92cf28e80692") format("truetype"),
+url("../fonts/fas.svg?34fe41faba9214ce364f92cf28e80692#fas") format("svg");
+    font-display: swap;
+}
+
+.fa-solid:before,.fas:before {
+    font-family: fas !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inherit;
+}
+.fa-solid:before,.fas:after {
+    display: none;
+}
+
+.fa-xmark:before {
+    content: "\f00d";
+}

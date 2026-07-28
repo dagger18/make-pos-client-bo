@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    ".next",
+    "eggs",
+    "**/*.egg-info"
+  ]
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html><html lang="en"><head>
+  <script>
+(function(){
+  var lang='en';
+  try{var m=document.cookie.match(/(?:^|;\s*)user=([^;]*)/);if(m){var u=JSON.parse(decodeURIComponent(m[1]));if(u&&u.language)lang=u.language;}}catch(e){}
+  if(lang==='en')return;
+  var f=location.pathname.split('/').pop();
+  location.replace(lang+'/'+f);
+})();
+</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Make Cargo User Guide</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="dashboard">
+<div class="layout">
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <i class="ti ti-ship"></i><span>Make Cargo</span>
+    </a>
+    <div class="search-wrap">
+      <i class="ti ti-search"></i>
+      <input class="sidebar-search" type="text" placeholder="Search this page…" id="search-input" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Getting Started</div>
+    <a class="nav-item" href="index.html" data-page="index"><i class="ti ti-home"></i><span>Overview</span></a>
+    <a class="nav-sub" href="index.html#login"><i class="ti ti-lock"></i><span>Logging In</span></a>
+    <a class="nav-sub" href="index.html#navigation"><i class="ti ti-compass"></i><span>Navigation</span></a>
+    <a class="nav-sub" href="index.html#language"><i class="ti ti-language"></i><span>Language &amp; RTL</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Core Modules</div>
+    <a class="nav-item" href="dashboard.html" data-page="dashboard"><i class="ti ti-layout-dashboard"></i><span>Dashboard</span></a>
+    <a class="nav-item" href="quotes.html" data-page="quotes"><i class="ti ti-file-invoice"></i><span>Quotes</span></a>
+    <a class="nav-item" href="shipments.html" data-page="shipments"><i class="ti ti-package"></i><span>Shipments</span></a>
+    <a class="nav-sub" href="shipments.html#tabs"><i class="ti ti-table-column"></i><span>Detail Tabs</span></a>
+    <a class="nav-sub" href="shipments.html#billing"><i class="ti ti-receipt"></i><span>Invoicing &amp; Billing</span></a>
+    <a class="nav-item" href="consolidations.html" data-page="consolidations"><i class="ti ti-link"></i><span>Consolidations</span></a>
+    <a class="nav-item" href="clients.html" data-page="clients"><i class="ti ti-users"></i><span>Clients</span></a>
+    <a class="nav-item" href="providers.html" data-page="providers"><i class="ti ti-building"></i><span>Providers</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Finance</div>
+    <a class="nav-item" href="accounting.html" data-page="accounting"><i class="ti ti-receipt-2"></i><span>Accounting</span></a>
+    <a class="nav-sub" href="accounting.html#invoices"><i class="ti ti-file-invoice"></i><span>Document Types</span></a>
+    <a class="nav-sub" href="accounting.html#soa"><i class="ti ti-report"></i><span>Statement of Account</span></a>
+    <a class="nav-sub" href="accounting.html#payments"><i class="ti ti-credit-card"></i><span>Payments &amp; Receipts</span></a>
+    <a class="nav-sub" href="accounting.html#ageing"><i class="ti ti-clock"></i><span>Ageing Reports</span></a>
+    <a class="nav-sub" href="accounting.html#journal"><i class="ti ti-notebook"></i><span>Journal Entries</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Pricing</div>
+    <a class="nav-item" href="rates.html" data-page="rates"><i class="ti ti-coin"></i><span>Rates</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Carriers</div>
+    <a class="nav-item" href="carrier-tools.html" data-page="carrier-tools"><i class="ti ti-ship"></i><span>Carrier Tools</span></a>
+    <a class="nav-sub" href="carrier-tools.html#vessel-sailing"><i class="ti ti-anchor"></i><span>Vessel Sailing</span></a>
+    <a class="nav-sub" href="carrier-tools.html#flight-schedule"><i class="ti ti-plane"></i><span>Flight Schedule</span></a>
+    <a class="nav-sub" href="carrier-tools.html#container-tracking"><i class="ti ti-box"></i><span>Container Tracking</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Warehouse</div>
+    <a class="nav-item" href="warehouse.html" data-page="warehouse"><i class="ti ti-building-warehouse"></i><span>Warehouse</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Sales</div>
+    <a class="nav-item" href="crm.html" data-page="crm"><i class="ti ti-trending-up"></i><span>CRM</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Reports</div>
+    <a class="nav-item" href="reports.html" data-page="reports"><i class="ti ti-chart-bar"></i><span>Reports</span></a>
+    <a class="nav-sub" href="reports.html#operations"><i class="ti ti-timeline"></i><span>Operations</span></a>
+    <a class="nav-sub" href="reports.html#finance"><i class="ti ti-coins"></i><span>Finance</span></a>
+    <a class="nav-sub" href="reports.html#analytics"><i class="ti ti-chart-dots"></i><span>Analytics &amp; KPIs</span></a>
+    <a class="nav-sub" href="reports.html#compliance"><i class="ti ti-shield-check"></i><span>Compliance</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Administration</div>
+    <a class="nav-item" href="library.html" data-page="library"><i class="ti ti-books"></i><span>Library</span></a>
+    <a class="nav-item" href="settings.html" data-page="settings"><i class="ti ti-settings"></i><span>Settings</span></a>
+    <a class="nav-sub" href="settings.html#users"><i class="ti ti-user-cog"></i><span>Users &amp; Groups</span></a>
+    <a class="nav-sub" href="settings.html#global-settings"><i class="ti ti-adjustments"></i><span>Global Settings</span></a>
+    <a class="nav-sub" href="settings.html#branches"><i class="ti ti-building-skyscraper"></i><span>Branches</span></a>
+    <a class="nav-sub" href="settings.html#integrations"><i class="ti ti-plug"></i><span>EDI Integrations</span></a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="top-bar">
+    <div class="breadcrumb">
+      <a href="index.html"><i class="ti ti-home"></i></a>
+      <i class="ti ti-chevron-right"></i>
+      <span>Dashboard</span>
+    </div>
+  </div>
+
+  <div class="content" id="page-content">
+
+    <div class="section" id="dashboard">
+      <div class="section-header">
+        <div class="section-icon"><i class="ti ti-layout-dashboard"></i></div>
+        <h2>Dashboard</h2>
+      </div>
+      <p>The Dashboard is your real-time operational overview showing where your business stands today.</p>
+
+      <h3>Stat Cards</h3>
+      <p>Seven stat cards provide an instant summary of your shipment portfolio:</p>
+      <div class="card-grid">
+        <div class="card">
+          <ul>
+            <li><strong>Active</strong> — shipments currently in progress</li>
+            <li><strong>Pending</strong> — shipments awaiting confirmation or action</li>
+            <li><strong>Confirmed</strong> — booked and confirmed jobs</li>
+            <li><strong>Arriving (next 7 days)</strong> — shipments with ETA within one week</li>
+          </ul>
+        </div>
+        <div class="card">
+          <ul>
+            <li><strong>Overdue</strong> — shipments past their expected delivery date</li>
+            <li><strong>Exceptions</strong> — shipments flagged with issues or delays</li>
+            <li><strong>Done (this month)</strong> — shipments completed in the current calendar month</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tip"><strong>Tip:</strong> Clicking any stat card navigates directly to a filtered shipment list showing only the shipments matching that status.</div>
+
+      <h3>Monthly Trend Chart</h3>
+      <p>A bar chart displays shipment volume month by month, giving a clear visual of growth trends or seasonal dips. Hover over a bar to see the exact count for that month.</p>
+
+      <h3>Upcoming Arrivals</h3>
+      <p>A table lists all shipments with an ETA in the next 7 days, helping operations staff plan for incoming cargo.</p>
+      <table>
+        <thead>
+          <tr><th>Column</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>POL</td><td>Port of Loading</td></tr>
+          <tr><td>POD</td><td>Port of Discharge / Destination</td></tr>
+          <tr><td>Carrier</td><td>Shipping line or airline</td></tr>
+          <tr><td>ETA</td><td>Estimated time of arrival</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Active Shipments</h3>
+      <p>A quick-view panel shows all in-progress jobs with their current status and assigned client. Click any row to open the full shipment detail.</p>
+    </div>
+
+  </div>
+</main>
+
+</div><!-- /layout -->
+<script>
+(function () {
+  if (window.self !== window.top) document.documentElement.classList.add('in-iframe');
+  var page = document.body.dataset.page;
+  if (page) {
+    document.querySelectorAll('.nav-item[data-page]').forEach(function(el) {
+      el.classList.toggle('active', el.dataset.page === page);
+    });
+  }
+  document.querySelectorAll('.nav-sub').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href') || '';
+      var hi = href.indexOf('#');
+      if (hi === -1) return;
+      var filePart = href.slice(0, hi);
+      var hash = href.slice(hi + 1);
+      var curFile = location.pathname.split('/').pop();
+      if (!filePart || filePart === curFile) {
+        e.preventDefault();
+        var target = document.getElementById(hash);
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.pushState(null, '', '#' + hash); }
+      }
+    });
+  });
+  var anchors = document.querySelectorAll('[id]');
+  var subLinks = document.querySelectorAll('.nav-sub');
+  if (anchors.length && subLinks.length) {
+    var curFile = location.pathname.split('/').pop();
+    function markSub() {
+      var cur = '';
+      anchors.forEach(function(el) { if (window.scrollY + 130 >= el.offsetTop) cur = el.id; });
+      subLinks.forEach(function(l) {
+        var href = l.getAttribute('href') || '';
+        var hi = href.indexOf('#');
+        if (hi === -1) return;
+        var fp = href.slice(0, hi); var hash = href.slice(hi + 1);
+        if (!fp || fp === curFile) l.classList.toggle('active', hash === cur);
+      });
+    }
+    window.addEventListener('scroll', markSub, { passive: true });
+    markSub();
+  }
+  var inp = document.getElementById('search-input');
+  var body = document.getElementById('page-content');
+  if (inp && body) {
+    var nodes = body.querySelectorAll('p, li, td, h2, h3, h4');
+    inp.addEventListener('input', function() {
+      var q = this.value.trim();
+      nodes.forEach(function(n) { n.innerHTML = n.innerHTML.replace(/<mark class="hl">(.*?)<\/mark>/gi, '$1'); });
+      if (!q) return;
+      var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      nodes.forEach(function(n) { if (re.test(n.textContent)) n.innerHTML = n.innerHTML.replace(re, '<mark class="hl">$1</mark>'); });
+      var first = body.querySelector('.hl');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+  if (location.hash) {
+    requestAnimationFrame(function() {
+      var el = document.getElementById(location.hash.slice(1));
+      if (el) el.scrollIntoView({ block: 'start' });
+    });
+  }
+})();
+</script>
+
+
+</body></html>

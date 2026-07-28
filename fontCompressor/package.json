@@ -1,0 +1,15 @@
+{
+  "name": "font-compressor",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "minimizeFont": "gulp minimizeFont",
+    "minimizeFontTabler": "gulp minimizeFontTabler"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "fantasticon": "^1.2.2",
+    "gulp": "^4.0.2",
+    "sass": "^1.69.4"
+  }
+}

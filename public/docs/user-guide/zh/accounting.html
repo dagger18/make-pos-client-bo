@@ -1,0 +1,260 @@
+<!DOCTYPE html><html lang="zh"><head>
+  <script>
+(function(){
+  var lang='en';
+  try{var m=document.cookie.match(/(?:^|;\s*)user=([^;]*)/);if(m){var u=JSON.parse(decodeURIComponent(m[1]));if(u&&u.language)lang=u.language;}}catch(e){}
+  if(lang==='zh')return;
+  var f=location.pathname.split('/').pop();
+  if(lang==='en'){location.replace('../'+f);}else{location.replace('../'+lang+'/'+f);}
+})();
+</script>
+
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>财务会计 — Make Cargo 用户指南</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="accounting">
+<div class="layout">
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <i class="ti ti-ship"></i><span>Make Cargo</span>
+    </a>
+    <div class="search-wrap">
+      <i class="ti ti-search"></i>
+      <input class="sidebar-search" type="text" placeholder="Search this page…" id="search-input" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">快速入门</div>
+    <a class="nav-item" href="index.html" data-page="index"><i class="ti ti-home"></i><span>概览</span></a>
+    <a class="nav-sub" href="index.html#login"><i class="ti ti-lock"></i><span>登录</span></a>
+    <a class="nav-sub" href="index.html#navigation"><i class="ti ti-compass"></i><span>导航</span></a>
+    <a class="nav-sub" href="index.html#language"><i class="ti ti-language"></i><span>语言与 RTL</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">核心模块</div>
+    <a class="nav-item" href="dashboard.html" data-page="dashboard"><i class="ti ti-layout-dashboard"></i><span>仪表盘</span></a>
+    <a class="nav-item" href="quotes.html" data-page="quotes"><i class="ti ti-file-invoice"></i><span>报价</span></a>
+    <a class="nav-item" href="shipments.html" data-page="shipments"><i class="ti ti-package"></i><span>货运订单</span></a>
+    <a class="nav-sub" href="shipments.html#tabs"><i class="ti ti-table-column"></i><span>详情标签页</span></a>
+    <a class="nav-sub" href="shipments.html#billing"><i class="ti ti-receipt"></i><span>开票与账单</span></a>
+    <a class="nav-item" href="consolidations.html" data-page="consolidations"><i class="ti ti-link"></i><span>拼箱/合并货运</span></a>
+    <a class="nav-item" href="clients.html" data-page="clients"><i class="ti ti-users"></i><span>客户</span></a>
+    <a class="nav-item" href="providers.html" data-page="providers"><i class="ti ti-building"></i><span>供应商</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">财务</div>
+    <a class="nav-item" href="accounting.html" data-page="accounting"><i class="ti ti-receipt-2"></i><span>财务会计</span></a>
+    <a class="nav-sub" href="accounting.html#invoices"><i class="ti ti-file-invoice"></i><span>单据类型</span></a>
+    <a class="nav-sub" href="accounting.html#soa"><i class="ti ti-report"></i><span>对账单</span></a>
+    <a class="nav-sub" href="accounting.html#payments"><i class="ti ti-credit-card"></i><span>付款与收款</span></a>
+    <a class="nav-sub" href="accounting.html#ageing"><i class="ti ti-clock"></i><span>账龄报表</span></a>
+    <a class="nav-sub" href="accounting.html#journal"><i class="ti ti-notebook"></i><span>日记账分录</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">定价</div>
+    <a class="nav-item" href="rates.html" data-page="rates"><i class="ti ti-coin"></i><span>费率</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">承运商</div>
+    <a class="nav-item" href="carrier-tools.html" data-page="carrier-tools"><i class="ti ti-ship"></i><span>承运商工具</span></a>
+    <a class="nav-sub" href="carrier-tools.html#vessel-sailing"><i class="ti ti-anchor"></i><span>船期查询</span></a>
+    <a class="nav-sub" href="carrier-tools.html#flight-schedule"><i class="ti ti-plane"></i><span>航班时刻表</span></a>
+    <a class="nav-sub" href="carrier-tools.html#container-tracking"><i class="ti ti-box"></i><span>集装箱追踪</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">仓库</div>
+    <a class="nav-item" href="warehouse.html" data-page="warehouse"><i class="ti ti-building-warehouse"></i><span>仓库</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">销售</div>
+    <a class="nav-item" href="crm.html" data-page="crm"><i class="ti ti-trending-up"></i><span>CRM</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">报表</div>
+    <a class="nav-item" href="reports.html" data-page="reports"><i class="ti ti-chart-bar"></i><span>报表</span></a>
+    <a class="nav-sub" href="reports.html#operations"><i class="ti ti-timeline"></i><span>运营</span></a>
+    <a class="nav-sub" href="reports.html#finance"><i class="ti ti-coins"></i><span>财务</span></a>
+    <a class="nav-sub" href="reports.html#analytics"><i class="ti ti-chart-dots"></i><span>数据分析与 KPI</span></a>
+    <a class="nav-sub" href="reports.html#compliance"><i class="ti ti-shield-check"></i><span>合规</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">系统管理</div>
+    <a class="nav-item" href="library.html" data-page="library"><i class="ti ti-books"></i><span>基础数据库</span></a>
+    <a class="nav-item" href="settings.html" data-page="settings"><i class="ti ti-settings"></i><span>系统设置</span></a>
+    <a class="nav-sub" href="settings.html#users"><i class="ti ti-user-cog"></i><span>用户与权限组</span></a>
+    <a class="nav-sub" href="settings.html#global-settings"><i class="ti ti-adjustments"></i><span>全局设置</span></a>
+    <a class="nav-sub" href="settings.html#branches"><i class="ti ti-building-skyscraper"></i><span>分公司/分支机构</span></a>
+    <a class="nav-sub" href="settings.html#integrations"><i class="ti ti-plug"></i><span>EDI 集成</span></a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="top-bar">
+    <div class="breadcrumb">
+      <a href="index.html"><i class="ti ti-home"></i></a>
+      <i class="ti ti-chevron-right"></i>
+      <span>财务会计</span>
+    </div>
+  </div>
+
+  <div class="content" id="page-content">
+
+    <div class="section" id="accounting">
+      <div class="section-header">
+        <div class="section-icon"><i class="ti ti-receipt-2"></i></div>
+        <h2>财务会计</h2>
+      </div>
+      <p>财务会计模块管理所有财务单据，包括发票、贷项通知单、付款及收款记录。</p>
+
+      <h3 id="invoices">单据类型</h3>
+      <table>
+        <thead>
+          <tr><th>Code</th><th>Name</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>ID</code></td><td>Debit Note / Sales Invoice</td><td>Charge a client for freight services</td></tr>
+          <tr><td><code>IC</code></td><td>Credit Note / Cost Invoice</td><td>Record cost from a provider</td></tr>
+          <tr><td><code>CO</code></td><td>COBO</td><td>Internal cost-to-owner document</td></tr>
+          <tr><td><code>PO</code></td><td>POBO / Purchase Order</td><td>Purchase order / payable record</td></tr>
+          <tr><td><code>PMT</code></td><td>Payment</td><td>Record a payment made to a provider</td></tr>
+          <tr><td><code>RPT</code></td><td>Receipt</td><td>Record a payment received from a client</td></tr>
+        </tbody>
+      </table>
+
+      <h3>创建发票 (ID)</h3>
+      <ol class="steps">
+        <li><span class="step-num">1</span><span>Go to <strong>Accounting → ID</strong> and click <strong>New Invoice</strong>, or create directly from the shipment Cost Sheet tab</span></li>
+        <li><span class="step-num">2</span><span>Select the client and shipment reference</span></li>
+        <li><span class="step-num">3</span><span>Add charge lines (imported from cost sheet or entered manually)</span></li>
+        <li><span class="step-num">4</span><span>Set the currency and exchange rate</span></li>
+        <li><span class="step-num">5</span><span>Save as <strong>Draft</strong>, then click <strong>Submit</strong> to finalise and issue to the client</span></li>
+      </ol>
+
+      <h3 id="soa">对账单</h3>
+      <p>前往 <strong>财务会计 → SOA-客户</strong>，或打开某个客户/供应商记录并选择 <strong>对账单</strong>。SOA 显示以下内容：</p>
+      <ul>
+        <li>所有发票及其当前状态（草稿 / 已提交 / 已审批 / 已付款）</li>
+        <li>所有付款记录及其对应的发票</li>
+        <li>滚动未结余额</li>
+        <li>支持多币种显示，汇率可编辑</li>
+      </ul>
+      <p>可将 SOA 导出为 PDF 或 Excel，供客户审核或内部对账使用。</p>
+
+      <h3 id="payments">记录付款与收款</h3>
+      <p>前往 <strong>财务会计 → PMT</strong> 记录向供应商的付款，或前往 <strong>财务会计 → RPT</strong> 记录从客户收到的款项。在每种情况下：</p>
+      <ol>
+        <li>创建新记录并关联到相关发票</li>
+        <li>输入付款金额、日期及付款方式（银行转账、刷卡、支票等）</li>
+        <li>保存后，关联发票的未结余额将自动更新</li>
+      </ol>
+
+      <h3 id="ageing">账龄报表</h3>
+      <p>前往 <strong>财务会计 → AR 账龄</strong>（应收款）或 <strong>AP 账龄</strong>（应付款）。选择日期范围并运行报表。未结金额按账龄区间分组显示：</p>
+      <div class="status-grid">
+        <span class="status-chip" style="background:#d1fae5;color:#065f46;">Current</span>
+        <span class="status-chip" style="background:#fef3c7;color:#92400e;">1–30 days</span>
+        <span class="status-chip" style="background:#fed7aa;color:#9a3412;">31–60 days</span>
+        <span class="status-chip" style="background:#fecaca;color:#b91c1c;">61–90 days</span>
+        <span class="status-chip" style="background:#fee2e2;color:#7f1d1d;">90+ days</span>
+      </div>
+
+      <h3 id="journal">日记账分录</h3>
+      <p>前往 <strong>财务会计 → 日记账</strong> 创建手动总账分录。每条日记账分录需要：</p>
+      <ul>
+        <li>来自科目表的借方和贷方账户编码</li>
+        <li>说明与参考编号</li>
+        <li>金额与货币</li>
+      </ul>
+      <p>日记账分录在过账至总账前，需要获得授权用户的审批。</p>
+
+      <h3>按期间损益报表</h3>
+      <p>前往 <strong>财务会计 → P&amp;L 期间</strong>。选择起止日期范围，点击 <strong>运行报表</strong>。报表按分公司展示收入、成本、毛利润、毛利率 %、外汇损益及净利润。</p>
+    </div>
+
+  </div>
+</main>
+
+</div><!-- /layout -->
+<script>
+(function () {
+  if (window.self !== window.top) document.documentElement.classList.add('in-iframe');
+  var page = document.body.dataset.page;
+  if (page) {
+    document.querySelectorAll('.nav-item[data-page]').forEach(function(el) {
+      el.classList.toggle('active', el.dataset.page === page);
+    });
+  }
+  document.querySelectorAll('.nav-sub').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href') || '';
+      var hi = href.indexOf('#');
+      if (hi === -1) return;
+      var filePart = href.slice(0, hi);
+      var hash = href.slice(hi + 1);
+      var curFile = location.pathname.split('/').pop();
+      if (!filePart || filePart === curFile) {
+        e.preventDefault();
+        var target = document.getElementById(hash);
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.pushState(null, '', '#' + hash); }
+      }
+    });
+  });
+  var anchors = document.querySelectorAll('[id]');
+  var subLinks = document.querySelectorAll('.nav-sub');
+  if (anchors.length && subLinks.length) {
+    var curFile = location.pathname.split('/').pop();
+    function markSub() {
+      var cur = '';
+      anchors.forEach(function(el) { if (window.scrollY + 130 >= el.offsetTop) cur = el.id; });
+      subLinks.forEach(function(l) {
+        var href = l.getAttribute('href') || '';
+        var hi = href.indexOf('#');
+        if (hi === -1) return;
+        var fp = href.slice(0, hi); var hash = href.slice(hi + 1);
+        if (!fp || fp === curFile) l.classList.toggle('active', hash === cur);
+      });
+    }
+    window.addEventListener('scroll', markSub, { passive: true });
+    markSub();
+  }
+  var inp = document.getElementById('search-input');
+  var body = document.getElementById('page-content');
+  if (inp && body) {
+    var nodes = body.querySelectorAll('p, li, td, h2, h3, h4');
+    inp.addEventListener('input', function() {
+      var q = this.value.trim();
+      nodes.forEach(function(n) { n.innerHTML = n.innerHTML.replace(/<mark class="hl">(.*?)<\/mark>/gi, '$1'); });
+      if (!q) return;
+      var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      nodes.forEach(function(n) { if (re.test(n.textContent)) n.innerHTML = n.innerHTML.replace(re, '<mark class="hl">$1</mark>'); });
+      var first = body.querySelector('.hl');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+  if (location.hash) {
+    requestAnimationFrame(function() {
+      var el = document.getElementById(location.hash.slice(1));
+      if (el) el.scrollIntoView({ block: 'start' });
+    });
+  }
+})();
+</script>
+
+
+</body></html>

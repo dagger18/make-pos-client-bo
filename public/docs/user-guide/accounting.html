@@ -1,0 +1,258 @@
+<!DOCTYPE html><html lang="en"><head>
+  <script>
+(function(){
+  var lang='en';
+  try{var m=document.cookie.match(/(?:^|;\s*)user=([^;]*)/);if(m){var u=JSON.parse(decodeURIComponent(m[1]));if(u&&u.language)lang=u.language;}}catch(e){}
+  if(lang==='en')return;
+  var f=location.pathname.split('/').pop();
+  location.replace(lang+'/'+f);
+})();
+</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accounting — Make Cargo User Guide</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="accounting">
+<div class="layout">
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <i class="ti ti-ship"></i><span>Make Cargo</span>
+    </a>
+    <div class="search-wrap">
+      <i class="ti ti-search"></i>
+      <input class="sidebar-search" type="text" placeholder="Search this page…" id="search-input" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Getting Started</div>
+    <a class="nav-item" href="index.html" data-page="index"><i class="ti ti-home"></i><span>Overview</span></a>
+    <a class="nav-sub" href="index.html#login"><i class="ti ti-lock"></i><span>Logging In</span></a>
+    <a class="nav-sub" href="index.html#navigation"><i class="ti ti-compass"></i><span>Navigation</span></a>
+    <a class="nav-sub" href="index.html#language"><i class="ti ti-language"></i><span>Language &amp; RTL</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Core Modules</div>
+    <a class="nav-item" href="dashboard.html" data-page="dashboard"><i class="ti ti-layout-dashboard"></i><span>Dashboard</span></a>
+    <a class="nav-item" href="quotes.html" data-page="quotes"><i class="ti ti-file-invoice"></i><span>Quotes</span></a>
+    <a class="nav-item" href="shipments.html" data-page="shipments"><i class="ti ti-package"></i><span>Shipments</span></a>
+    <a class="nav-sub" href="shipments.html#tabs"><i class="ti ti-table-column"></i><span>Detail Tabs</span></a>
+    <a class="nav-sub" href="shipments.html#billing"><i class="ti ti-receipt"></i><span>Invoicing &amp; Billing</span></a>
+    <a class="nav-item" href="consolidations.html" data-page="consolidations"><i class="ti ti-link"></i><span>Consolidations</span></a>
+    <a class="nav-item" href="clients.html" data-page="clients"><i class="ti ti-users"></i><span>Clients</span></a>
+    <a class="nav-item" href="providers.html" data-page="providers"><i class="ti ti-building"></i><span>Providers</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Finance</div>
+    <a class="nav-item" href="accounting.html" data-page="accounting"><i class="ti ti-receipt-2"></i><span>Accounting</span></a>
+    <a class="nav-sub" href="accounting.html#invoices"><i class="ti ti-file-invoice"></i><span>Document Types</span></a>
+    <a class="nav-sub" href="accounting.html#soa"><i class="ti ti-report"></i><span>Statement of Account</span></a>
+    <a class="nav-sub" href="accounting.html#payments"><i class="ti ti-credit-card"></i><span>Payments &amp; Receipts</span></a>
+    <a class="nav-sub" href="accounting.html#ageing"><i class="ti ti-clock"></i><span>Ageing Reports</span></a>
+    <a class="nav-sub" href="accounting.html#journal"><i class="ti ti-notebook"></i><span>Journal Entries</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Pricing</div>
+    <a class="nav-item" href="rates.html" data-page="rates"><i class="ti ti-coin"></i><span>Rates</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Carriers</div>
+    <a class="nav-item" href="carrier-tools.html" data-page="carrier-tools"><i class="ti ti-ship"></i><span>Carrier Tools</span></a>
+    <a class="nav-sub" href="carrier-tools.html#vessel-sailing"><i class="ti ti-anchor"></i><span>Vessel Sailing</span></a>
+    <a class="nav-sub" href="carrier-tools.html#flight-schedule"><i class="ti ti-plane"></i><span>Flight Schedule</span></a>
+    <a class="nav-sub" href="carrier-tools.html#container-tracking"><i class="ti ti-box"></i><span>Container Tracking</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Warehouse</div>
+    <a class="nav-item" href="warehouse.html" data-page="warehouse"><i class="ti ti-building-warehouse"></i><span>Warehouse</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Sales</div>
+    <a class="nav-item" href="crm.html" data-page="crm"><i class="ti ti-trending-up"></i><span>CRM</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Reports</div>
+    <a class="nav-item" href="reports.html" data-page="reports"><i class="ti ti-chart-bar"></i><span>Reports</span></a>
+    <a class="nav-sub" href="reports.html#operations"><i class="ti ti-timeline"></i><span>Operations</span></a>
+    <a class="nav-sub" href="reports.html#finance"><i class="ti ti-coins"></i><span>Finance</span></a>
+    <a class="nav-sub" href="reports.html#analytics"><i class="ti ti-chart-dots"></i><span>Analytics &amp; KPIs</span></a>
+    <a class="nav-sub" href="reports.html#compliance"><i class="ti ti-shield-check"></i><span>Compliance</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Administration</div>
+    <a class="nav-item" href="library.html" data-page="library"><i class="ti ti-books"></i><span>Library</span></a>
+    <a class="nav-item" href="settings.html" data-page="settings"><i class="ti ti-settings"></i><span>Settings</span></a>
+    <a class="nav-sub" href="settings.html#users"><i class="ti ti-user-cog"></i><span>Users &amp; Groups</span></a>
+    <a class="nav-sub" href="settings.html#global-settings"><i class="ti ti-adjustments"></i><span>Global Settings</span></a>
+    <a class="nav-sub" href="settings.html#branches"><i class="ti ti-building-skyscraper"></i><span>Branches</span></a>
+    <a class="nav-sub" href="settings.html#integrations"><i class="ti ti-plug"></i><span>EDI Integrations</span></a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="top-bar">
+    <div class="breadcrumb">
+      <a href="index.html"><i class="ti ti-home"></i></a>
+      <i class="ti ti-chevron-right"></i>
+      <span>Accounting</span>
+    </div>
+  </div>
+
+  <div class="content" id="page-content">
+
+    <div class="section" id="accounting">
+      <div class="section-header">
+        <div class="section-icon"><i class="ti ti-receipt-2"></i></div>
+        <h2>Accounting</h2>
+      </div>
+      <p>The Accounting module handles all financial documents — invoices, credit notes, payments, and receipts.</p>
+
+      <h3 id="invoices">Document Types</h3>
+      <table>
+        <thead>
+          <tr><th>Code</th><th>Name</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>ID</code></td><td>Debit Note / Sales Invoice</td><td>Charge a client for freight services</td></tr>
+          <tr><td><code>IC</code></td><td>Credit Note / Cost Invoice</td><td>Record cost from a provider</td></tr>
+          <tr><td><code>CO</code></td><td>COBO</td><td>Internal cost-to-owner document</td></tr>
+          <tr><td><code>PO</code></td><td>POBO / Purchase Order</td><td>Purchase order / payable record</td></tr>
+          <tr><td><code>PMT</code></td><td>Payment</td><td>Record a payment made to a provider</td></tr>
+          <tr><td><code>RPT</code></td><td>Receipt</td><td>Record a payment received from a client</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Creating an Invoice (ID)</h3>
+      <ol class="steps">
+        <li><span class="step-num">1</span><span>Go to <strong>Accounting → ID</strong> and click <strong>New Invoice</strong>, or create directly from the shipment Cost Sheet tab</span></li>
+        <li><span class="step-num">2</span><span>Select the client and shipment reference</span></li>
+        <li><span class="step-num">3</span><span>Add charge lines (imported from cost sheet or entered manually)</span></li>
+        <li><span class="step-num">4</span><span>Set the currency and exchange rate</span></li>
+        <li><span class="step-num">5</span><span>Save as <strong>Draft</strong>, then click <strong>Submit</strong> to finalise and issue to the client</span></li>
+      </ol>
+
+      <h3 id="soa">Statement of Account</h3>
+      <p>Navigate to <strong>Accounting → SOA-Client</strong> or open a client/provider record and select <strong>Statement of Account</strong>. The SOA shows:</p>
+      <ul>
+        <li>All invoices and their current status (Draft / Submitted / Approved / Paid)</li>
+        <li>All payments and the invoices they were applied to</li>
+        <li>Running outstanding balance</li>
+        <li>Multi-currency display with editable exchange rates</li>
+      </ul>
+      <p>Export the SOA as PDF or Excel for client review or internal reconciliation.</p>
+
+      <h3 id="payments">Recording Payments &amp; Receipts</h3>
+      <p>Go to <strong>Accounting → PMT</strong> to record a payment made to a provider, or <strong>Accounting → RPT</strong> to record a payment received from a client. In each case:</p>
+      <ol>
+        <li>Create a new record and link it to the relevant invoice(s)</li>
+        <li>Enter the payment amount, date, and payment method (bank transfer, card, cheque, etc.)</li>
+        <li>Save — the outstanding balance on the linked invoice(s) updates automatically</li>
+      </ol>
+
+      <h3 id="ageing">Ageing Reports</h3>
+      <p>Go to <strong>Accounting → AR Ageing</strong> (receivables) or <strong>AP Ageing</strong> (payables). Select a date range and run the report. Outstanding amounts are grouped by age band:</p>
+      <div class="status-grid">
+        <span class="status-chip" style="background:#d1fae5;color:#065f46;">Current</span>
+        <span class="status-chip" style="background:#fef3c7;color:#92400e;">1–30 days</span>
+        <span class="status-chip" style="background:#fed7aa;color:#9a3412;">31–60 days</span>
+        <span class="status-chip" style="background:#fecaca;color:#b91c1c;">61–90 days</span>
+        <span class="status-chip" style="background:#fee2e2;color:#7f1d1d;">90+ days</span>
+      </div>
+
+      <h3 id="journal">Journal Entries</h3>
+      <p>Go to <strong>Accounting → Journal</strong> to create manual general ledger entries. Each journal entry requires:</p>
+      <ul>
+        <li>Debit and credit account codes from the Chart of Accounts</li>
+        <li>Description and reference</li>
+        <li>Amount and currency</li>
+      </ul>
+      <p>Journal entries require approval from an authorised user before they are posted to the general ledger.</p>
+
+      <h3>P&amp;L by Period</h3>
+      <p>Go to <strong>Accounting → P&amp;L Period</strong>. Select a from/to date range and click <strong>Run Report</strong>. The report shows revenue, cost, gross profit, margin %, FX gain/loss, and net profit broken down by branch.</p>
+    </div>
+
+  </div>
+</main>
+
+</div><!-- /layout -->
+<script>
+(function () {
+  if (window.self !== window.top) document.documentElement.classList.add('in-iframe');
+  var page = document.body.dataset.page;
+  if (page) {
+    document.querySelectorAll('.nav-item[data-page]').forEach(function(el) {
+      el.classList.toggle('active', el.dataset.page === page);
+    });
+  }
+  document.querySelectorAll('.nav-sub').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href') || '';
+      var hi = href.indexOf('#');
+      if (hi === -1) return;
+      var filePart = href.slice(0, hi);
+      var hash = href.slice(hi + 1);
+      var curFile = location.pathname.split('/').pop();
+      if (!filePart || filePart === curFile) {
+        e.preventDefault();
+        var target = document.getElementById(hash);
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.pushState(null, '', '#' + hash); }
+      }
+    });
+  });
+  var anchors = document.querySelectorAll('[id]');
+  var subLinks = document.querySelectorAll('.nav-sub');
+  if (anchors.length && subLinks.length) {
+    var curFile = location.pathname.split('/').pop();
+    function markSub() {
+      var cur = '';
+      anchors.forEach(function(el) { if (window.scrollY + 130 >= el.offsetTop) cur = el.id; });
+      subLinks.forEach(function(l) {
+        var href = l.getAttribute('href') || '';
+        var hi = href.indexOf('#');
+        if (hi === -1) return;
+        var fp = href.slice(0, hi); var hash = href.slice(hi + 1);
+        if (!fp || fp === curFile) l.classList.toggle('active', hash === cur);
+      });
+    }
+    window.addEventListener('scroll', markSub, { passive: true });
+    markSub();
+  }
+  var inp = document.getElementById('search-input');
+  var body = document.getElementById('page-content');
+  if (inp && body) {
+    var nodes = body.querySelectorAll('p, li, td, h2, h3, h4');
+    inp.addEventListener('input', function() {
+      var q = this.value.trim();
+      nodes.forEach(function(n) { n.innerHTML = n.innerHTML.replace(/<mark class="hl">(.*?)<\/mark>/gi, '$1'); });
+      if (!q) return;
+      var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      nodes.forEach(function(n) { if (re.test(n.textContent)) n.innerHTML = n.innerHTML.replace(re, '<mark class="hl">$1</mark>'); });
+      var first = body.querySelector('.hl');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+  if (location.hash) {
+    requestAnimationFrame(function() {
+      var el = document.getElementById(location.hash.slice(1));
+      if (el) el.scrollIntoView({ block: 'start' });
+    });
+  }
+})();
+</script>
+
+
+</body></html>

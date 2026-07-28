@@ -1,0 +1,251 @@
+<!DOCTYPE html><html lang="ko"><head>
+  <script>
+(function(){
+  var lang='en';
+  try{var m=document.cookie.match(/(?:^|;\s*)user=([^;]*)/);if(m){var u=JSON.parse(decodeURIComponent(m[1]));if(u&&u.language)lang=u.language;}}catch(e){}
+  if(lang==='ko')return;
+  var f=location.pathname.split('/').pop();
+  if(lang==='en'){location.replace('../'+f);}else{location.replace('../'+lang+'/'+f);}
+})();
+</script>
+
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>보고서 — Make Cargo 사용 가이드</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="reports">
+<div class="layout">
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-logo" href="index.html">
+      <i class="ti ti-ship"></i><span>Make Cargo</span>
+    </a>
+    <div class="search-wrap">
+      <i class="ti ti-search"></i>
+      <input class="sidebar-search" type="text" placeholder="Search this page…" id="search-input" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">시작하기</div>
+    <a class="nav-item" href="index.html" data-page="index"><i class="ti ti-home"></i><span>개요</span></a>
+    <a class="nav-sub" href="index.html#login"><i class="ti ti-lock"></i><span>로그인</span></a>
+    <a class="nav-sub" href="index.html#navigation"><i class="ti ti-compass"></i><span>탐색</span></a>
+    <a class="nav-sub" href="index.html#language"><i class="ti ti-language"></i><span>언어 &amp; RTL</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">핵심 모듈</div>
+    <a class="nav-item" href="dashboard.html" data-page="dashboard"><i class="ti ti-layout-dashboard"></i><span>대시보드</span></a>
+    <a class="nav-item" href="quotes.html" data-page="quotes"><i class="ti ti-file-invoice"></i><span>견적</span></a>
+    <a class="nav-item" href="shipments.html" data-page="shipments"><i class="ti ti-package"></i><span>화물 운송</span></a>
+    <a class="nav-sub" href="shipments.html#tabs"><i class="ti ti-table-column"></i><span>세부 탭</span></a>
+    <a class="nav-sub" href="shipments.html#billing"><i class="ti ti-receipt"></i><span>청구 &amp; 결제</span></a>
+    <a class="nav-item" href="consolidations.html" data-page="consolidations"><i class="ti ti-link"></i><span>혼재</span></a>
+    <a class="nav-item" href="clients.html" data-page="clients"><i class="ti ti-users"></i><span>클라이언트</span></a>
+    <a class="nav-item" href="providers.html" data-page="providers"><i class="ti ti-building"></i><span>공급업체</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">재무</div>
+    <a class="nav-item" href="accounting.html" data-page="accounting"><i class="ti ti-receipt-2"></i><span>회계</span></a>
+    <a class="nav-sub" href="accounting.html#invoices"><i class="ti ti-file-invoice"></i><span>문서 유형</span></a>
+    <a class="nav-sub" href="accounting.html#soa"><i class="ti ti-report"></i><span>거래 명세서</span></a>
+    <a class="nav-sub" href="accounting.html#payments"><i class="ti ti-credit-card"></i><span>지급 &amp; 영수증</span></a>
+    <a class="nav-sub" href="accounting.html#ageing"><i class="ti ti-clock"></i><span>연령 분석 보고서</span></a>
+    <a class="nav-sub" href="accounting.html#journal"><i class="ti ti-notebook"></i><span>분개 입력</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">요금 설정</div>
+    <a class="nav-item" href="rates.html" data-page="rates"><i class="ti ti-coin"></i><span>운임</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">운송사</div>
+    <a class="nav-item" href="carrier-tools.html" data-page="carrier-tools"><i class="ti ti-ship"></i><span>운송사 도구</span></a>
+    <a class="nav-sub" href="carrier-tools.html#vessel-sailing"><i class="ti ti-anchor"></i><span>선박 스케줄</span></a>
+    <a class="nav-sub" href="carrier-tools.html#flight-schedule"><i class="ti ti-plane"></i><span>항공 스케줄</span></a>
+    <a class="nav-sub" href="carrier-tools.html#container-tracking"><i class="ti ti-box"></i><span>컨테이너 추적</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">창고</div>
+    <a class="nav-item" href="warehouse.html" data-page="warehouse"><i class="ti ti-building-warehouse"></i><span>창고</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">영업</div>
+    <a class="nav-item" href="crm.html" data-page="crm"><i class="ti ti-trending-up"></i><span>CRM</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">보고서</div>
+    <a class="nav-item" href="reports.html" data-page="reports"><i class="ti ti-chart-bar"></i><span>보고서</span></a>
+    <a class="nav-sub" href="reports.html#operations"><i class="ti ti-timeline"></i><span>운영</span></a>
+    <a class="nav-sub" href="reports.html#finance"><i class="ti ti-coins"></i><span>재무</span></a>
+    <a class="nav-sub" href="reports.html#analytics"><i class="ti ti-chart-dots"></i><span>분석 &amp; KPI</span></a>
+    <a class="nav-sub" href="reports.html#compliance"><i class="ti ti-shield-check"></i><span>컴플라이언스</span></a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">관리</div>
+    <a class="nav-item" href="library.html" data-page="library"><i class="ti ti-books"></i><span>라이브러리</span></a>
+    <a class="nav-item" href="settings.html" data-page="settings"><i class="ti ti-settings"></i><span>설정</span></a>
+    <a class="nav-sub" href="settings.html#users"><i class="ti ti-user-cog"></i><span>사용자 &amp; 그룹</span></a>
+    <a class="nav-sub" href="settings.html#global-settings"><i class="ti ti-adjustments"></i><span>전역 설정</span></a>
+    <a class="nav-sub" href="settings.html#branches"><i class="ti ti-building-skyscraper"></i><span>지점</span></a>
+    <a class="nav-sub" href="settings.html#integrations"><i class="ti ti-plug"></i><span>EDI 연동</span></a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="top-bar">
+    <div class="breadcrumb">
+      <a href="index.html"><i class="ti ti-home"></i></a>
+      <i class="ti ti-chevron-right"></i>
+      <span>보고서</span>
+    </div>
+  </div>
+
+  <div class="content" id="page-content">
+
+    <div class="section" id="reports">
+      <div class="section-header">
+        <div class="section-icon"><i class="ti ti-chart-bar"></i></div>
+        <h2>보고서</h2>
+      </div>
+      <p>비즈니스 전반의 운영, 재무, 컴플라이언스 인사이트. 대부분의 보고서는 날짜 범위가 필요합니다. 시작/종료 날짜를 설정하고 <strong>보고서 실행</strong>을 클릭하세요.</p>
+
+      <h3 id="operations">운영 보고서</h3>
+      <table>
+        <thead>
+          <tr><th>Report</th><th>What it shows</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Shipment</strong></td><td>All shipments with status, client, carrier, route, and financial summary. Filterable by mode, date range, and status.</td></tr>
+          <tr><td><strong>Exception</strong></td><td>Shipments flagged as exceptions — delayed, missing docs, escalated issues — with reason codes and current responsible party.</td></tr>
+          <tr><td><strong>Staff</strong></td><td>Workload and productivity metrics per staff member, including shipments handled and tasks completed.</td></tr>
+        </tbody>
+      </table>
+
+      <h3 id="finance">재무 보고서</h3>
+      <table>
+        <thead>
+          <tr><th>Report</th><th>What it shows</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Charge</strong></td><td>Detailed charge breakdown by type, shipment, and currency across the selected period.</td></tr>
+          <tr><td><strong>VAT Report</strong></td><td>Output tax, input tax, net VAT payable, and withholding tax for the period. Export for tax filings.</td></tr>
+          <tr><td><strong>Insurance Declaration</strong></td><td>Declared cargo values and insurance premiums for all insured shipments in the period.</td></tr>
+        </tbody>
+      </table>
+
+      <h3 id="analytics">분석 &amp; KPI</h3>
+      <table>
+        <thead>
+          <tr><th>Report</th><th>What it shows</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>KPI Dashboard</strong></td><td>On-time delivery rate, DSO (days sales outstanding), quote conversion rate by month, operator productivity.</td></tr>
+          <tr><td><strong>Customer Profitability</strong></td><td>Revenue, cost, gross profit, and margin % per client for the period.</td></tr>
+          <tr><td><strong>Department P&amp;L</strong></td><td>Profit &amp; loss broken down by branch or department.</td></tr>
+          <tr><td><strong>Top Lanes</strong></td><td>Busiest trade lanes by shipment count and revenue.</td></tr>
+          <tr><td><strong>Rate Benchmark</strong></td><td>Buy vs. market, sell vs. market, and market trend charts for evaluating rate competitiveness.</td></tr>
+          <tr><td><strong>Carrier Performance</strong></td><td>On-time and reliability scores by carrier across all your shipments.</td></tr>
+          <tr><td><strong>Sales Commission</strong></td><td>Commission earned per sales staff member based on closed shipments in the period.</td></tr>
+          <tr><td><strong>Sales Target</strong></td><td>Revenue target vs. actual by staff member or branch for the period.</td></tr>
+          <tr><td><strong>CO₂ Emissions</strong></td><td>Estimated and actual carbon emissions by shipment and transport mode. Export for sustainability reporting.</td></tr>
+        </tbody>
+      </table>
+
+      <h3 id="compliance">컴플라이언스 보고서</h3>
+      <table>
+        <thead>
+          <tr><th>Report</th><th>What it shows</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Compliance Dashboard</strong></td><td>Overview of sanctions screenings, restricted cargo alerts, and compliance flags across active shipments.</td></tr>
+          <tr><td><strong>Audit Log</strong></td><td>Complete immutable record of all system actions — who, what, when, and result (Success / Failure / Blocked). Filter by event type, actor, and date.</td></tr>
+          <tr><td><strong>EDI Log</strong></td><td>History of all electronic data interchange messages sent to and received from carriers and partners.</td></tr>
+          <tr><td><strong>D&amp;D Dashboard</strong></td><td>Demurrage &amp; Detention status across all active shipments — containers in dispute, returned, or actively accruing fees.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</main>
+
+</div><!-- /layout -->
+<script>
+(function () {
+  if (window.self !== window.top) document.documentElement.classList.add('in-iframe');
+  var page = document.body.dataset.page;
+  if (page) {
+    document.querySelectorAll('.nav-item[data-page]').forEach(function(el) {
+      el.classList.toggle('active', el.dataset.page === page);
+    });
+  }
+  document.querySelectorAll('.nav-sub').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href') || '';
+      var hi = href.indexOf('#');
+      if (hi === -1) return;
+      var filePart = href.slice(0, hi);
+      var hash = href.slice(hi + 1);
+      var curFile = location.pathname.split('/').pop();
+      if (!filePart || filePart === curFile) {
+        e.preventDefault();
+        var target = document.getElementById(hash);
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.pushState(null, '', '#' + hash); }
+      }
+    });
+  });
+  var anchors = document.querySelectorAll('[id]');
+  var subLinks = document.querySelectorAll('.nav-sub');
+  if (anchors.length && subLinks.length) {
+    var curFile = location.pathname.split('/').pop();
+    function markSub() {
+      var cur = '';
+      anchors.forEach(function(el) { if (window.scrollY + 130 >= el.offsetTop) cur = el.id; });
+      subLinks.forEach(function(l) {
+        var href = l.getAttribute('href') || '';
+        var hi = href.indexOf('#');
+        if (hi === -1) return;
+        var fp = href.slice(0, hi); var hash = href.slice(hi + 1);
+        if (!fp || fp === curFile) l.classList.toggle('active', hash === cur);
+      });
+    }
+    window.addEventListener('scroll', markSub, { passive: true });
+    markSub();
+  }
+  var inp = document.getElementById('search-input');
+  var body = document.getElementById('page-content');
+  if (inp && body) {
+    var nodes = body.querySelectorAll('p, li, td, h2, h3, h4');
+    inp.addEventListener('input', function() {
+      var q = this.value.trim();
+      nodes.forEach(function(n) { n.innerHTML = n.innerHTML.replace(/<mark class="hl">(.*?)<\/mark>/gi, '$1'); });
+      if (!q) return;
+      var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      nodes.forEach(function(n) { if (re.test(n.textContent)) n.innerHTML = n.innerHTML.replace(re, '<mark class="hl">$1</mark>'); });
+      var first = body.querySelector('.hl');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+  if (location.hash) {
+    requestAnimationFrame(function() {
+      var el = document.getElementById(location.hash.slice(1));
+      if (el) el.scrollIntoView({ block: 'start' });
+    });
+  }
+})();
+</script>
+
+
+</body></html>
