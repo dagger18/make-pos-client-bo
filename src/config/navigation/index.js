@@ -23,6 +23,16 @@ export default () => {
     icon: { icon: 'tabler-device-desktop-analytics' },
   },
   {
+    title: $gettext('POS Terminal'),
+    to: { name: 'pos' },
+    icon: { icon: 'tabler-cash-register' },
+  },
+  {
+    title: $gettext('Orders'),
+    to: { name: 'order' },
+    icon: { icon: 'tabler-receipt' },
+  },
+  {
     title: $gettext('Catalog'),
     icon: { icon: 'tabler-shopping-bag' },
     children: [
