@@ -33,6 +33,11 @@ export default () => {
     icon: { icon: 'tabler-receipt' },
   },
   {
+    title: $gettext('Inventory'),
+    to: { name: 'inventory' },
+    icon: { icon: 'tabler-package' },
+  },
+  {
     title: $gettext('Catalog'),
     icon: { icon: 'tabler-shopping-bag' },
     children: [
