@@ -1,5 +1,6 @@
 <script setup>
-import DdService from '@/services/DdService'
+// DdService removed - freight-specific service
+const DdService = null;
 
 const props = defineProps({
   shipment: { type: Object, required: true },

@@ -2,7 +2,8 @@ import { enums as ChargeType } from '@/config/enums/ChargeType';
 import { getList as getChargeTypes } from '@/config/enums/PriceDetailChargeType';
 import { enums as TransportType } from '@/config/enums/TransportType';
 import CommonService, { multiFloat } from '@/services/CommonService';
-import ProviderService from '@/services/ProviderService';
+// ProviderService removed - freight-specific service
+const ProviderService = null;
 import DepartmentService from '@/services/DepartmentService';
 import { getList as getPayableAtList } from '@/config/enums/PayableAt';
 import { getList as getVisibleToList } from '@/config/enums/VisibleTo';

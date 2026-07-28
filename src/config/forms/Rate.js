@@ -3,7 +3,8 @@ import { getList as localChargeTypes } from '@/config/enums/LocalChargeType';
 import { getList as containerTypes } from '@/config/enums/ContainerType';
 import { getList as freightTerms } from '@/config/enums/FreightTerm';
 import CommonService, { portFieldConfig } from '@/services/CommonService';
-import ProviderService from '@/services/ProviderService';
+// ProviderService removed - freight-specific service
+const ProviderService = null;
 import { useAppStore } from '@/stores/appStore';
 export const makeDefaultEntity = async () => {
   return {}

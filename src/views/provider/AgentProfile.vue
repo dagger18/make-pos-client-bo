@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import AgentProfileService from '@/services/AgentProfileService'
+// AgentProfileService removed - freight-specific service
+const AgentProfileService = null;
 
 const props = defineProps({ provider: { type: Object, required: true } })
 const emit = defineEmits(['providerChanged'])

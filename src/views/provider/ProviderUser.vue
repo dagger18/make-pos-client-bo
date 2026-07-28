@@ -1,5 +1,6 @@
 <script setup>
-import ProviderService from '@/services/ProviderService';
+// ProviderService removed - freight-specific service
+const ProviderService = null;
 import { useAppStore } from '@/stores/appStore';
 import { useGettext } from "vue3-gettext";
 const { $gettext } = useGettext();

@@ -4,9 +4,10 @@ import { enums as EbitNoteType } from '@/config/enums/EbitNoteType';
 import { headers as exportPricesHeaders } from '@/config/tables/accounting/ChargeItem';
 import { filterConfigs, headers } from '@/config/tables/accounting/ID';
 import { dateAdapter } from "@/plugins/vuetify";
-import ChargeItemService from '@/services/ChargeItemService';
 import CommonService, { printDate } from '@/services/CommonService';
-import EntityService from '@/services/EbitNoteService';
+// ChargeItemService and EbitNoteService removed - freight-specific services
+const ChargeItemService = null;
+const EntityService = null;
 import { useAppStore } from '@/stores/appStore';
 import { useAuthStore } from '@/stores/authStore';
 import ShipmentDetail from '@/views/shipment/ShipmentDetail.vue';

@@ -1,6 +1,8 @@
 <script setup>
-import TruckService from '@/services/TruckService'
-import ProviderService from '@/services/ProviderService'
+// TruckService removed - freight-specific service
+const TruckService = null;
+// ProviderService removed - freight-specific service
+const ProviderService = null;
 
 const props = defineProps({
   shipment: { type: Object, required: true },

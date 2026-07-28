@@ -1,6 +1,8 @@
 <script setup>
-import StrippingService from '@/services/StrippingService'
-import WarehouseFacilityService from '@/services/WarehouseFacilityService'
+// StrippingService removed - freight-specific service
+const StrippingService = null;
+// WarehouseFacilityService removed - freight-specific service
+const WarehouseFacilityService = null;
 
 const props = defineProps({
   consolId: { type: Number, required: true },

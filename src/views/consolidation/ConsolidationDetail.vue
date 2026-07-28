@@ -1,6 +1,8 @@
 <script setup>
-import ConsolidationService from '@/services/ConsolidationService'
-import ShipmentService from '@/services/ShipmentService'
+// ConsolidationService removed - freight-specific service
+const ConsolidationService = null;
+// ShipmentService removed - freight-specific service
+const ShipmentService = null;
 import StuffingPanel from './StuffingPanel.vue'
 import StrippingPanel from './StrippingPanel.vue'
 import { useGettext } from 'vue3-gettext'

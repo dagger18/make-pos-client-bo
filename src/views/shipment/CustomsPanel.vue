@@ -1,5 +1,6 @@
 <script setup>
-import CustomsEntryService from '@/services/CustomsEntryService'
+// CustomsEntryService removed - freight-specific service
+const CustomsEntryService = null;
 
 const props = defineProps({ shipmentId: { type: Number, required: true } })
 

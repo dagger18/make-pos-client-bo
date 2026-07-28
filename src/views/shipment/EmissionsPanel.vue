@@ -1,5 +1,6 @@
 <script setup>
-import EmissionsService from '@/services/EmissionsService'
+// EmissionsService removed - freight-specific service
+const EmissionsService = null;
 
 const props = defineProps({ shipment: { type: Object, required: true } })
 

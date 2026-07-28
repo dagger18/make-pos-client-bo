@@ -1,6 +1,5 @@
 <script setup>
 import ReportAnalyticsService from '@/services/ReportAnalyticsService'
-import CapacityService from '@/services/CapacityService'
 import CapacityUsageCard from '@/components/dashboard/CapacityUsageCard.vue'
 import { useGettext } from 'vue3-gettext'
 import { useAuthStore } from '@/stores/authStore'
@@ -17,12 +16,9 @@ const loading = ref(false)
 async function load() {
   loading.value = true
   try {
-    const [stats, usage] = await Promise.all([
-      ReportAnalyticsService.dashboardStats(),
-      CapacityService.getUsage(),
-    ])
+    const stats = await ReportAnalyticsService.dashboardStats()
     data.value = stats
-    capacityUsage.value = usage ?? []
+    capacityUsage.value = []
   } finally {
     loading.value = false
   }

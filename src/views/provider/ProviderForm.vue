@@ -1,7 +1,8 @@
 <script setup>
 import { layout, makeDefaultEntity } from '@/config/forms/Provider';
 import { transformArray, transformPreSubmit } from '@/services/CommonService';
-import EntityService from '@/services/ProviderService';
+// ProviderService removed - freight-specific service
+const EntityService = null;
 const props = defineProps({
   currentType: { type: Object, default: () => {} }
 })

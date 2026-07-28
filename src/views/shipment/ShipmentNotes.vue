@@ -1,5 +1,6 @@
 <script setup>
-import ShipmentNoteService from '@/services/ShipmentNoteService'
+// ShipmentNoteService removed - freight-specific service
+const ShipmentNoteService = null;
 
 const props = defineProps({
   shipment: { type: Object, required: true },

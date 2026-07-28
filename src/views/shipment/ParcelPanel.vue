@@ -1,5 +1,6 @@
 <script setup>
-import ParcelService from '@/services/ParcelService'
+// ParcelService removed - freight-specific service
+const ParcelService = null;
 
 const props = defineProps({
   shipment: { type: Object, required: true },

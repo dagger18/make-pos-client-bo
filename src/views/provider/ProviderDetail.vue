@@ -2,7 +2,8 @@
 import Uploader from '@/components/common/Uploader/Uploader.vue';
 import { CompanyProviderId } from '@/config/enums/AppEnums';
 import { valueToSlug } from '@/config/enums/ProviderType';
-import EntityService from '@/services/ProviderService';
+// ProviderService removed - freight-specific service
+const EntityService = null;
 import BankAccounts from './BankAccounts.vue';
 import Contacts from './Contacts.vue';
 import InvoiceInfos from './InvoiceInfos.vue';

@@ -1,10 +1,13 @@
 <script setup>
 import { CBM } from '@/config/enums/Unit';
 import { layout, makeDefaultEntity } from '@/config/forms/shipment/Booking';
-import EntityService from '@/services/BookingService';
+// BookingService removed - freight-specific service
+const EntityService = null;
 import { transformObject, transformPreSubmit } from '@/services/CommonService';
-import VesselSailingService from '@/services/VesselSailingService'
-import FlightScheduleService from '@/services/FlightScheduleService'
+// VesselSailingService removed - freight-specific service
+const VesselSailingService = null;
+// FlightScheduleService removed - freight-specific service
+const FlightScheduleService = null;
 const props = defineProps({
   parentBind: { type: Object, default: () => {} },
   shipment: { type: Object, default: () => {}}

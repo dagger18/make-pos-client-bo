@@ -1,5 +1,6 @@
 <script setup>
-import VesselRollService from '@/services/VesselRollService'
+// VesselRollService removed - freight-specific service
+const VesselRollService = null;
 
 const props = defineProps({
   shipment: { type: Object, default: () => ({}) },

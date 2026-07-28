@@ -4,7 +4,8 @@ import { enums as EbitNoteType } from '@/config/enums/EbitNoteType';
 import { filterConfigs, headers } from '@/config/tables/accounting/CO';
 import { dateAdapter } from "@/plugins/vuetify";
 import { printDate } from '@/services/CommonService';
-import EntityService from '@/services/EbitNoteService';
+// EbitNoteService removed - freight-specific service
+const EntityService = null;
 import { useAppStore } from '@/stores/appStore';
 import { useAuthStore } from '@/stores/authStore';
 import ShipmentDetail from '@/views/shipment/ShipmentDetail.vue';

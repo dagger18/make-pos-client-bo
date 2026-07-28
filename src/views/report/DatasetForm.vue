@@ -4,7 +4,8 @@ import {
 } from "@/config/enums/DatasetType";
 import { layout, makeDefaultEntity } from '@/config/forms/report/Dataset';
 import CommonService, { transformArray, transformPreSubmit } from '@/services/CommonService';
-import EntityService from '@/services/DatasetService';
+// DatasetService removed - freight-specific service
+const EntityService = null;
 import { useAuthStore } from '@/stores/authStore';
 const form = ref(null)
 function setEntity(entity = null) {

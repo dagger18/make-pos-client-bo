@@ -8,7 +8,8 @@ makeDefaultEntity as componentDefaultEntity,
 layout as componentLayout
 } from '@/config/forms/report/Component';
 import CommonService, { transformArray, transformPreSubmit } from '@/services/CommonService';
-import ComponentService from '@/services/ComponentService';
+// ComponentService removed - freight-specific service
+const ComponentService = null;
 import { useAppStore } from '@/stores/appStore';
 import { useAuthStore } from '@/stores/authStore';
 const props = defineProps({

@@ -1,6 +1,7 @@
 <script setup>
 import { filterConfigs, headers } from '@/config/tables/InsuranceDeclaration'
-import InsuranceService from '@/services/InsuranceService'
+// InsuranceService removed - freight-specific service
+const InsuranceService = null
 import { useGettext } from 'vue3-gettext'
 
 definePage({ meta: { action: 'GET', subject: 'EbitNote', navActiveLink: 'report-vat-report' } })

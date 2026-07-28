@@ -1,6 +1,7 @@
 <script setup>
 import { enums as ShipmentStatus } from '@/config/enums/ShipmentStatus';
-import ShipmentService from '@/services/ShipmentService';
+// ShipmentService removed - freight-specific service
+const ShipmentService = null;
 import { useAppStore } from '@/stores/appStore';
 import { $gettext } from '@/utils/api';
 import { can } from '@layouts/plugins/casl';

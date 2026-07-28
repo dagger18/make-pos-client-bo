@@ -1,15 +1,11 @@
 <script setup>
 import { downloadMonthlyLayout } from '@/config/forms/accounting/Revenue';
-import EbitNoteService from '@/services/EbitNoteService';
 import MediaService from '@/services/MediaService';
 const props = defineProps({
   ebitNoteType: {type: String, default: ''}
 })
-async function downloadMonthly(entity) {
-  const result = await EbitNoteService.downloadMonthlyPdf(entity)
-  if(result.zip) {
-    MediaService.download(result.zip)
-  }
+// EbitNoteService removed - freight-specific service no longer available
+async function downloadMonthly(_entity) {
   return true
 }
 </script>

@@ -3,7 +3,8 @@ import { getTitle as getFreightTermTitle } from '@/config/enums/FreightTerm';
 import { enums as ShipmentStatus } from '@/config/enums/ShipmentStatus';
 import { enums as TransportType } from '@/config/enums/TransportType';
 import { enums as VolumeType } from '@/config/enums/VolumeType';
-import BookingService from '@/services/BookingService';
+// BookingService removed - freight-specific service
+const BookingService = null;
 import { printDate, printDateTime, printPort } from '@/services/CommonService';
 import { $gettext } from '@/utils/api';
 import { useDisplay } from 'vuetify';

@@ -1,7 +1,8 @@
 <script setup>
 import { getTitle as getActivityTitle } from '@/config/enums/ShipmentActivityType';
 import { printDateTime } from '@/services/CommonService';
-import ShipmentService from '@/services/ShipmentService';
+// ShipmentService removed - freight-specific service
+const ShipmentService = null;
 
 const props = defineProps({
   shipment: { type: Object, default: () => ({}) }

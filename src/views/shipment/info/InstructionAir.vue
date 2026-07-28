@@ -2,7 +2,8 @@
 import { enums as ShipmentStatus } from '@/config/enums/ShipmentStatus';
 import { layout, makeDefaultEntity } from '@/config/forms/shipment/InstructionAir';
 import { transformPreSubmit } from '@/services/CommonService';
-import EntityService from '@/services/InstructionService';
+// InstructionService removed - freight-specific service
+const EntityService = null;
 const props = defineProps({
   shipment: { type: Object, default: () => {}}
 })

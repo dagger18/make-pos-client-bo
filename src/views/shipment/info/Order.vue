@@ -4,7 +4,8 @@ import { enums as ShipmentStatus } from '@/config/enums/ShipmentStatus';
 import { getTitle as shipmentTypeTitle } from '@/config/enums/ShipmentType';
 import { getCarrierTitle, enums as TransportType } from '@/config/enums/TransportType';
 import { printDate, printPersonName, printPort } from '@/services/CommonService';
-import ShipmentService from '@/services/ShipmentService';
+// ShipmentService removed - freight-specific service
+const ShipmentService = null;
 import DangerousGoodsPanel from '../DangerousGoodsPanel.vue';
 import TruckPanel from '../TruckPanel.vue';
 import RailBookingPanel from '../RailBookingPanel.vue';

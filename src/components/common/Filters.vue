@@ -5,13 +5,11 @@ import { VAutocomplete, VSelect, VTextField } from 'vuetify/lib/components/index
 import DatePicker from '../form/DatePicker.vue';
 import GoodSearchSelect from '../form/GoodSearchSelect.vue';
 import ClientService from '@/services/ClientService';
-import ProviderService from '@/services/ProviderService';
 import UserService from '@/services/UserService';
 import BranchService from '@/services/BranchService';
 import DepartmentService from '@/services/DepartmentService';
 const serviceMap = {
   'ClientService': ClientService,
-  'ProviderService': ProviderService,
   'UserService': UserService,
   'BranchService': BranchService,
   'DepartmentService': DepartmentService,

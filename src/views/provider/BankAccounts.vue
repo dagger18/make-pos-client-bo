@@ -1,9 +1,11 @@
 <script setup>
 import { layout, makeDefaultEntity } from '@/config/forms/BankAccount';
-import EntityService from '@/services/BankAccountService';
+// BankAccountService removed - freight-specific service
+const EntityService = null;
 import ClientService from '@/services/ClientService';
 import { printNullable } from '@/services/CommonService';
-import ProviderService from '@/services/ProviderService';
+// ProviderService removed - freight-specific service
+const ProviderService = null;
 import { useAppStore } from '@/stores/appStore';
 const props = defineProps({
   parent: { type: Object, default: () => {}},

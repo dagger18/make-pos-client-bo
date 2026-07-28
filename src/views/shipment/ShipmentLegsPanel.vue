@@ -1,5 +1,6 @@
 <script setup>
-import ShipmentLegService from '@/services/ShipmentLegService'
+// ShipmentLegService removed - freight-specific service
+const ShipmentLegService = null;
 
 const props = defineProps({
   shipment: { type: Object, required: true },

@@ -1,13 +1,9 @@
-import { usePortalAuthStore } from '@/stores/portalAuthStore'
+// portalAuthStore removed - freight-specific portal auth
 
 const BASE = '/portal'
 
 function portalFetch(path, options = {}) {
-  const store = usePortalAuthStore()
   const headers = { ...(options.headers ?? {}) }
-  if (store.accessToken && store.user?.email) {
-    headers['X-W-Auth'] = `Token Email="${store.user.email}", Token="${store.accessToken}"`
-  }
   return $api(`${BASE}${path}`, { ...options, headers })
 }
 

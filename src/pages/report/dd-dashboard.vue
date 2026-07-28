@@ -1,6 +1,7 @@
 <script setup>
 import { useGettext } from 'vue3-gettext'
-import DdService from '@/services/DdService'
+// DdService removed - freight-specific service
+const DdService = null
 
 definePage({ meta: { action: 'GET', subject: 'EbitNote', navActiveLink: 'report-customer-profitability' } })
 

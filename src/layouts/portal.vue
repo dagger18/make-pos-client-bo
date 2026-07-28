@@ -1,16 +1,14 @@
 <script setup>
-import { usePortalAuthStore } from '@/stores/portalAuthStore'
+// portalAuthStore removed - freight-specific portal auth
 import PortalAuthService from '@/services/portal/PortalAuthService'
 import { useRouter } from 'vue-router'
 import { useGettext } from 'vue3-gettext'
 
 const { $gettext } = useGettext()
-const portalStore = usePortalAuthStore()
 const router = useRouter()
 
 async function logout() {
   try { await PortalAuthService.logout() } catch {}
-  portalStore.logout()
   router.push('/portal/login')
 }
 </script>

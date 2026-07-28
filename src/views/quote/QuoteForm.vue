@@ -4,7 +4,8 @@ import { enums as ShipmentType } from '@/config/enums/ShipmentType';
 import { valueToVolumeType } from '@/config/enums/TransportType';
 import { layout, makeDefaultEntity } from '@/config/forms/quote/Quote';
 import { getCurrencyRate, getSubTotal, printPort, transformArray, transformObject, transformPreSubmit } from '@/services/CommonService';
-import EntityService from '@/services/QuoteService'
+// QuoteService removed - freight-specific service
+const EntityService = null;
 import ClientService from '@/services/ClientService';
 import { useAppStore } from '@/stores/appStore';
 import { $gettext } from '@/utils/api';

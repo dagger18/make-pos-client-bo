@@ -3,8 +3,10 @@ import { enums as ShipmentStatus } from '@/config/enums/ShipmentStatus'
 import { enums as TransportType } from '@/config/enums/TransportType'
 import { headers } from '@/config/tables/shipment/Document'
 import MediaService from '@/services/MediaService'
-import InstructionService from '@/services/InstructionService'
-import ShipmentDocumentService from '@/services/ShipmentDocumentService'
+// InstructionService removed - freight-specific service
+const InstructionService = null;
+// ShipmentDocumentService removed - freight-specific service
+const ShipmentDocumentService = null;
 import { useAppStore } from '@/stores/appStore'
 
 const props = defineProps({

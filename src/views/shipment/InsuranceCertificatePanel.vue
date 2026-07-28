@@ -1,5 +1,6 @@
 <script setup>
-import InsuranceService from '@/services/InsuranceService'
+// InsuranceService removed - freight-specific service
+const InsuranceService = null;
 
 const props = defineProps({
   shipment: { type: Object, required: true },

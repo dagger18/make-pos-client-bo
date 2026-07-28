@@ -1,6 +1,7 @@
 <script setup>
 import { useGettext } from 'vue3-gettext'
-import ComplianceService from '@/services/ComplianceService'
+// ComplianceService removed - freight-specific service
+const ComplianceService = null
 definePage({ meta: { action: 'GET', subject: 'EbitNote', navActiveLink: 'report-vat-report' } })
 
 const { $gettext } = useGettext()

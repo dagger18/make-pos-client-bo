@@ -7,7 +7,8 @@ import { makeDefaultEntity as paymentDefault, layout as paymentLayout } from '@/
 import { headers } from '@/config/tables/shipment/Credit';
 import { headers as headersInvoiceCredit } from '@/config/tables/shipment/InvoiceCredit';
 import { getCurrencyRate, priceToChargeItem, recalculateChargeItemPrice, transformArray, transformPreSubmit } from '@/services/CommonService';
-import EntityService from '@/services/EbitNoteService';
+// EbitNoteService removed - freight-specific service
+const EntityService = null;
 import { useAppStore } from '@/stores/appStore';
 import EbitNotePreview from './EbitNotePreview.vue';
 import RecordForm from './RecordForm.vue';

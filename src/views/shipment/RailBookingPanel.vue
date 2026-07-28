@@ -1,5 +1,6 @@
 <script setup>
-import RailBookingService from '@/services/RailBookingService'
+// RailBookingService removed - freight-specific service
+const RailBookingService = null;
 
 const props = defineProps({
   shipment: { type: Object, required: true },

@@ -1,5 +1,6 @@
 <script setup>
-import DangerousGoodsService from '@/services/DangerousGoodsService'
+// DangerousGoodsService removed - freight-specific service
+const DangerousGoodsService = null;
 
 const props = defineProps({
   shipment: { type: Object, required: true },

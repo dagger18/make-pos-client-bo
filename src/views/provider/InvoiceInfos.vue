@@ -2,8 +2,10 @@
 import { layout, makeDefaultEntity } from '@/config/forms/InvoiceInfo';
 import ClientService from '@/services/ClientService';
 import { printNullable } from '@/services/CommonService';
-import EntityService from '@/services/InvoiceInfoService';
-import ProviderService from '@/services/ProviderService';
+// InvoiceInfoService removed - freight-specific service
+const EntityService = null;
+// ProviderService removed - freight-specific service
+const ProviderService = null;
 import { useAppStore } from '@/stores/appStore';
 const props = defineProps({
   parent: { type: Object, default: () => {}},

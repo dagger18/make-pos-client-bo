@@ -3,7 +3,8 @@ import { enums as mode } from '@/config/enums/CustomInfoMode';
 import { layout, makeDefaultEntity } from '@/config/forms/ClientQuoteInfo';
 import EntityService from '@/services/ClientService';
 import { printNullable } from '@/services/CommonService';
-import InvoiceInfoService from '@/services/InvoiceInfoService';
+// InvoiceInfoService removed - freight-specific service
+const InvoiceInfoService = null;
 const props = defineProps({
   parent: {type: Object, default: () => {}}
 })

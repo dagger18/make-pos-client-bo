@@ -1,6 +1,7 @@
 <script setup>
 import { useGettext } from 'vue3-gettext'
-import RateBenchmarkService from '@/services/RateBenchmarkService'
+// RateBenchmarkService removed - freight-specific service
+const RateBenchmarkService = null
 
 definePage({ meta: { action: 'GET', subject: 'Quote' } })
 

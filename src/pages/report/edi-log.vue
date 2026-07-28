@@ -1,6 +1,7 @@
 <script setup>
 import { useGettext } from 'vue3-gettext'
-import IntegrationService from '@/services/IntegrationService'
+// IntegrationService removed - freight-specific service
+const IntegrationService = null
 
 definePage({ meta: { action: 'GET', subject: 'Integration' } })
 

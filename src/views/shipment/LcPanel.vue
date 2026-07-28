@@ -1,5 +1,6 @@
 <script setup>
-import LcService from '@/services/LcService'
+// LcService removed - freight-specific service
+const LcService = null;
 
 const props = defineProps({ shipmentId: { type: Number, required: true } })
 

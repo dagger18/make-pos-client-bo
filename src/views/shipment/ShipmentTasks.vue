@@ -1,6 +1,7 @@
 <script setup>
 import { enums as ShipmentStatus } from '@/config/enums/ShipmentStatus'
-import ShipmentTaskService from '@/services/ShipmentTaskService'
+// ShipmentTaskService removed - freight-specific service
+const ShipmentTaskService = null;
 import { useAppStore } from '@/stores/appStore'
 
 const props = defineProps({

@@ -1,6 +1,7 @@
 <script setup>
 import { enums as TransportType } from '@/config/enums/TransportType'
-import InstructionService from '@/services/InstructionService';
+// InstructionService removed - freight-specific service
+const InstructionService = null;
 const props = defineProps({
   isDialog: {type: Boolean, default: false},
   shipment: {type: Object, default: () => {}}

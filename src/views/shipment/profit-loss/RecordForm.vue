@@ -2,7 +2,8 @@
 import { enums as EbitNoteType } from '@/config/enums/EbitNoteType';
 import { dateAdapter } from "@/plugins/vuetify";
 import { dayJSToUTC, transformPreSubmit } from '@/services/CommonService';
-import EntityService from '@/services/EbitNoteService';
+// EbitNoteService removed - freight-specific service
+const EntityService = null;
 const form = ref(null)
 const props = defineProps({
   context: {type: Object, default: () => {}},

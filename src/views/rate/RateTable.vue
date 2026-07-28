@@ -2,7 +2,8 @@
 import { enums as ChargeType, findByValue } from '@/config/enums/ChargeType';
 import { slugToTransportType, getList as transportTypeList } from '@/config/enums/TransportType';
 import { filterConfigs, headers } from '@/config/tables/Rate';
-import EntityService from '@/services/RateService';
+// RateService removed - freight-specific service
+const EntityService = null;
 import RateForm from '@/views/rate/RateForm.vue';
 import { useAppStore } from '@/stores/appStore';
 const props = defineProps({

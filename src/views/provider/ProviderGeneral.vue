@@ -2,7 +2,8 @@
 import { findByValue as findCreditStatus, getList as creditStatusList } from '@/config/enums/CreditStatus';
 import { initLayout, layout, makeDefaultEntity } from '@/config/forms/ProviderGeneral';
 import { printMoney, printNullable, transformObject, transformPreSubmit } from '@/services/CommonService';
-import ProviderService from '@/services/ProviderService';
+// ProviderService removed - freight-specific service
+const ProviderService = null;
 import { useGettext } from 'vue3-gettext';
 const { $gettext } = useGettext()
 const props = defineProps({

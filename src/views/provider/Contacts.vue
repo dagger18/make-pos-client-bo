@@ -3,7 +3,8 @@ import { layout, makeDefaultEntity } from '@/config/forms/Contact';
 import ClientService from '@/services/ClientService';
 import { printNullable } from '@/services/CommonService';
 import EntityService from '@/services/ContactService';
-import ProviderService from '@/services/ProviderService';
+// ProviderService removed - freight-specific service
+const ProviderService = null;
 import { useAppStore } from '@/stores/appStore';
 import { useGettext } from 'vue3-gettext';
 const { $gettext } = useGettext()

@@ -1,5 +1,6 @@
 <script setup>
-import ArrivalNoticeService from '@/services/ArrivalNoticeService'
+// ArrivalNoticeService removed - freight-specific service
+const ArrivalNoticeService = null;
 import { useAuthStore } from '@/stores/authStore'
 
 const props = defineProps({

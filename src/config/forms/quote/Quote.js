@@ -13,7 +13,8 @@ import { getList as weekdays } from '@/config/enums/WeekDay';
 import ClientService from '@/services/ClientService';
 import CommonService, { availableCurrencies, portFieldConfig } from '@/services/CommonService';
 import ContactService from '@/services/ContactService';
-import ProviderService from '@/services/ProviderService';
+// ProviderService removed - freight-specific service
+const ProviderService = null;
 import { useAppStore } from '@/stores/appStore';
 
 function getRouteType(transportType) {

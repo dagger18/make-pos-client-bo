@@ -5,8 +5,10 @@ import { enums as EbitNote } from '@/config/enums/EbitNoteType';
 import { dateAdapter } from "@/plugins/vuetify";
 import ClientService from '@/services/ClientService';
 import CommonService, { availableCurrencies, dayJSToUTC, exchangeRatesToMap, priceToChargeItem } from '@/services/CommonService';
-import InvoiceInfoService from '@/services/InvoiceInfoService';
-import ProviderService from '@/services/ProviderService';
+// InvoiceInfoService removed - freight-specific service
+const InvoiceInfoService = null;
+// ProviderService removed - freight-specific service
+const ProviderService = null;
 import { useAppStore } from '@/stores/appStore';
 export const makeDefaultEntity = (context) => {
   const defaultRates = useAppStore().exchangeRatesConfig

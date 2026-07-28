@@ -2,7 +2,8 @@
 import { findByValue as getQuoteStatus } from '@/config/enums/QuoteStatus';
 import { findByValue } from '@/config/enums/TransportType';
 import { router } from '@/plugins/1.router';
-import QuoteService from '@/services/QuoteService';
+// QuoteService removed - freight-specific service
+const QuoteService = null;
 const props = defineProps({
   isDialog: {type: Boolean, default: true}
 })

@@ -3,10 +3,13 @@ import { findByValue as getShipmentStatus, enums as ShipmentStatus } from '@/con
 import { findByValue as findSubStatus, getListForStatus as getSubStatuses } from '@/config/enums/SubStatus';
 import { findByValue, enums as TransportType } from '@/config/enums/TransportType';
 import { enums as VolumeType } from '@/config/enums/VolumeType';
-import BookingService from '@/services/BookingService';
+// BookingService removed - freight-specific service
+const BookingService = null;
 import { printPort } from '@/services/CommonService';
-import ProviderService from '@/services/ProviderService';
-import ShipmentService from '@/services/ShipmentService';
+// ProviderService removed - freight-specific service
+const ProviderService = null;
+// ShipmentService removed - freight-specific service
+const ShipmentService = null;
 import { useAppStore } from '@/stores/appStore';
 import { can } from '@layouts/plugins/casl';
 import { watch } from 'vue';

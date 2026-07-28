@@ -1,5 +1,6 @@
 <script setup>
-import TrackingRequestService from '@/services/TrackingRequestService'
+// TrackingRequestService removed - freight-specific service
+const TrackingRequestService = null;
 
 const props = defineProps({ shipment: { type: Object, required: true } })
 

@@ -2,7 +2,8 @@
 import { enums as EbitNoteStatus, findByValue as getEbitNoteStatus } from '@/config/enums/EbitNoteStatus';
 import { enums as EbitNoteType, findByValue as getEbitNoteType } from '@/config/enums/EbitNoteType';
 import { layout as layoutSendmail, makeDefaultEntity } from '@/config/forms/shipment/SendMail';
-import EbitNoteService from '@/services/EbitNoteService';
+// EbitNoteService removed - freight-specific service
+const EbitNoteService = null;
 const props = defineProps({
   removeDocumentScroll: { type: Boolean, default: false }
 })

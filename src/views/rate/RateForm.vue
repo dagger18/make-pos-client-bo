@@ -1,6 +1,7 @@
 <script setup>
 import { layout, makeDefaultEntity } from '@/config/forms/Rate';
-import EntityService from '@/services/RateService';
+// RateService removed - freight-specific service
+const EntityService = null;
 const props = defineProps({
   currentTransportType: { type: Object, default: () => {} },
   currentChargeType: { type: Object, default: () => {} }

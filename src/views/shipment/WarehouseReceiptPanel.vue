@@ -1,6 +1,8 @@
 <script setup>
-import WarehouseFacilityService from '@/services/WarehouseFacilityService'
-import WarehouseReceiptService from '@/services/WarehouseReceiptService'
+// WarehouseFacilityService removed - freight-specific service
+const WarehouseFacilityService = null;
+// WarehouseReceiptService removed - freight-specific service
+const WarehouseReceiptService = null;
 
 const props = defineProps({
   shipment: { type: Object, required: true },

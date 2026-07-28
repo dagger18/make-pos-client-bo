@@ -1,6 +1,7 @@
 <script setup>
 import { useGettext } from 'vue3-gettext'
-import CarrierPerformanceService from '@/services/CarrierPerformanceService'
+// CarrierPerformanceService removed - freight-specific service
+const CarrierPerformanceService = null
 definePage({ meta: { action: 'GET', subject: 'EbitNote', navActiveLink: 'report-customer-profitability' } })
 
 const { $gettext } = useGettext()

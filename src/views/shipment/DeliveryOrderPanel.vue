@@ -1,5 +1,6 @@
 <script setup>
-import DeliveryOrderService from '@/services/DeliveryOrderService'
+// DeliveryOrderService removed - freight-specific service
+const DeliveryOrderService = null;
 
 const props = defineProps({
   shipment: { type: Object, required: true },

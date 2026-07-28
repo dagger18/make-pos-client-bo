@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import CarrierProfileService from '@/services/CarrierProfileService'
+// CarrierProfileService removed - freight-specific service
+const CarrierProfileService = null;
 import { getList as carrierTypeList } from '@/config/enums/CarrierType'
 
 const props = defineProps({ provider: { type: Object, required: true } })

@@ -1,6 +1,7 @@
 <script setup>
 import { filterConfigs, headers } from '@/config/tables/report/Dataset';
-import EntityService from '@/services/DatasetService';
+// DatasetService removed - freight-specific service
+const EntityService = null;
 import DatasetForm from '@/views/report/DatasetForm.vue';
 import { useAppStore } from '@/stores/appStore';
 definePage({ 

@@ -5,8 +5,9 @@ import { filterConfigs, headers } from '@/config/tables/accounting/SOA';
 import { dateAdapter } from "@/plugins/vuetify";
 import ClientService from '@/services/ClientService';
 import CommonService, { exchangeRatesToMap, printDate, availableCurrencies } from '@/services/CommonService';
-import EntityService from '@/services/EbitNoteService';
-import ProviderService from '@/services/ProviderService';
+// EbitNoteService and ProviderService removed - freight-specific services
+const EntityService = null;
+const ProviderService = null;
 import { useAppStore } from '@/stores/appStore';
 import { useAuthStore } from '@/stores/authStore';
 import ShipmentDetail from '@/views/shipment/ShipmentDetail.vue';

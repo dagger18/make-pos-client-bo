@@ -15,16 +15,12 @@ export const setupGuards = router => {
     if (to.meta.public)
       return
 
-    // 👉 Portal route guard — portal routes use their own auth, handled separately
+    // 👉 Portal route guard — portalAuthStore removed, redirect to login
     if (to.path.startsWith('/portal')) {
       if (to.path === '/portal/login')
         return
-      const { usePortalAuthStore } = await import('@/stores/portalAuthStore')
-      const portalStore = usePortalAuthStore()
-      if (!portalStore.isAuthenticated()) {
-        return { path: '/portal/login' }
-      }
-      return
+      // portalAuthStore removed - freight-specific; portal routes redirect to login
+      return { path: '/portal/login' }
     }
 
     /**

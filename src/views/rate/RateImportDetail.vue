@@ -1,5 +1,6 @@
 <script setup>
-import RateImportService from '@/services/RateImportService'
+// RateImportService removed - freight-specific service
+const RateImportService = null;
 
 const props = defineProps({
   modelValue: { type: Boolean, default: false },

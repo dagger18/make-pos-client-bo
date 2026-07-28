@@ -2,11 +2,15 @@ import DepartmentService from '@/services/DepartmentService'
 import BranchService from '@/services/BranchService'
 import ClientService from '@/services/ClientService'
 import CurrencyService from '@/services/CurrencyService'
-import DatasetService from '@/services/DatasetService'
+// DatasetService removed - freight-specific service
+const DatasetService = null;
 import ExchangeRateGroupService from '@/services/ExchangeRateGroupService'
-import PriceMarkupService from '@/services/PriceMarkupService'
-import ProviderService from '@/services/ProviderService'
-import RateService from '@/services/RateService'
+// PriceMarkupService removed - freight-specific service
+const PriceMarkupService = null;
+// ProviderService removed - freight-specific service
+const ProviderService = null;
+// RateService removed - freight-specific service
+const RateService = null;
 import UserGroupService from '@/services/UserGroupService'
 import UserService from '@/services/UserService'
 import CalculationTypeService from '@/services/library/CalculationTypeService'
