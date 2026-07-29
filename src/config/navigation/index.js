@@ -43,6 +43,11 @@ export default () => {
     icon: { icon: 'tabler-clock' },
   },
   {
+    title: $gettext('Tables'),
+    to: { name: 'table' },
+    icon: { icon: 'tabler-layout-grid' },
+  },
+  {
     title: $gettext('Catalog'),
     icon: { icon: 'tabler-shopping-bag' },
     children: [
