@@ -53,6 +53,11 @@ export default () => {
     icon: { icon: 'tabler-tools-kitchen-2' },
   },
   {
+    title: $gettext('Loyalty'),
+    to: { name: 'loyalty' },
+    icon: { icon: 'tabler-gift' },
+  },
+  {
     title: $gettext('Catalog'),
     icon: { icon: 'tabler-shopping-bag' },
     children: [
