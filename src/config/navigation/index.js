@@ -48,6 +48,11 @@ export default () => {
     icon: { icon: 'tabler-layout-grid' },
   },
   {
+    title: $gettext('Kitchen'),
+    to: { name: 'kitchen' },
+    icon: { icon: 'tabler-tools-kitchen-2' },
+  },
+  {
     title: $gettext('Catalog'),
     icon: { icon: 'tabler-shopping-bag' },
     children: [
