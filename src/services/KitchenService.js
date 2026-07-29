@@ -1,7 +1,16 @@
-import CommonService from './CommonService'
+import CommonService from '@/services/CommonService'
 
-const KitchenService = {
-  // TODO: implement Kitchen API calls
+export default {
+  listTickets(params = '') {
+    return $api(`kitchen?${params}`)
+  },
+  getTicket(id) {
+    return $api(`kitchen/${id}`)
+  },
+  createFromOrder(orderId) {
+    return $api(`kitchen/from-order/${orderId}`, { method: 'POST', loading: true })
+  },
+  advance(id) {
+    return $api(`kitchen/${id}/advance`, { method: 'POST', loading: true })
+  },
 }
-
-export default KitchenService
