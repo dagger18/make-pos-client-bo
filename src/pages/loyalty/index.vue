@@ -17,7 +17,7 @@
             clearable
             density="compact"
             prepend-inner-icon="tabler-search"
-            @update:modelValue="load"
+            @update:modelValue="debouncedLoad"
           />
         </VCol>
         <VCol cols="12" sm="2" class="d-flex align-center">
@@ -162,6 +162,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useDebounceFn } from '@vueuse/core'
 import LoyaltyService from '@/services/LoyaltyService'
 
 const items   = ref([])
@@ -179,7 +180,7 @@ const headers = [
 // Create/Edit
 const formDialog = ref(false)
 const editTarget = ref(null)
-const form       = ref({ name: '', phone: '', email: '' })
+const form       = ref({ id: null, name: '', phone: '', email: '' })
 
 // Earn
 const earnDialog = ref(false)
@@ -198,11 +199,14 @@ const txList   = ref([])
 
 const load = async () => {
   loading.value = true
-  const params = new URLSearchParams()
-  if (filters.value.q) params.set('q', filters.value.q)
-  const res = await LoyaltyService.listCustomers(params.toString())
-  items.value = res?.list ?? res ?? []
-  loading.value = false
+  try {
+    const params = new URLSearchParams()
+    if (filters.value.q) params.set('q', filters.value.q)
+    const res = await LoyaltyService.listCustomers(params.toString())
+    items.value = res?.list ?? res ?? []
+  } finally {
+    loading.value = false
+  }
 }
 
 const clearFilters = () => {
@@ -210,9 +214,11 @@ const clearFilters = () => {
   load()
 }
 
+const debouncedLoad = useDebounceFn(load, 300)
+
 const openCreate = () => {
   editTarget.value = null
-  form.value       = { name: '', phone: '', email: '' }
+  form.value       = { id: null, name: '', phone: '', email: '' }
   formDialog.value = true
 }
 
