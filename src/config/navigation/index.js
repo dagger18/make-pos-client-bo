@@ -38,6 +38,11 @@ export default () => {
     icon: { icon: 'tabler-package' },
   },
   {
+    title: $gettext('Shift'),
+    to: { name: 'shift' },
+    icon: { icon: 'tabler-clock' },
+  },
+  {
     title: $gettext('Catalog'),
     icon: { icon: 'tabler-shopping-bag' },
     children: [
